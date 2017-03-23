@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.2">Jekyll</generator><link href="https://l-cafe.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://l-cafe.github.io/" rel="alternate" type="text/html" /><updated>2017-03-23T15:12:29+01:00</updated><id>https://l-cafe.github.io/</id><title type="html">L-Cafe</title><subtitle>Keep your eyes on the stars, and your feet on the ground. - Theodore Roosevelt
+</subtitle><entry><title type="html">Password managers</title><link href="https://l-cafe.github.io/2017/03/21/password-managers.html" rel="alternate" type="text/html" title="Password managers" /><published>2017-03-21T19:29:29+01:00</published><updated>2017-03-21T19:29:29+01:00</updated><id>https://l-cafe.github.io/2017/03/21/password-managers</id><content type="html" xml:base="https://l-cafe.github.io/2017/03/21/password-managers.html">&lt;p&gt;The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft…&lt;/p&gt;
+
+&lt;p&gt;If you have ever read basic security and privacy tips you might be aware of some basic points:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Don’t share your password with anyone, especially people claiming to be employees of these companies.&lt;/li&gt;
+  &lt;li&gt;Always use hard to guess and long passwords, combining symbols, uppercase and lowercase letters, numbers, and never reuse them across services.&lt;/li&gt;
+  &lt;li&gt;Don’t use obvious passwords such as your e-mail address, your name, your wife’s name, your birthdate or words like “password” or “1234”.&lt;/li&gt;
+  &lt;li&gt;Enable two factor authentication when possible, this adds an extra layer which, in case your password gets stolen, will make it more difficult to gain unauthorised access to your account.&lt;/li&gt;
+  &lt;li&gt;Do a regular check-up of your online accounts, and change passwords.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These tips, while valid, are sometimes difficult to accomplish. Nowadays, almost every online service asks us to make an account, so that will be another new password we’ll need to remember. As we sign up for more and more services, this becomes more and more unlikely until we reach the point of simply using the same password or using variations that are difficult for computers to guess but easy for human attackers, like changing Os for zeroes, or intentionally misspelling words (like writing “twtter” instead of “twitter”). This is not very wise, but fortunately, we have a better tool: password managers.&lt;/p&gt;
+
+&lt;p&gt;In this article, I will summarise a few options regarding password management, sorted by popularity ranking as per &lt;a href=&quot;https://alternativeto.net/&quot;&gt;AlternativeTo&lt;/a&gt; ratings.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-most-well-known&quot;&gt;The most well known&lt;/h2&gt;
+
+&lt;h3 id=&quot;lastpass&quot;&gt;&lt;a href=&quot;https://www.lastpass.com/&quot;&gt;LastPass&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l-cafe.github.io/media/2017-03-21-password-managers/lastpass.png&quot; alt=&quot;LastPass' interface&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Probably the most famous password manager. Released in 2008, their team of experts deliver a cross-platform experience, with extensions for the most used browsers, but also for less well known browsers like Vivaldi, Maxthon or Dolphin. Can work independently of the operating system because it can be used as a browser extension, so all you need is a compatible browser, and you can carry your passwords wherever you go. There are also applications for Android, iPhone, iPad, Windows Phone, etc. The premium plan, at 1 USD/month is rather affordable. It also has a few extra features, such as one that watches websites for breaches and notifies you if you have a stored password for a website that may have been compromised, or a password change wizard that allows for semi-automated fast password changing in supported sites that requires very little manual intervention.&lt;/p&gt;
+
+&lt;h4 id=&quot;pros&quot;&gt;Pros&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Well established&lt;/li&gt;
+  &lt;li&gt;Unified experience across devices&lt;/li&gt;
+  &lt;li&gt;Cloud sync&lt;/li&gt;
+  &lt;li&gt;Free plan&lt;/li&gt;
+  &lt;li&gt;Auto-fill features&lt;/li&gt;
+  &lt;li&gt;Can store encrypted files (with limits depending on the plan)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cons&quot;&gt;Cons&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Closed source, so it cannot be independently audited&lt;/li&gt;
+  &lt;li&gt;Cloud-based, local storage or third party sync (like Dropbox) is not feasible&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;keepass&quot;&gt;&lt;a href=&quot;http://keepass.info/&quot;&gt;KeePass&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l-cafe.github.io/media/2017-03-21-password-managers/keepass.png&quot; alt=&quot;KeePass' interface&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It isn’t exactly an application, but rather, a standard. The application is completely open source and the most used implementation (KeePass), uses the .Net framework on Windows, and Mono on macOS and Linux. Because of its open nature, there are lots of third party implementations such as KeePassX (which uses Qt, much more desirable for non-Windows machines), KeePassDroid, and others. It is absolutely free to use, forever, and it doesn’t carry a service or cloud with it: it focuses exclusively on password vaults as files. These files can then be easily synchronised using Dropbox, Resilio Sync, or your cloud storage tool of choice. These vaults are encrypted and they can be tuned to use stronger encryption (increasing the open delay, and decreasing the effectiveness of brute-force attacks). KeePass/X allows specifying a key file, a password, or a combination of both, making it a multi-factor solution. There are third party ports for Android, iOS, Windows Phone, Windows Mobile, and even web apps.&lt;/p&gt;
+
+&lt;h4 id=&quot;pros-1&quot;&gt;Pros&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Completely open source&lt;/li&gt;
+  &lt;li&gt;Cross-platform&lt;/li&gt;
+  &lt;li&gt;Fully free&lt;/li&gt;
+  &lt;li&gt;(Partly) audited&lt;/li&gt;
+  &lt;li&gt;Rudimentary auto-fill&lt;/li&gt;
+  &lt;li&gt;Allows storing arbitrary files inside the database&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cons-1&quot;&gt;Cons&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Does not have cloud sync&lt;/li&gt;
+  &lt;li&gt;Notably uglier than other solutions&lt;/li&gt;
+  &lt;li&gt;Third party implementations sometimes lack minor functionality&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;1password&quot;&gt;&lt;a href=&quot;https://1password.com/&quot;&gt;1Password&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l-cafe.github.io/media/2017-03-21-password-managers/1password.png&quot; alt=&quot;1Password's interface&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;1Password has long been the prettiest of the bunch. It offers both a subscription based service, and allows paying a single time for a major version and subsequent updates. It has apps for Windows, and Mac, along with Android and iOS, and ships primarily as an app, rather than as a plug-in (although, browser plug-ins are available for integration). It supports a few OS specific features, such as the Touch Bar and the Touch ID on macOS and iOS, fingerprint authentication on Android, and, like LastPass, it has a service that watches for data breaches.&lt;/p&gt;
+
+&lt;h4 id=&quot;pros-2&quot;&gt;Pros&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Very well-designed interface&lt;/li&gt;
+  &lt;li&gt;Allows for both cloud and local storage&lt;/li&gt;
+  &lt;li&gt;Can store files&lt;/li&gt;
+  &lt;li&gt;Auto-fill features&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;cons-2&quot;&gt;Cons&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A bit pricier than its alternatives, no free plan&lt;/li&gt;
+  &lt;li&gt;No other desktop OS support besides Windows or macOS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;other-alternatives&quot;&gt;Other alternatives&lt;/h2&gt;
+
+&lt;p&gt;While less known, there are other ways to manage your passwords.&lt;/p&gt;
+
+&lt;h3 id=&quot;encryptr&quot;&gt;&lt;a href=&quot;https://spideroak.com/personal/encryptr&quot;&gt;Encryptr&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l-cafe.github.io/media/2017-03-21-password-managers/encryptr.png&quot; alt=&quot;Encryptr's interface&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tiny little app that allows for fast password management. It’s clean-looking, and it’s cloud-based, so you’ll never lose your passwords. It’s cross-platform and it uses the Electron framework to bring a unified experience across operating systems. It has apps for Windows, Linux, macOS, as well as Android, iOS. It’s free and open source. Doesn’t allow storing files, only plain text.&lt;/p&gt;
+
+&lt;h3 id=&quot;enpass&quot;&gt;&lt;a href=&quot;https://www.enpass.io/&quot;&gt;Enpass&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l-cafe.github.io/media/2017-03-21-password-managers/enpass.png&quot; alt=&quot;Enpass' interface&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A newcomer to the password management industry. It is completely free to use on desktop (Windows, macOS, Linux), but its mobile apps (Android, iOS, Blackberry, Windows Phone, Android Wear, Apple Watch) have a one-time fee. It looks good and allows for both local and third party cloud-based storage. Supports Windows Hello, Touch ID, Android fingerprint, etc.&lt;/p&gt;
+
+&lt;h3 id=&quot;true-key&quot;&gt;&lt;a href=&quot;https://www.truekey.com/&quot;&gt;True Key&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l-cafe.github.io/media/2017-03-21-password-managers/truekey.jpg&quot; alt=&quot;True Key's interface&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Backed by Intel, it features biometric authentication, and is free for up to 15 passwords. After that, it requires a yearly subscription to use on Windows, macOS, iOS, and Android.&lt;/p&gt;
+
+&lt;h3 id=&quot;master-password&quot;&gt;&lt;a href=&quot;http://masterpasswordapp.com/&quot;&gt;Master Password&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l-cafe.github.io/media/2017-03-21-password-managers/masterpassword.png&quot; alt=&quot;Master Password's interface&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This one is a bit different. Instead of saving passwords in a file database or saving them on the cloud, it generates your passwords based on your master password, name, and website, so it never stores data.png&lt;/p&gt;</content><author><name>L-Cafe</name></author><category term="opinion" /><category term="infosec" /><summary type="html">The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft…</summary></entry><entry><title type="html">Don’t share Microsoft Office documents: use open formats</title><link href="https://l-cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats.html" rel="alternate" type="text/html" title="Don't share Microsoft Office documents: use open formats" /><published>2017-03-21T18:59:32+01:00</published><updated>2017-03-21T18:59:32+01:00</updated><id>https://l-cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats</id><content type="html" xml:base="https://l-cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats.html">&lt;p&gt;It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.&lt;/p&gt;
+
+&lt;p&gt;It’s not the first, and probably won’t be the last time, people complain about OOXML, Microsoft Office, and their dirty tricks. Here’s a few references in no particular order: &lt;a href=&quot;http://www.consortiuminfo.org/standardsblog/article.php?story=20070117145745854&quot;&gt;consortiuminfo.org&lt;/a&gt;, &lt;a href=&quot;https://www.gnu.org/philosophy/no-word-attachments.en.html&quot;&gt;GNU&lt;/a&gt;, &lt;a href=&quot;https://www.fsf.org/campaigns/opendocument/reject&quot;&gt;FSF&lt;/a&gt;, &lt;a href=&quot;http://stephesblog.blogs.com/my_weblog/2007/08/microsofts-fail.html&quot;&gt;stephesblog.blogs.com&lt;/a&gt;, &lt;a href=&quot;https://arstechnica.com/information-technology/2008/02/ibm-responds-to-microsoft-ooxml-is-technically-inferior/&quot;&gt;Ars Technica&lt;/a&gt;, &lt;a href=&quot;http://www.goldmark.org/netrants/no-word/attach.html&quot;&gt;GoldMark&lt;/a&gt;, &lt;a href=&quot;https://logological.org/word&quot;&gt;Tristan Miller&lt;/a&gt;… The list could go on and on forever, but I think the links provided make valid points. Now It’s my turn:&lt;/p&gt;
+
+&lt;h1 id=&quot;its-formatting-is-not-consistent&quot;&gt;Its formatting is not consistent&lt;/h1&gt;
+
+&lt;p&gt;Microsoft’s own OOXML format isn’t designed to be consistent across all platforms and applications. While it definitely is an open format, some critics claim that its standard specification is too long to be implemented realistically. Moreover, even Microsoft doesn’t respect its own standard in a consistent manner across their Microsoft Office releases. This means that a document produced with Microsoft Word 2007 is likely to have inconsistencies when opened in a newer version such as Microsoft Word 2016. The truth is that, while Microsoft tries to insert features in newer Office releases that maintain a certain degree of retrocompatibility, this often introduces an inferior solution in the form of a workaround. What’s worse, this situation, when handled by a third party such as Apple (With Apple Pages, for example), or free software office suites such as LibreOffice, will increase the cost of maintenance, and it’s very likely the workaround will not be as effective as Microsoft’s implementation for practical reasons.&lt;/p&gt;
+
+&lt;h1 id=&quot;third-party-support-isnt-great&quot;&gt;Third party support isn’t great&lt;/h1&gt;
+
+&lt;p&gt;Related to the above point, to correctly display OOXML files you’re going to need the latest version of Microsoft Office (which isn’t free as in beer or as in freedom), or one of the Office documents viewing tools Microsoft provides at no extra charge (this is only for Windows though, macOS users are left in the dark). If you have ever tried to view a Microsoft Word-produced document in Apple Pages or LibreOffice Writer, you probably know it will not be pixel-perfect (some images might be offset, text fonts might not display correctly unless you have the same font set, margins and some special formatting could be configured incorrectly, etc). This also happens vice versa: Apple Pages-produced OOXML documents opened in Microsoft Word, or even LibreOffice Writer. However, PDF (Portable Document Format) is a fully open specification, it’s universal, and can be viewed in any modern operating system without additional software (even modern browsers ship with PDF viewers built in).&lt;/p&gt;
+
+&lt;h1 id=&quot;its-openness-is-debatable&quot;&gt;Its openness is debatable&lt;/h1&gt;
+
+&lt;p&gt;While the format itself is an open specification, Microsoft has a long record of using the &lt;a href=&quot;https://en.wikipedia.org/wiki/Embrace%2C_extend_and_extinguish&quot;&gt;EEE&lt;/a&gt; strategy to marginalise and neutralise competition. This means that, while they might release something that looks like an open standard anyone can adopt, the truth is that OOXML is &lt;a href=&quot;http://www.sutor.com/newsite/blog-open/?p=2069&quot;&gt;too hard to implement, even for Microsoft&lt;/a&gt;. While other office suites can adopt OOXML formats, Microsoft Office can always add new features that break compatibility with these office suites that don’t implement them.&lt;/p&gt;
+
+&lt;h1 id=&quot;they-can-contain-malware-in-the-form-of-macros&quot;&gt;They can contain malware in the form of macros&lt;/h1&gt;
+
+&lt;p&gt;This is a well known fact by malware designers, information security professionals, and most software engineers. This is such a commonly known fact that Microsoft Office, by default, opens unknown origin documents in read-only mode, disabling macros, and warns users in multiple ways of allowing edits on these documents. Warnings that are, by the way, typically dismissed by inexperienced users.&lt;/p&gt;
+
+&lt;h1 id=&quot;editing-shared-documents-is-often-unnecessary&quot;&gt;Editing shared documents is often unnecessary&lt;/h1&gt;
+
+&lt;p&gt;When sharing an OOXML document, the receiver will have a file they can easily edit or modify. Therefore, when attaching invoices, or finished works, if you use the PDF format, the document will be displayed exactly the way you want it to be. Microsoft Office supports exporting to PDF in its latest versions, as well as LibreOffice and essentially most office suites, including Apple’s and Google’s.&lt;/p&gt;
+
+&lt;h1 id=&quot;its-a-poor-choice-for-forms&quot;&gt;It’s a poor choice for forms&lt;/h1&gt;
+
+&lt;p&gt;People sometimes use Office documents to send blank forms to be filled in by the recipient. This document passing forth and back is unnecessary, slow, and inconvenient. Where you could simply present a webpage with a form, and have a web server receive all that data in a manner that can be automatically stored into databases for further processing, encrypted for security, or analysed, the choice of using a document format that cannot facilitate automation seems rather an uninformed and suboptimal decision.&lt;/p&gt;
+
+&lt;h1 id=&quot;microsoft-office-has-terrible-formula-support&quot;&gt;Microsoft Office has terrible formula support&lt;/h1&gt;
+
+&lt;p&gt;When producing documents with math and physics formulas, Microsoft Office has a tool for inserting equations, however, this tool, while easy to use for sporadic situations, becomes a nightmare in terms of UX, because it’s too difficult to insert reasonably complex formulas using Microsoft Office’s system. The most reasonable option, and what most math university teachers and doctors use is LaTeX. LaTeX typically produces PDF documents, and has a very solid syntax, built on top of TeX. Both are open source typesetting systems that produce beautiful, solid, and consistent output and it’s the desirable choice for productivity. Here’s some more information on Word vs LaTeX: &lt;a href=&quot;http://web.mit.edu/klund/www/urk/texvword.html&quot;&gt;MIT&lt;/a&gt;, &lt;a href=&quot;https://www.researchgate.net/post/Why_LaTex_is_better_choice_than_Microsoft_Word&quot;&gt;ResearchGate&lt;/a&gt;,  &lt;a href=&quot;https://tex.stackexchange.com/questions/1756/why-should-i-use-latex&quot;&gt;StackExchange&lt;/a&gt;, &lt;a href=&quot;https://www.reddit.com/r/LaTeX/comments/26z3ii/why_is_latex_better_than_the_current_version_of/&quot;&gt;Reddit&lt;/a&gt;, [Andrew Roberts](http://www.andy-roberts.net/writing/latex/benefits.&lt;/p&gt;</content><author><name>L-Cafe</name></author><category term="FOSS" /><category term="rant" /><category term="opinion" /><summary type="html">It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.</summary></entry><entry><title type="html">Making an open source security system: part 1</title><link href="https://l-cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html" rel="alternate" type="text/html" title="Making an open source security system: part 1" /><published>2017-03-21T18:45:54+01:00</published><updated>2017-03-21T18:45:54+01:00</updated><id>https://l-cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1</id><content type="html" xml:base="https://l-cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html">&lt;p&gt;It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from &lt;a href=&quot;http://www.chuango.com/english/&quot;&gt;Chuango&lt;/a&gt;. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First issue&lt;/strong&gt;: lack of encryption. After a little investigation I found out that, despite their claims on the official website, the communications with the wireless sensors were not encrypted.&lt;/p&gt;
+
+&lt;p&gt;These devices use a standard 433 Mhz radio band, and communicate with a central alarm panel, that has GSM and PSTN features. The GSM in this control panel is GPRS, so, again, not very secure, because GPRS is vulnerable to somewhat easy attacks, can be spoofed, intercepted and decrypted, jammed, etc. I found this out after I ordered an SDR dongle and tuned it to the appropriate frequency. Their command sequences work as follows: Every device seems to have a unique identifier, that is sent right before the command. So, on every command sent from a remote, the remote sends its own ID, and the disarm/arm command. This works because the control panel, when pairing devices, reads the first part of the command and stores it in an internal database, so every time the control panel receives a command, it first compares the first part of the command, containing the ID, and if it matches what’s stored in memory, it executes the second part.&lt;/p&gt;
+
+&lt;p&gt;My investigation suggests there are at least 9 remote commands: arm, partial arm (home arm), disarm, panic button, duress alarm, sensor trigger, low battery, tamper trigger, and finally, normal alarm.&lt;/p&gt;
+
+&lt;p&gt;Some devices only listen for signals, like sirens, which are triggered on arming and disarming, and obviously on panic triggers and normal alarms.&lt;/p&gt;
+
+&lt;p&gt;Some other devices only send signals, such as remote controls and presence sensors.&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;second issue&lt;/strong&gt; with these home alarms is that their GSM module isn’t really configurable, and seems to be making regular connections to (presumably) a control center you can access from a smartphone application. There is no way to disable network Internet connectivity unless the SIM card carrier offers this possibility (the alarm panel can be controlled through SMS).&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Third issue&lt;/strong&gt; is that their PSTN (Public Switched Telephone Network), or basically, what’s known as “landline phones” feature is extremely intrusive and doesn’t respect the whitelisted phone number list, so anyone who dials in the PSTN phone number, will get 5 dial tones, and after that, the alarm’s PSTN will be triggered, letting anyone enter the code to set up the alarm, disarm, arm, and so on. This is both a good and a bad thing: Good because you can access your alarm from anywhere in the world you have access to a landline phone. Bad because it tends to interrupt conversations if you pick up before the 5th tone, or might interfere picking up after the 5th tone: It won’t stop talking, asking for a passcode, on regular intervals even when there’s another phone picked up in the line.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fourth issue&lt;/strong&gt;: it’s not a very fully featured device and lacks modern functionality such as IoT connectivity, interoperability with other brands and devices, video feeds.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fifth issue&lt;/strong&gt;: it’s not very reliable. The alarm will sometimes fail to be triggered on wireless sensors (I’m still investigating if this is a problem with the sensors themselves not sending the signal, but I do know that the PIR sensor doesn’t detect presence very well). The alarm panel is touch enabled, but sometimes stops responding to touch, so you can’t really interact with it.&lt;/p&gt;
+
+&lt;p&gt;In general, it’s a device that might suit some people’s needs, but it isn’t very reliable. I believe that using open source hardware and software, and the help of the community, we can bring a new meaning to DIY alarm systems, and create a more reliable, modular, and customisable solution that will fit everyone’s need while staying as cheap as the hardware can get.&lt;/p&gt;
+
+&lt;p&gt;I will soon start developing an alternative open source burglar alarm in &lt;a href=&quot;https://github.com/L-Cafe/SafeSpace&quot;&gt;GitHub&lt;/a&gt;. Based on Arduino, and maybe Raspberry Pi.&lt;/p&gt;</content><author><name>L-Cafe</name></author><category term="SafeSpace" /><category term="security" /><category term="IoT" /><category term="GitHub" /><summary type="html">It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).</summary></entry><entry><title type="html">Hello world</title><link href="https://l-cafe.github.io/2017/03/20/hello-world.html" rel="alternate" type="text/html" title="Hello world" /><published>2017-03-20T16:28:03+01:00</published><updated>2017-03-20T16:28:03+01:00</updated><id>https://l-cafe.github.io/2017/03/20/hello-world</id><content type="html" xml:base="https://l-cafe.github.io/2017/03/20/hello-world.html">&lt;p&gt;This is my first post.&lt;/p&gt;
+
+&lt;p&gt;In this blog, I’ll be sharing my projects, opinions and tips on various matters.&lt;/p&gt;
+
+&lt;p&gt;I’m a Computer Science / Engineering student, currently on my first year at
+&lt;a href=&quot;http://www.urjc.es/&quot;&gt;URJC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;My areas of interest:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Software development (Ruby, Rust, Swift, C…)&lt;/li&gt;
+  &lt;li&gt;Privacy and digital rights&lt;/li&gt;
+  &lt;li&gt;System administration&lt;/li&gt;
+  &lt;li&gt;Information security&lt;/li&gt;
+  &lt;li&gt;Graphical design&lt;/li&gt;
+  &lt;li&gt;Mathematics&lt;/li&gt;
+  &lt;li&gt;Science&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>L-Cafe</name></author><summary type="html">This is my first post.</summary></entry></feed>

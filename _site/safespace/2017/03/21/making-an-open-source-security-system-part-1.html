@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<link rel="shortcut icon" type="image/png" href="/favicon.png" >
+<html lang="en">
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Making an open source security system: part 1</title>
+  <meta name="description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm ve...">
+  
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  
+
+  
+
+  
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="https://l-cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html">
+  <link rel="alternate" type="application/rss+xml" title="L-Cafe" href="https://l-cafe.github.io/feed.xml" />
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      
+      <img src="/media/logo.png" alt="L-Cafe">
+      
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        
+          
+          <li class="nav-link"><a href="/about/">About me</a>
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/posts/">Categories</a>
+          
+        
+          
+        
+          
+        
+          
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <div class="post">
+
+<div class="post-header-container " >
+  <div class="scrim ">
+    <header class="post-header">
+      <h1 class="title">Making an open source security system: part 1</h1>
+      <p class="info">by <strong>L-Cafe</strong></p>
+    </header>
+  </div>
+</div>
+
+<div class="wrapper">
+
+ <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>
+ 
+
+<section class="post-meta">
+  <div class="post-date">March 21, 2017</div>
+  <div class="post-categories">
+  in 
+    
+    <a href="/posts/#SafeSpace">Safespace</a>
+    
+  
+  </div>
+</section>
+
+<article class="post-content">
+  <p>It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from <a href="http://www.chuango.com/english/">Chuango</a>. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).</p>
+
+<p><strong>First issue</strong>: lack of encryption. After a little investigation I found out that, despite their claims on the official website, the communications with the wireless sensors were not encrypted.</p>
+
+<p>These devices use a standard 433 Mhz radio band, and communicate with a central alarm panel, that has GSM and PSTN features. The GSM in this control panel is GPRS, so, again, not very secure, because GPRS is vulnerable to somewhat easy attacks, can be spoofed, intercepted and decrypted, jammed, etc. I found this out after I ordered an SDR dongle and tuned it to the appropriate frequency. Their command sequences work as follows: Every device seems to have a unique identifier, that is sent right before the command. So, on every command sent from a remote, the remote sends its own ID, and the disarm/arm command. This works because the control panel, when pairing devices, reads the first part of the command and stores it in an internal database, so every time the control panel receives a command, it first compares the first part of the command, containing the ID, and if it matches what’s stored in memory, it executes the second part.</p>
+
+<p>My investigation suggests there are at least 9 remote commands: arm, partial arm (home arm), disarm, panic button, duress alarm, sensor trigger, low battery, tamper trigger, and finally, normal alarm.</p>
+
+<p>Some devices only listen for signals, like sirens, which are triggered on arming and disarming, and obviously on panic triggers and normal alarms.</p>
+
+<p>Some other devices only send signals, such as remote controls and presence sensors.</p>
+
+<p>The <strong>second issue</strong> with these home alarms is that their GSM module isn’t really configurable, and seems to be making regular connections to (presumably) a control center you can access from a smartphone application. There is no way to disable network Internet connectivity unless the SIM card carrier offers this possibility (the alarm panel can be controlled through SMS).</p>
+
+<p><strong>Third issue</strong> is that their PSTN (Public Switched Telephone Network), or basically, what’s known as “landline phones” feature is extremely intrusive and doesn’t respect the whitelisted phone number list, so anyone who dials in the PSTN phone number, will get 5 dial tones, and after that, the alarm’s PSTN will be triggered, letting anyone enter the code to set up the alarm, disarm, arm, and so on. This is both a good and a bad thing: Good because you can access your alarm from anywhere in the world you have access to a landline phone. Bad because it tends to interrupt conversations if you pick up before the 5th tone, or might interfere picking up after the 5th tone: It won’t stop talking, asking for a passcode, on regular intervals even when there’s another phone picked up in the line.</p>
+
+<p><strong>Fourth issue</strong>: it’s not a very fully featured device and lacks modern functionality such as IoT connectivity, interoperability with other brands and devices, video feeds.</p>
+
+<p><strong>Fifth issue</strong>: it’s not very reliable. The alarm will sometimes fail to be triggered on wireless sensors (I’m still investigating if this is a problem with the sensors themselves not sending the signal, but I do know that the PIR sensor doesn’t detect presence very well). The alarm panel is touch enabled, but sometimes stops responding to touch, so you can’t really interact with it.</p>
+
+<p>In general, it’s a device that might suit some people’s needs, but it isn’t very reliable. I believe that using open source hardware and software, and the help of the community, we can bring a new meaning to DIY alarm systems, and create a more reliable, modular, and customisable solution that will fit everyone’s need while staying as cheap as the hardware can get.</p>
+
+<p>I will soon start developing an alternative open source burglar alarm in <a href="https://github.com/L-Cafe/SafeSpace">GitHub</a>. Based on Arduino, and maybe Raspberry Pi.</p>
+
+</article>
+
+
+
+<section class="rss">
+  <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+</section>
+
+<section class="share">
+  <span>Share: </span>
+  
+    
+    
+      <a href="//twitter.com/share?text=Making+an+open+source+security+system%3A+part+1&url=https%3A%2F%2Fl-cafe.github.io%2Fsafespace%2F2017%2F03%2F21%2Fmaking-an-open-source-security-system-part-1.html&via=L__Cafe"
+        onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+        <i class="fa fa-twitter-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+      <a href="//www.facebook.com/sharer.php?t=Making+an+open+source+security+system%3A+part+1&u=https%3A%2F%2Fl-cafe.github.io%2Fsafespace%2F2017%2F03%2F21%2Fmaking-an-open-source-security-system-part-1.html"
+        onclick="window.open(this.href, 'facebook-share', 'width=550,height=255');return false;">
+        <i class="fa fa-facebook-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+      <a href="//www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fl-cafe.github.io%2Fsafespace%2F2017%2F03%2F21%2Fmaking-an-open-source-security-system-part-1.html"
+        onclick="window.open(this.href, 'linkedin-share', 'width=550,height=255');return false;">
+        <i class="fa fa-linkedin-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      <a href="//plus.google.com/share?title=Making+an+open+source+security+system%3A+part+1&url=https%3A%2F%2Fl-cafe.github.io%2Fsafespace%2F2017%2F03%2F21%2Fmaking-an-open-source-security-system-part-1.html"
+        onclick="window.open(this.href, 'google-plus-share', 'width=550,height=255');return false;">
+        <i class="fa fa-google-plus-square fa-lg"></i>
+      </a>
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+      <a href="//www.pinterest.com/pin/create/button/?description=Making+an+open+source+security+system%3A+part+1&url=https%3A%2F%2Fl-cafe.github.io%2Fsafespace%2F2017%2F03%2F21%2Fmaking-an-open-source-security-system-part-1.html&media=https://l-cafe.github.io/media/header_image.jpg"
+        onclick="window.open(this.href, 'pinterest-share', 'width=550,height=255');return false;">
+        <i class="fa fa-pinterest-square fa-lg"></i>
+      </a>
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('https://l-cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html') + '&title=Making an open source security system: part 1'; return false">
+        <i class="fa fa-reddit-square fa-lg"></i>
+      </a>
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+      <a href="//news.ycombinator.com/submitlink" onclick="window.location = '//news.ycombinator.com/submitlink?u=' + encodeURIComponent('https://l-cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html') + '&t=Making an open source security system: part 1'; return false">
+        <i class="fa fa-hacker-news fa-lg"></i>
+      </a>
+    
+  
+</section>
+
+
+
+
+</div>
+</div>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">L-Cafe</h3>
+
+    <div class="site-navigation">
+
+      <p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="/about/">About me</a>
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/posts/">Categories</a>
+        
+        
+        
+        
+        
+        
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+      <p><strong>Social</strong></p>
+      <ul class="social-media-list">
+        <li>
+          <a href="mailto:L-Cafe@linux.com">
+            <i class="fa fa-envelope-o"></i>
+            <span class="username">L-Cafe@linux.com</span>
+          </a>
+        </li>
+
+        
+          
+          <li>
+            <a href="https://twitter.com/L__Cafe" title="Follow me on Twitter">
+              <i class="fa fa-twitter"></i>
+              <span class="username">L__Cafe</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://github.com/L-Cafe" title="Follow me on GitHub">
+              <i class="fa fa-github"></i>
+              <span class="username">L-Cafe</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li>
+            <a href="https://soundcloud.com/l_cafe" title="Follow me on SoundCloud">
+              <i class="fa fa-soundcloud"></i>
+              <span class="username">L-Cafe</span>
+            </a>
+          </li>
+          
+        
+          
+        
+          
+        
+          
+        
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
+      <p class="text">Keep your eyes on the stars, and your feet on the ground. - Theodore Roosevelt
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  // Default syntax highlighting
+  hljs.initHighlightingOnLoad();
+
+  // Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+});
+
+</script>
+
+
+
+
+
+
+  </body>
+
+</html>
