@@ -45,8 +45,7 @@ For my photo editing and graphical design needs, I rely on
 [Affinity Photo](https://affinity.serif.com/en-gb/photo/), and
 [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
 
-My favourite programming languages are: Rust, Ruby (on Rails), C, Swift and
-Python.
+My favourite programming languages are: Rust, Ruby (on Rails), C and Swift.
 
 For writing documents, I use a combination of LaTeX and Markdown, depending on
 whether what I write will be published on the web (for which I use Markdown,
