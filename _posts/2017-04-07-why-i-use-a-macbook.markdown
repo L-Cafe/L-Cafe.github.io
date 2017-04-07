@@ -7,7 +7,7 @@ tags: opinion macOS Apple MacBook
 ---
 
 
-On this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.
+In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.
 
 # It's familiar
 
@@ -19,7 +19,7 @@ I love and use Linux regularly. I think it's a very solid operating system for t
 
 # Great trackpad
 
-MacBooks have brilliant trackpads. Considering they are the primary input device on laptops, this is a huge deal. Before this MacBook, I used to carry a little mouse around because that trackpad was simply atrocious. Now I like the it so much, I actually prefer it. It's much more precise, and with its huge surface area combined with accurate palm rejection, I really have no need for a mouse.
+MacBooks have brilliant trackpads. Considering they are the primary input device on laptops, this is a huge deal. Before this MacBook, I used to carry a little mouse around because that trackpad was simply atrocious. Now I like it so much, I actually prefer it. It's much more precise, and with its huge surface area combined with accurate palm rejection, I really have no need for a mouse.
 
 # USB-C all the things!
 
