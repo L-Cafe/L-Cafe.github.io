@@ -31,6 +31,12 @@ I paid good money for this laptop, but I'm very willing to pay even more for a b
 
 So, I love POSIX and Unix, and this is as close as I can get while also owning good quality hardware. I don't wish to use Windows. Windows is an objectively inferior OS, and Microsoft's pathetic attempts at attracting Linux users by including a Bash shell and some other stuff are definitely not enticing me to use Windows if I can help it.
 
+# Apple is global
+
+Where I live, the only Microsoft Surface product I can buy are the non-Book variants. There are very good Samsung laptops, but they don't sell in Europe anymore. Razer has a great laptop: The Razer Blade Stealth, but, again, not available in Spain. Asus, MSI, only sell a few laptops, and, to be honest, their lineup is insane: too many models to choose from, where Apple only offers a few base models, with customisations. Sure, I could probably buy them through Amazon, but I want to buy them on their respective official stores, directly. Even if that means paying a little bit more in shipping prices, I really don't want to deal with a third party. Apple allows me to buy every single product on their line-up, both online, and in a physical Apple store. Apple allows me to configure my product with a US ANSI keyboard, which, in my opinion, is a must for us programmers, and that's what I have done.
+
+The only real alternative I have to this MacBook Pro is one of the newest Dell XPS 15, which I can buy on their official online store, but I finally decided on the MacBook Pro because the XPS 15 only supports Windows officially (the Developer Edition, which runs Ubuntu, is an XPS 13 model, too small for my needs).
+
 # It's well designed
 
 The model I own, the MacBook Pro 2016 15 inch with Touch Bar, has received very tough criticism for a few things, and I would like to comment on that:
