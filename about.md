@@ -50,9 +50,7 @@ whether what I write will be published on the web (for which I use Markdown,
 with LaTeX math formulas through MathJax), or needs to be printed, or released
 as a PDF file, (for which I use plain LaTeX).
 
-I enjoy producing audiovisual content. Specifically, I play the piano, and enjoy making chiptunes (8-bit music) with [Pico-8](http://www.lexaloffle.com/pico-8.php).
-
-I also do photo editing and I’m learning vector graphics.
+I enjoy producing audiovisual content. Specifically, I play the piano, and enjoy making chiptunes (8-bit music) with [Pico-8](http://www.lexaloffle.com/pico-8.php). As well as photo editing, and I’m learning vector graphics.
 
 For my photo editing and graphical design needs, I rely on
 [Affinity Photo](https://affinity.serif.com/en-gb/photo/), and 
