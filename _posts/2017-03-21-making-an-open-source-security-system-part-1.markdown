@@ -3,7 +3,6 @@ layout: post
 title: "Making an open source security system: part 1"
 date: "2017-03-21 18:45:54 +0100"
 author: L1Cafe
-category: SafeSpace
 tags: security IoT GitHub
 ---
 
