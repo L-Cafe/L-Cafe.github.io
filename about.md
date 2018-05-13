@@ -22,12 +22,11 @@ comments, unless explicitly required to use Spanish.
 I created this blog in order to have a centralised place to express my opinion
 and share what I know with the world.
 
-If you need to contact me, you can:
+If you need to contact me, you can use the links at the bottom, to reach me on
+e-mail and different social media platforms.
 
-- Send me an e-mail at <L1Cafe-github@tuta.io>
-- Tweet me at [@L1Cafe](https://twitter.com/L1Cafe)
-
-Additionally, you can fetch my PGP public key, and/or follow me on [Keybase](https://keybase.io/l1cafe).
+Additionally, you can fetch my PGP public key, and/or follow me on
+[Keybase](https://keybase.io/l1cafe).
 
 ## How I do my computing
 

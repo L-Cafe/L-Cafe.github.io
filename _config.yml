@@ -122,7 +122,7 @@ social:
 
   - name: "Hacker News"
     icon: hacker-news
-    username: Hakashiro # Commented because Karma is below 2 and API is not available
-    url: https://news.ycombinator.com/user?id=Hakashiro
+    username:
+    url:
     desc: Share to Hacker News
     share: true
