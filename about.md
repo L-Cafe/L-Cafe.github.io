@@ -4,11 +4,9 @@ title: About me
 permalink: /about/
 ---
 
-I'm L1Cafe. I'm a Higher Technician Cross-Platform Application Developer, you
-can find my notes (in Spanish) [here](https://github.com/L1Cafe/Apuntesdam2015).
+I'm L1Cafe. I'm a Higher Technician Cross-Platform Application Developer.
 Currently studying Computer Science & Engineering at
-[URJC](http://www.urjc.es/), a Spanish university located in Madrid, you can
-find my notes (in Spanish) [here](https://github.com/L1Cafe/II-URJC-2016).
+[URJC](http://www.urjc.es/), a Spanish university located in Madrid.
 
 I consider myself a passionate and creative individual, I’m always looking forward to learn more and
 better ways to do things, I love challenges.
