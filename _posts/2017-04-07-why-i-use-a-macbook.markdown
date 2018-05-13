@@ -2,7 +2,7 @@
 layout: post
 title: "Why I use a MacBook"
 date: "2017-04-07 19:26:48 +0200"
-author: L-Cafe
+author: L1Cafe
 tags: opinion macOS Apple MacBook
 ---
 

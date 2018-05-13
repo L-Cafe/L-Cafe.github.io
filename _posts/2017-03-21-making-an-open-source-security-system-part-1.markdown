@@ -2,7 +2,7 @@
 layout: post
 title: "Making an open source security system: part 1"
 date: "2017-03-21 18:45:54 +0100"
-author: L-Cafe
+author: L1Cafe
 category: SafeSpace
 tags: security IoT GitHub
 ---
@@ -29,4 +29,4 @@ The **second issue** with these home alarms is that their GSM module isn't reall
 
 In general, it's a device that might suit some people's needs, but it isn't very reliable. I believe that using open source hardware and software, and the help of the community, we can bring a new meaning to DIY alarm systems, and create a more reliable, modular, and customisable solution that will fit everyone's need while staying as cheap as the hardware can get.
 
-I will soon start developing an alternative open source burglar alarm in [GitHub](https://github.com/L-Cafe/SafeSpace). Based on Arduino, and maybe Raspberry Pi.
+I will soon start developing an alternative open source burglar alarm in [GitHub](https://github.com/L1Cafe/SafeSpace). Based on Arduino, and maybe Raspberry Pi.

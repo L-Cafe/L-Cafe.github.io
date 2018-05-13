@@ -25,15 +25,15 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-title: L-Cafe
+title: L1Cafe
 subtitle: Software, infosec, system administration projects, opinions and tips.
-email: L-Cafe@linux.com
+email: L1Cafe-github@tuta.io
 description: > # this means to ignore newlines until "baseurl:"
-  Keep your eyes on the stars, and your feet on the ground. - Theodore Roosevelt
+  <q>Keep your eyes on the stars, and your feet on the ground.</q> - Theodore Roosevelt
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://l-cafe.github.io"
-cover: "/media/header_image.jpg"
-logo: "/media/logo.png"
+url: "https://l1cafe.github.io"
+cover: "/assets/images/header_image.jpg"
+logo: "/assets/images/logo.png"
 
 # Build settings
 markdown: kramdown
@@ -45,8 +45,8 @@ highlightjs_theme: "monokai-sublime"
 social:
   - name: Twitter
     icon: twitter
-    username: L__Cafe
-    url: https://twitter.com/L__Cafe
+    username: L1Cafe
+    url: https://twitter.com/L1Cafe
     desc: Follow me on Twitter
     share: true
 
@@ -59,15 +59,15 @@ social:
 
   - name: GitHub
     icon: github
-    username: L-Cafe
-    url: https://github.com/L-Cafe
+    username: L1Cafe
+    url: https://github.com/L1Cafe
     desc: Follow me on GitHub
     share: false 
 
   - name: LinkedIn
     icon: linkedin
-    username:
-    url: 
+    username: L1Cafe
+    url: https://www.linkedin.com/in/l1cafe/
     desc: Connect with me on LinkedIn
     share: true
 
@@ -101,8 +101,8 @@ social:
 
   - name: SoundCloud
     icon: soundcloud
-    username: L-Cafe
-    url: https://soundcloud.com/l_cafe
+    username: L1Cafe
+    url: https://soundcloud.com/l1cafe
     desc: Follow me on SoundCloud
     share: false
 
@@ -113,20 +113,6 @@ social:
     desc: Follow me on Tumblr
     share: true
 
-#  - name: Steam
-#    icon: steam
-#    username:
-#    url:
-#    desc: Friend me on Steam
-#    share: false
-
-#  - name: Vimeo
-#    icon: vimeo-square
-#    username:
-#    url:
-#    desc: Follow me on Vimeo
-#    share: false
-
   - name: Reddit
     icon: reddit
     username:
@@ -136,20 +122,7 @@ social:
 
   - name: "Hacker News"
     icon: hacker-news
-    username: #Hakashiro # Commented because Karma is below 2 and API is not available
-    url: #https://news.ycombinator.com/user?id=Hakashiro
+    username: Hakashiro # Commented because Karma is below 2 and API is not available
+    url: https://news.ycombinator.com/user?id=Hakashiro
     desc: Share to Hacker News
     share: true
-
-
-#protocols:
-#    fb_image: "/assets/logo.png"
-#    fb_image_width: 612
-#    fb_image_height: 605
-#    fb_image_type: "image/png"
-#
-#    twitter_image: "/assets/logo.png"
-#
-#    os_repo: "https://github.com/xxx/yyy"
-#    os_rcs_type: "git"
-#    os_src: "git@github.com:user/repo.git"

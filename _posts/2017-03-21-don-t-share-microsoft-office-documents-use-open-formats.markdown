@@ -2,7 +2,7 @@
 layout: post
 title: "Don't share Microsoft Office documents: use open formats"
 date: "2017-03-21 18:59:32 +0100"
-author: L-Cafe
+author: L1Cafe
 tags: FOSS rant opinion
 ---
 

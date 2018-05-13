@@ -2,7 +2,7 @@
 layout: post
 title: "Password managers"
 date: "2017-03-21 19:29:29 +0100"
-author: L-Cafe
+author: L1Cafe
 tags: opinion infosec
 ---
 
@@ -24,7 +24,7 @@ In this article, I will summarise a few options regarding password management, s
 
 ### [LastPass](https://www.lastpass.com/)
 
-![LastPass' interface]({{site.url}}/media/2017-03-21-password-managers/lastpass.png)
+![LastPass' interface]({{site.url}}/assets/images/2017-03-21-password-managers/lastpass.png)
 
 Probably the most famous password manager. Released in 2008, their team of experts deliver a cross-platform experience, with extensions for the most used browsers, but also for less well known browsers like Vivaldi, Maxthon or Dolphin. Can work independently of the operating system because it can be used as a browser extension, so all you need is a compatible browser, and you can carry your passwords wherever you go. There are also applications for Android, iPhone, iPad, Windows Phone, etc. The premium plan, at 1 USD/month is rather affordable. It also has a few extra features, such as one that watches websites for breaches and notifies you if you have a stored password for a website that may have been compromised, or a password change wizard that allows for semi-automated fast password changing in supported sites that requires very little manual intervention.
 
@@ -44,7 +44,7 @@ Probably the most famous password manager. Released in 2008, their team of exper
 
 ### [KeePass](http://keepass.info/)
 
-![KeePass' interface]( {{site.url}}/media/2017-03-21-password-managers/keepass.png)
+![KeePass' interface]( {{site.url}}/assets/images/2017-03-21-password-managers/keepass.png)
 
 It isn't exactly an application, but rather, a standard. The application is completely open source and the most used implementation (KeePass), uses the .Net framework on Windows, and Mono on macOS and Linux. Because of its open nature, there are lots of third party implementations such as KeePassX (which uses Qt, much more desirable for non-Windows machines), KeePassDroid, and others. It is absolutely free to use, forever, and it doesn't carry a service or cloud with it: it focuses exclusively on password vaults as files. These files can then be easily synchronised using Dropbox, Resilio Sync, or your cloud storage tool of choice. These vaults are encrypted and they can be tuned to use stronger encryption (increasing the open delay, and decreasing the effectiveness of brute-force attacks). KeePass/X allows specifying a key file, a password, or a combination of both, making it a multi-factor solution. There are third party ports for Android, iOS, Windows Phone, Windows Mobile, and even web apps.
 
@@ -65,7 +65,7 @@ It isn't exactly an application, but rather, a standard. The application is comp
 
 ### [1Password](https://1password.com/)
 
-![1Password's interface]( {{site.url}}/media/2017-03-21-password-managers/1password.png)
+![1Password's interface]( {{site.url}}/assets/images/2017-03-21-password-managers/1password.png)
 
 1Password has long been the prettiest of the bunch. It offers both a subscription based service, and allows paying a single time for a major version and subsequent updates. It has apps for Windows, and Mac, along with Android and iOS, and ships primarily as an app, rather than as a plug-in (although, browser plug-ins are available for integration). It supports a few OS specific features, such as the Touch Bar and the Touch ID on macOS and iOS, fingerprint authentication on Android, and, like LastPass, it has a service that watches for data breaches.
 
@@ -87,24 +87,24 @@ While less known, there are other ways to manage your passwords.
 
 ### [Encryptr](https://spideroak.com/personal/encryptr)
 
-![Encryptr's interface]( {{site.url}}/media/2017-03-21-password-managers/encryptr.png)
+![Encryptr's interface]( {{site.url}}/assets/images/2017-03-21-password-managers/encryptr.png)
 
 Tiny little app that allows for fast password management. It's clean-looking, and it's cloud-based, so you'll never lose your passwords. It's cross-platform and it uses the Electron framework to bring a unified experience across operating systems. It has apps for Windows, Linux, macOS, as well as Android, iOS. It's free and open source. Doesn't allow storing files, only plain text.
 
 ### [Enpass](https://www.enpass.io/)
 
-![Enpass' interface]( {{site.url}}/media/2017-03-21-password-managers/enpass.png)
+![Enpass' interface]( {{site.url}}/assets/images/2017-03-21-password-managers/enpass.png)
 
 A newcomer to the password management industry. It is completely free to use on desktop (Windows, macOS, Linux), but its mobile apps (Android, iOS, Blackberry, Windows Phone, Android Wear, Apple Watch) have a one-time fee. It looks good and allows for both local and third party cloud-based storage. Supports Windows Hello, Touch ID, Android fingerprint, etc.
 
 ### [True Key](https://www.truekey.com/)
 
-![True Key's interface]( {{site.url}}/media/2017-03-21-password-managers/truekey.jpg)
+![True Key's interface]( {{site.url}}/assets/images/2017-03-21-password-managers/truekey.jpg)
 
 Backed by Intel, it features biometric authentication, and is free for up to 15 passwords. After that, it requires a yearly subscription to use on Windows, macOS, iOS, and Android.
 
 ### [Master Password](http://masterpasswordapp.com/)
 
-![Master Password's interface]( {{site.url}}/media/2017-03-21-password-managers/masterpassword.png)
+![Master Password's interface]( {{site.url}}/assets/images/2017-03-21-password-managers/masterpassword.png)
 
-This one is a bit different. Instead of saving passwords in a file database or saving them on the cloud, it generates your passwords based on your master password, name, and website, so it never stores data.png
+This one is a bit different. Instead of saving passwords in a file database or saving them on the cloud, it generates your passwords based on your master password, name, and website, so it never stores data.

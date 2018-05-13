@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">{{ site.title }}</h3>
+    <p class="footer-description">{{ site.description }}</p>
 
     <div class="site-navigation">
 
@@ -18,7 +18,7 @@
 
     <div class="site-contact">
 
-      <p><strong>Social</strong></p>
+      <p><strong>Contact me</strong></p>
       <ul class="social-media-list">
         <li>
           <a href="mailto:{{ site.email }}">
@@ -43,7 +43,6 @@
 
     <div class="site-signature">
       <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
-      <p class="text">{{ site.description }}</p>
     </div>
 
   </div>

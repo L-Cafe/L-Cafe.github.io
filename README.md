@@ -1,2 +1,2 @@
-# [L-Cafe.github.io](https://l-cafe.github.io)
+# [L1Cafe.github.io](https://l1cafe.github.io)
 My personal website

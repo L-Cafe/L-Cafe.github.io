@@ -218,6 +218,13 @@ picture {
   margin: 0;
   max-width: 100%; }
 
+.footer-description {
+  font-size: 18px;
+  font-style: italic;
+  font-family: serif;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2); }
+
 html {
   box-sizing: border-box; }
 
