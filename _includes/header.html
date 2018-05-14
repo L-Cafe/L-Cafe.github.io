@@ -19,6 +19,8 @@
             {% else %}
               <li class="nav-link"><a href="{{ node.url | prepend: site.baseurl }}">{{ node.title }}</a>
             {% endif %}
+            <li> node {{ node.url}} </li>
+            <li> page {{page.url}} </li>
           {% endif %}
         {% endfor %}
       </ul>
