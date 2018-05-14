@@ -224,8 +224,7 @@ picture {
   font-size: 1em;
   font-style: italic;
   font-family: serif;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.05); }
+  text-align: center; }
   .footer-description:hover {
     background-color: rgba(0, 0, 0, 0.3); }
 
@@ -522,13 +521,6 @@ pre code.hljs {
       width: 1em;
       padding: 0 0.25em;
       text-decoration: none; }
-  .page-content .post .disqus {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .page-content .post .disqus:last-child {
-      margin-right: 0; }
   .page-content .post .post-navigation {
     font-size: 0.9em;
     display: block;
@@ -564,6 +556,7 @@ pre code.hljs {
 .site-footer {
   padding: 1em 1em 2em;
   background: linear-gradient(#20638f, #164666);
+  box-shadow: 0 -0.5em 3em rgba(0, 0, 0, 0.5);
   color: #fff;
     /*
 	*	Site Navigation (left)

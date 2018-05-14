@@ -305,9 +305,6 @@ pre code.hljs {
                 text-decoration: none;
             }
         }
-        .disqus {
-            @include span-columns(12);
-        }
         .post-navigation {
             font-size: 0.9em;
             display: block;
@@ -362,6 +359,7 @@ pre code.hljs {
     $link-color: $white;
     padding: 1em 1em 2em;
     background: linear-gradient($highlight-color,darken($highlight-color,10%));
+    box-shadow: 0 -0.5em 3em rgba(0, 0, 0, 0.5);
     color: $white;
     a {
         color: $link-color;
