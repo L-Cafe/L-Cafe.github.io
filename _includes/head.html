@@ -17,7 +17,6 @@
 
   <meta name="theme-color" content="#ffffff">
 
-  <!-- {% if site.protocols.fb_image %} -->
   <!-- Facebook OGP cards -->
   <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:url" content="{{ site.url }}" />
@@ -28,24 +27,19 @@
   <meta property="og:image:type" content="{{ site.protocols.fb_image_type }}" />
   <meta property="og:image:width" content="{{ site.protocols.fb_image_width }}" />
   <meta property="og:image:height" content="{{ site.protocols.fb_image_height }}" />
-  <!-- {% endif %} -->
 
-  <!-- {% if site.protocols.twitter_image %} -->
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.twitter_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   <meta name="twitter:url" content="{{ site.url }}">
-  <!-- {% endif %} -->
 
-  <!-- {% if protocols.os_repo and protocols.os_rcs_type and protocols.os_src %} -->
   <!-- Open Source Protocol -->
   <link rel="profile" href="http://osprotocol.com" />
   <meta property="os:repo" content="{{ protocols.os_repo }}" />
   <meta property="os:rcs_type" content="{{ protocols.os_rcs_type }}" />
   <meta property="os:src" content="{{ protocols.os_src }}" />
-  <!-- {% endif %} -->
 
   <!-- Site styles -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
