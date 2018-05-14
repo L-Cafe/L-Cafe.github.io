@@ -333,7 +333,7 @@ pre code.hljs {
       .navigation .navigation-menu-button {
         display: none; } }
   .navigation .navigation-wrapper {
-    max-width: 48em;
+    max-width: 62em;
     margin-left: auto;
     margin-right: auto;
     position: relative; }
@@ -412,10 +412,10 @@ pre code.hljs {
 	*	Pages
 	*/ }
   .page-content .wrapper {
-    max-width: 48em;
+    max-width: 62em;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em; }
+    padding: 2em; }
     .page-content .wrapper::after {
       clear: both;
       content: "";
@@ -423,7 +423,7 @@ pre code.hljs {
   .page-content .post-list {
     padding-top: 1em !important; }
   .page-content .post-meta {
-    max-width: 48em;
+    max-width: 62em;
     margin-left: auto;
     margin-right: auto;
     color: #999; }
@@ -555,7 +555,7 @@ pre code.hljs {
 */
 .site-footer {
   padding: 1em 1em 2em;
-  background: linear-gradient(#20638f, #164666);
+  background: linear-gradient(#1b557a, #0d293c);
   box-shadow: 0 -0.5em 3em rgba(0, 0, 0, 0.5);
   color: #fff;
     /*
@@ -574,7 +574,7 @@ pre code.hljs {
     .site-footer a:active, .site-footer a:focus {
       outline: none; }
   .site-footer .wrapper {
-    max-width: 48em;
+    max-width: 62em;
     margin-left: auto;
     margin-right: auto; }
     .site-footer .wrapper::after {

@@ -206,7 +206,7 @@ pre code.hljs {
 .page-content {
     .wrapper {
         @include outer-container;
-        padding: 1em;
+        padding: 2em;
     }
     /*
 	*	index.html
@@ -358,7 +358,7 @@ pre code.hljs {
 .site-footer {
     $link-color: $white;
     padding: 1em 1em 2em;
-    background: linear-gradient($highlight-color,darken($highlight-color,10%));
+    background: linear-gradient(darken($highlight-color,05%),darken($highlight-color,20%));
     box-shadow: 0 -0.5em 3em rgba(0, 0, 0, 0.5);
     color: $white;
     a {
