@@ -223,7 +223,7 @@ picture {
   font-style: italic;
   font-family: serif;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.2); }
+  background-color: rgba(0, 0, 0, 0.1); }
 
 html {
   box-sizing: border-box; }
@@ -334,9 +334,6 @@ pre code.hljs {
   .navigation .logo {
     float: left;
     height: 4em; }
-    @media screen and (min-width: 768px) {
-      .navigation .logo {
-        padding-left: 16px; } }
     .navigation .logo img {
       max-height: 2.5em;
       margin-top: 0.75em;

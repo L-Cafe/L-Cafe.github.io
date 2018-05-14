@@ -127,7 +127,7 @@ pre code.hljs {
     float: left;
     height: 4em;
     @include media ($tablet) {
-    	padding-left: $em-base;
+    	// padding-left: 1em;
     }
     img {
       max-height: 2.5em;
