@@ -27,8 +27,9 @@ exclude:
 
 title: L1Cafe
 subtitle: Software, infosec, system administration projects, opinions and tips.
+description: Software, infosec, system administration projects, opinions and tips.
 email: L1Cafe-github@tuta.io
-description: > # this means to ignore newlines until "baseurl:"
+quote: > # this means to ignore newlines until "baseurl:"
   <q>Keep your eyes on the stars, and your feet on the ground.</q> - Theodore Roosevelt
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://l1cafe.github.io"
