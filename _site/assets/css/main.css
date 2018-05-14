@@ -177,7 +177,8 @@ h6 {
   margin: 0 0 1rem; }
 
 h1 {
-  font-size: 2.0736em; }
+  font-size: 2.48832em;
+  text-shadow: 0 0 3em #20638f; }
 
 h2 {
   font-size: 1.728em; }
@@ -223,7 +224,9 @@ picture {
   font-style: italic;
   font-family: serif;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.1); }
+  background-color: rgba(0, 0, 0, 0.05); }
+  .footer-description:hover {
+    background-color: rgba(0, 0, 0, 0.3); }
 
 html {
   box-sizing: border-box; }
@@ -303,7 +306,9 @@ pre code.hljs {
 *	Header
 */
 .navigation {
-  box-shadow: 0 2px #20638f;
+  background-color: white;
+  box-shadow: 0 0.2em 10em #20638f;
+  border-bottom: 0.15em solid #20638f;
   padding: 0 1em;
   margin: 0;
   /*

@@ -35,12 +35,6 @@
   <meta name="twitter:image" content="{% if page.cover %}{{ page.cover | prepend: site.baseurl | prepend: site.url }}{% else %}{{ site.protocols.twitter_image | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   <meta name="twitter:url" content="{{ site.url }}">
 
-  <!-- Open Source Protocol -->
-  <link rel="profile" href="http://osprotocol.com" />
-  <meta property="os:repo" content="{{ protocols.os_repo }}" />
-  <meta property="os:rcs_type" content="{{ protocols.os_rcs_type }}" />
-  <meta property="os:src" content="{{ protocols.os_src }}" />
-
   <!-- Site styles -->
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

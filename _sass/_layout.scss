@@ -100,7 +100,9 @@ pre code.hljs {
 *	Header
 */
 .navigation {
-	box-shadow: 0 2px $highlight-color;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 0.20em 10em $highlight-color;
+	border-bottom: 0.15em solid $highlight-color;
 	padding: 0 1em;
 	margin: 0;
 	/*
@@ -368,9 +370,6 @@ pre code.hljs {
 	}
 	.wrapper {
 		@include outer-container;
-	}
-	.footer-heading {
-
 	}
 	/*
 	*	Site Navigation (left)
