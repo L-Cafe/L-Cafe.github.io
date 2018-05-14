@@ -220,7 +220,8 @@ picture {
   max-width: 100%; }
 
 .footer-description {
-  font-size: 18px;
+  cursor: default;
+  font-size: 1em;
   font-style: italic;
   font-family: serif;
   text-align: center;
@@ -240,7 +241,8 @@ html {
 /*
 *	Globals
 */
-html, body {
+body,
+html {
   margin: 0;
   padding: 0;
   width: 100%; }
@@ -281,39 +283,47 @@ pre code.hljs {
     margin-right: auto;
     border-radius: 50%; }
 
-.site-header-container, .post-header-container {
+.post-header-container,
+.site-header-container {
   width: 100%;
   text-align: center; }
-  .site-header-container.has-cover, .post-header-container.has-cover {
+  .post-header-container.has-cover,
+  .site-header-container.has-cover {
     color: #fff;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.67) !important;
     background-position: 50% 50%;
     background-size: cover; }
-    .site-header-container.has-cover .title, .post-header-container.has-cover .title {
+    .post-header-container.has-cover .title,
+    .site-header-container.has-cover .title {
       font-size: 2.98598em; }
-    .site-header-container.has-cover .subtitle, .site-header-container.has-cover .info, .post-header-container.has-cover .subtitle, .post-header-container.has-cover .info {
+    .post-header-container.has-cover .info,
+    .post-header-container.has-cover .subtitle,
+    .site-header-container.has-cover .info,
+    .site-header-container.has-cover .subtitle {
       font-size: 1.2em; }
-  .site-header-container .scrim, .post-header-container .scrim {
+  .post-header-container .scrim,
+  .site-header-container .scrim {
     padding: 3em 1em; }
-    .site-header-container .scrim.has-cover, .post-header-container .scrim.has-cover {
+    .post-header-container .scrim.has-cover,
+    .site-header-container .scrim.has-cover {
       background-color: rgba(0, 0, 0, 0.2);
       padding: 6em 1em !important; }
       @media screen and (min-width: 768px) {
-        .site-header-container .scrim.has-cover, .post-header-container .scrim.has-cover {
+        .post-header-container .scrim.has-cover,
+        .site-header-container .scrim.has-cover {
           padding: 9em 1em !important; } }
 
 /*
 *	Header
 */
 .navigation {
-  background-color: white;
-  box-shadow: 0 0.2em 10em #20638f;
-  border-bottom: 0.15em solid #20638f;
+  background: linear-gradient(#164666, #0d293c);
+  box-shadow: 0 0.2em 10em #2980b9;
   padding: 0 1em;
   margin: 0;
-  /*
-  *	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
-  */ }
+    /*
+	*	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
+	*/ }
   .navigation .navigation-menu-button {
     display: block;
     float: right;
@@ -371,34 +381,37 @@ pre code.hljs {
     text-align: right;
     width: 100%;
     padding: 0.25em 0; }
+    .navigation ul li.nav-link a {
+      color: #94c6e7; }
     @media screen and (min-width: 768px) {
       .navigation ul li.nav-link {
         background: transparent;
         display: inline;
         text-decoration: none;
         width: auto; } }
+  .navigation li.nav-link.active a {
+    color: white;
+    text-decoration: none; }
   .navigation li.nav-link a {
     display: inline-block; }
     @media screen and (min-width: 768px) {
       .navigation li.nav-link a {
-        padding-right: 1.5em; } }
-  @media screen and (min-width: 768px) {
-    .navigation li.nav-link:last-child a {
-      padding-right: 1em; } }
+        padding-right: 0.75em;
+        padding-left: 0.75em; } }
 
 /*
 *	Body
 */
 .page-content {
-  /*
-  *	index.html
-  */
-  /*
-  *	Posts
-  */
-  /*
-  *	Pages
-  */ }
+    /*
+	*	index.html
+	*/
+    /*
+	*	Posts
+	*/
+    /*
+	*	Pages
+	*/ }
   .page-content .wrapper {
     max-width: 48em;
     margin-left: auto;
@@ -462,7 +475,7 @@ pre code.hljs {
   .page-content .post ul {
     margin-bottom: 1em; }
   .page-content .post .post-header-container .scrim {
-    padding: 2em 1em 1em 1em; }
+    padding: 2em 1em 1em; }
   .page-content .post .post-meta {
     padding-bottom: 1em; }
   .page-content .post .post-content {
@@ -470,7 +483,7 @@ pre code.hljs {
   .page-content .post .tags {
     font-size: 0.9em; }
   .page-content .post .rss {
-    margin: 1em 0 0 0;
+    margin: 1em 0 0;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -488,7 +501,7 @@ pre code.hljs {
           margin-right: 0; } }
   .page-content .post .share {
     font-weight: bold;
-    margin: 0 0 1em 0;
+    margin: 0 0 1em;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -532,11 +545,10 @@ pre code.hljs {
       margin: 1em 0;
       text-align: right; }
   .page-content .page .post-header {
-    padding: 0.5em 1em 1em 1em;
+    padding: 0.5em 1em 1em;
     text-align: center; }
   .page-content .page .posts-list li {
-    padding: 0.48225em;
-    padding-left: 0; }
+    padding: 0.48225em 0.48225em 0.48225em 0; }
   .page-content .page .posts-list .desc {
     font-size: 0.9em; }
   .page-content .page .posts-list .post-date {
@@ -550,22 +562,22 @@ pre code.hljs {
 *	Footer
 */
 .site-footer {
-  padding: 1em 1em 2em 1em;
-  background-color: #20638f;
+  padding: 1em 1em 2em;
+  background: linear-gradient(#20638f, #164666);
   color: #fff;
-  /*
-  *	Site Navigation (left)
-  */
-  /*
-  *	Contact Info (center)
-  */
-  /*
-  *	Site Description/Signature (right)
-  */ }
+    /*
+	*	Site Navigation (left)
+	*/
+    /*
+	*	Contact Info (center)
+	*/
+    /*
+	*	Subscribe
+	*/ }
   .site-footer a {
     color: #fff; }
     .site-footer a:active, .site-footer a:focus, .site-footer a:hover {
-      color: #e6e6e6; }
+      color: #6ab0de; }
     .site-footer a:active, .site-footer a:focus {
       outline: none; }
   .site-footer .wrapper {
