@@ -45,8 +45,8 @@ fragments of source code in a file, for lots of programming languages.
 # [DevSkim](https://marketplace.visualstudio.com/items?itemName=MS-DevSkim.vscode-devskim)
 
 Great extension that detects lots of common mistakes that may result in security
-issues, such as plain HTTP links, secrets and tokens stored in plain text, 
-disabled certificate validation, and so on.
+issues, such as plain HTTP links, secrets and tokens stored in plain text,
+ disabled certificate validation, and so on.
 
 # [Docker](https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker)
 
