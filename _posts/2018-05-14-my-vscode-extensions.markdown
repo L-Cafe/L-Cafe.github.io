@@ -15,7 +15,6 @@ has fixed a lot of its shortcomings, like its speed.
 So it's been a few months since I first started using VSCode, and I found a few
 extensions that I really like now and use often. Here are some of them:
 
-
 # [Auto Close Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag)
 
 ![]({{site.url}}/assets/images/2018-05-14-my-vscode-extensions/autoclosetag.gif)
