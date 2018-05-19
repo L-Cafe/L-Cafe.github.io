@@ -43,7 +43,7 @@ defaults:
       type: posts
     values:
       layout: post
-      author: "L-Cafe"
+      author: "L1Cafe"
 
 # Build settings
 markdown: kramdown

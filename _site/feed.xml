@@ -1,4 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.2">Jekyll</generator><link href="https://l1cafe.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://l1cafe.github.io/" rel="alternate" type="text/html" /><updated>2018-05-19T17:36:08+02:00</updated><id>https://l1cafe.github.io/</id><title type="html">L1Cafe</title><subtitle>Software, infosec, system administration projects, opinions and tips.</subtitle><entry><title type="html">Why I use a MacBook</title><link href="https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook.html" rel="alternate" type="text/html" title="Why I use a MacBook" /><published>2017-04-07T19:26:48+02:00</published><updated>2017-04-07T19:26:48+02:00</updated><id>https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook</id><content type="html" xml:base="https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook.html">&lt;p&gt;In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.2">Jekyll</generator><link href="https://l1cafe.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://l1cafe.github.io/" rel="alternate" type="text/html" /><updated>2018-05-19T17:42:07+02:00</updated><id>https://l1cafe.github.io/</id><title type="html">L1Cafe</title><subtitle>Software, infosec, system administration projects, opinions and tips.</subtitle><entry><title type="html">My favourite Visual Studio Code extensions</title><link href="https://l1cafe.github.io/2018/05/14/my-vscode-extensions.html" rel="alternate" type="text/html" title="My favourite Visual Studio Code extensions" /><published>2018-05-14T18:28:03+02:00</published><updated>2018-05-14T18:28:03+02:00</updated><id>https://l1cafe.github.io/2018/05/14/my-vscode-extensions</id><content type="html" xml:base="https://l1cafe.github.io/2018/05/14/my-vscode-extensions.html">&lt;p&gt;At first, I really disliked Electron and JS-based text editors, like Atom and
+VSCode, but after learning Vim, and finding many problems with my plug-ins, on
+different languages (such as MIPS assembly, Java and VHDL), I decided to give
+VSCode a try, and I have been very impressed by how well Visual Studio Code
+works. It’s much faster than JS-based editors used to be, it has amazing
+community support, and I’m generally faster, and more productive using it. It 
+has fixed a lot of its shortcomings, like its speed.&lt;/p&gt;
+
+&lt;p&gt;So it’s been a few months since I first started using VSCode, and I found a few
+extensions that I really like now and use often. Here are some of them:&lt;/p&gt;
+
+&lt;h1 id=&quot;auto-close-tag&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag&quot;&gt;Auto Close Tag&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l1cafe.github.io/assets/images/2018-05-14-my-vscode-extensions/autoclosetag.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Very useful extension for web development.&lt;/p&gt;
+
+&lt;h1 id=&quot;beautify&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify&quot;&gt;Beautify&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Much more powerful than the js-beautify built into VSCode.&lt;/p&gt;
+
+&lt;h1 id=&quot;better-comments&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments&quot;&gt;Better Comments&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l1cafe.github.io/assets/images/2018-05-14-my-vscode-extensions/bettercomments.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When a project size grows, keeping track of things to do, questions, and other
+special comments you leave in the code to improve readability can quickly become
+a challenge. This extension essentially proposes a few tiers of comments you
+can use to categorise comments and notes, so it’s easier to keep track of them.&lt;/p&gt;
+
+&lt;h1 id=&quot;code-runner&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner&quot;&gt;Code Runner&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;This extension supports running code with custom commands, as well as running
+fragments of source code in a file, for lots of programming languages.&lt;/p&gt;
+
+&lt;h1 id=&quot;devskim&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=MS-DevSkim.vscode-devskim&quot;&gt;DevSkim&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Great extension that detects lots of common mistakes that may result in security
+issues, such as plain HTTP links, secrets and tokens stored in plain text,
+ disabled certificate validation, and so on.&lt;/p&gt;
+
+&lt;h1 id=&quot;docker&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker&quot;&gt;Docker&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l1cafe.github.io/assets/images/2018-05-14-my-vscode-extensions/docker.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Adds functionality for automatic Dockerfile generation, syntax highlighting
+for docker files, IntelliSense, linting, the ability to deploy images
+directly from VSCode and more.&lt;/p&gt;
+
+&lt;h1 id=&quot;editorconfig&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig&quot;&gt;EditorConfig&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;This extension is based on the &lt;a href=&quot;http://editorconfig.org&quot;&gt;EditorConfig&lt;/a&gt; standard
+which aims to maintain consistency across environments where code is shared,
+even when different people editing the same file are using different editors,
+by abstracting and overriding common settings such as tab spacing, charsets, and
+such.&lt;/p&gt;
+
+&lt;h1 id=&quot;git-history&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory&quot;&gt;Git History&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l1cafe.github.io/assets/images/2018-05-14-my-vscode-extensions/git_history.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Allows you to browse any git repository graphically, compare branches, commits,
+as well as perform merges, revert commits, view GitHub avatars…&lt;/p&gt;
+
+&lt;h1 id=&quot;git-lens&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens&quot;&gt;Git Lens&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Adds many features, like inline blame (to see who edited what line, and when), 
+opening commit directly in GitHub, view diff from commit and current file, and 
+more.&lt;/p&gt;
+
+&lt;h1 id=&quot;gruvbox-themes&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=tomphilbin.gruvbox-themes&quot;&gt;Gruvbox Themes&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l1cafe.github.io/assets/images/2018-05-14-my-vscode-extensions/gruvbox.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Definitely my favourite theme: The light version is not completely white, but 
+beige, which is much more pleasant to see even in dark environments, but it also
+ ships with a dark theme which uses the same color scheme. It has good contrast 
+while at the same time not being soft enough to use for hours on end.&lt;/p&gt;
+
+&lt;h1 id=&quot;ip-address&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Compulim.vscode-ipaddress&quot;&gt;IP Address&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://l1cafe.github.io/assets/images/2018-05-14-my-vscode-extensions/ip.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Shows your IP address in the status bar, which helps greatly when using a laptop
+ and moving around often, as you don’t need to pull up a terminal or a web 
+browser to check your IP.&lt;/p&gt;
+
+&lt;h1 id=&quot;jekyll-snippets&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=ginfuru.vscode-jekyll-snippets&quot;&gt;Jekyll Snippets&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Helpful when dealing with Jekyll websites (did you know this website runs on 
+Jekyll and is completely static?) which is my favourite static site generator. 
+Adds features such as syntax highlighting for Jekyll Front Matter, as well as 
+ERB snippets.&lt;/p&gt;
+
+&lt;h1 id=&quot;nightswitch-lite&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=gharveymn.nightswitch-lite&quot;&gt;NightSwitch-Lite&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Toggles to light/dark themes as specified in your configuration automatically 
+based on the time of day and location, but it also allows to manually set the 
+switching time.&lt;/p&gt;
+
+&lt;h1 id=&quot;vim&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=vscodevim.vim&quot;&gt;Vim&lt;/a&gt;&lt;/h1&gt;
+
+&lt;p&gt;Adds modal editing, Vim shortcuts, command remapping, and some popular Vim 
+plugins like EasyMotion, Surround, and such.&lt;/p&gt;</content><author><name>L1Cafe</name></author><category term="VSCode" /><category term="Microsoft" /><summary type="html">At first, I really disliked Electron and JS-based text editors, like Atom and VSCode, but after learning Vim, and finding many problems with my plug-ins, on different languages (such as MIPS assembly, Java and VHDL), I decided to give VSCode a try, and I have been very impressed by how well Visual Studio Code works. It’s much faster than JS-based editors used to be, it has amazing community support, and I’m generally faster, and more productive using it. It has fixed a lot of its shortcomings, like its speed.</summary></entry><entry><title type="html">Why I use a MacBook</title><link href="https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook.html" rel="alternate" type="text/html" title="Why I use a MacBook" /><published>2017-04-07T19:26:48+02:00</published><updated>2017-04-07T19:26:48+02:00</updated><id>https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook</id><content type="html" xml:base="https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook.html">&lt;p&gt;In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.&lt;/p&gt;
 
 &lt;h1 id=&quot;its-familiar&quot;&gt;It’s familiar&lt;/h1&gt;
 
@@ -50,7 +153,7 @@
 
 &lt;h2 id=&quot;it-simply-is-pretty&quot;&gt;It simply is pretty&lt;/h2&gt;
 
-&lt;p&gt;The truth is that design is a very important part of productivity: a study found that when people worked in well designed offices, and used nicely designed hardware and appliances, were much more productive than on ugly environments and devices.&lt;/p&gt;</content><author><name>L-Cafe</name></author><category term="opinion" /><category term="Apple" /><summary type="html">In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.</summary></entry><entry><title type="html">Password managers</title><link href="https://l1cafe.github.io/2017/03/21/password-managers.html" rel="alternate" type="text/html" title="Password managers" /><published>2017-03-21T19:29:29+01:00</published><updated>2017-03-21T19:29:29+01:00</updated><id>https://l1cafe.github.io/2017/03/21/password-managers</id><content type="html" xml:base="https://l1cafe.github.io/2017/03/21/password-managers.html">&lt;p&gt;The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft…&lt;/p&gt;
+&lt;p&gt;The truth is that design is a very important part of productivity: a study found that when people worked in well designed offices, and used nicely designed hardware and appliances, were much more productive than on ugly environments and devices.&lt;/p&gt;</content><author><name>L1Cafe</name></author><category term="opinion" /><category term="Apple" /><summary type="html">In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.</summary></entry><entry><title type="html">Password managers</title><link href="https://l1cafe.github.io/2017/03/21/password-managers.html" rel="alternate" type="text/html" title="Password managers" /><published>2017-03-21T19:29:29+01:00</published><updated>2017-03-21T19:29:29+01:00</updated><id>https://l1cafe.github.io/2017/03/21/password-managers</id><content type="html" xml:base="https://l1cafe.github.io/2017/03/21/password-managers.html">&lt;p&gt;The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft…&lt;/p&gt;
 
 &lt;p&gt;If you have ever read basic security and privacy tips you might be aware of some basic points:&lt;/p&gt;
 
@@ -165,7 +268,7 @@
 
 &lt;p&gt;&lt;img src=&quot;https://l1cafe.github.io/assets/images/2017-03-21-password-managers/masterpassword.png&quot; alt=&quot;Master Password's interface&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;This one is a bit different. Instead of saving passwords in a file database or saving them on the cloud, it generates your passwords based on your master password, name, and website, so it never stores data.&lt;/p&gt;</content><author><name>L-Cafe</name></author><category term="opinion" /><category term="passwords" /><summary type="html">The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft…</summary></entry><entry><title type="html">Don’t share Microsoft Office documents: use open formats</title><link href="https://l1cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats.html" rel="alternate" type="text/html" title="Don't share Microsoft Office documents: use open formats" /><published>2017-03-21T18:59:32+01:00</published><updated>2017-03-21T18:59:32+01:00</updated><id>https://l1cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats</id><content type="html" xml:base="https://l1cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats.html">&lt;p&gt;It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.&lt;/p&gt;
+&lt;p&gt;This one is a bit different. Instead of saving passwords in a file database or saving them on the cloud, it generates your passwords based on your master password, name, and website, so it never stores data.&lt;/p&gt;</content><author><name>L1Cafe</name></author><category term="opinion" /><category term="passwords" /><summary type="html">The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft…</summary></entry><entry><title type="html">Don’t share Microsoft Office documents: use open formats</title><link href="https://l1cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats.html" rel="alternate" type="text/html" title="Don't share Microsoft Office documents: use open formats" /><published>2017-03-21T18:59:32+01:00</published><updated>2017-03-21T18:59:32+01:00</updated><id>https://l1cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats</id><content type="html" xml:base="https://l1cafe.github.io/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats.html">&lt;p&gt;It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.&lt;/p&gt;
 
 &lt;p&gt;It’s not the first, and probably won’t be the last time, people complain about OOXML, Microsoft Office, and their dirty tricks. Here’s a few references in no particular order: &lt;a href=&quot;http://www.consortiuminfo.org/standardsblog/article.php?story=20070117145745854&quot;&gt;consortiuminfo.org&lt;/a&gt;, &lt;a href=&quot;https://www.gnu.org/philosophy/no-word-attachments.en.html&quot;&gt;GNU&lt;/a&gt;, &lt;a href=&quot;https://www.fsf.org/campaigns/opendocument/reject&quot;&gt;FSF&lt;/a&gt;, &lt;a href=&quot;http://stephesblog.blogs.com/my_weblog/2007/08/microsofts-fail.html&quot;&gt;stephesblog.blogs.com&lt;/a&gt;, &lt;a href=&quot;https://arstechnica.com/information-technology/2008/02/ibm-responds-to-microsoft-ooxml-is-technically-inferior/&quot;&gt;Ars Technica&lt;/a&gt;, &lt;a href=&quot;http://www.goldmark.org/netrants/no-word/attach.html&quot;&gt;GoldMark&lt;/a&gt;, &lt;a href=&quot;https://logological.org/word&quot;&gt;Tristan Miller&lt;/a&gt;… The list could go on and on forever, but I think the links provided make valid points. Now It’s my turn:&lt;/p&gt;
 
@@ -195,7 +298,7 @@
 
 &lt;h1 id=&quot;microsoft-office-has-terrible-formula-support&quot;&gt;Microsoft Office has terrible formula support&lt;/h1&gt;
 
-&lt;p&gt;When producing documents with math and physics formulas, Microsoft Office has a tool for inserting equations, however, this tool, while easy to use for sporadic situations, becomes a nightmare in terms of UX, because it’s too difficult to insert reasonably complex formulas using Microsoft Office’s system. The most reasonable option, and what most math university teachers and doctors use is LaTeX. LaTeX typically produces PDF documents, and has a very solid syntax, built on top of TeX. Both are open source typesetting systems that produce beautiful, solid, and consistent output and it’s the desirable choice for productivity. Here’s some more information on Word vs LaTeX: &lt;a href=&quot;http://web.mit.edu/klund/www/urk/texvword.html&quot;&gt;MIT&lt;/a&gt;, &lt;a href=&quot;https://www.researchgate.net/post/Why_LaTex_is_better_choice_than_Microsoft_Word&quot;&gt;ResearchGate&lt;/a&gt;,  &lt;a href=&quot;https://tex.stackexchange.com/questions/1756/why-should-i-use-latex&quot;&gt;StackExchange&lt;/a&gt;, &lt;a href=&quot;https://www.reddit.com/r/LaTeX/comments/26z3ii/why_is_latex_better_than_the_current_version_of/&quot;&gt;Reddit&lt;/a&gt;, &lt;a href=&quot;http://www.andy-roberts.net/writing/latex/benefits&quot;&gt;Andrew Roberts&lt;/a&gt;.&lt;/p&gt;</content><author><name>L-Cafe</name></author><category term="opinion" /><category term="Microsoft" /><summary type="html">It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.</summary></entry><entry><title type="html">Making an open source security system: part 1</title><link href="https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html" rel="alternate" type="text/html" title="Making an open source security system: part 1" /><published>2017-03-21T18:45:54+01:00</published><updated>2017-03-21T18:45:54+01:00</updated><id>https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1</id><content type="html" xml:base="https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html">&lt;p&gt;It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from &lt;a href=&quot;http://www.chuango.com/english/&quot;&gt;Chuango&lt;/a&gt;. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).&lt;/p&gt;
+&lt;p&gt;When producing documents with math and physics formulas, Microsoft Office has a tool for inserting equations, however, this tool, while easy to use for sporadic situations, becomes a nightmare in terms of UX, because it’s too difficult to insert reasonably complex formulas using Microsoft Office’s system. The most reasonable option, and what most math university teachers and doctors use is LaTeX. LaTeX typically produces PDF documents, and has a very solid syntax, built on top of TeX. Both are open source typesetting systems that produce beautiful, solid, and consistent output and it’s the desirable choice for productivity. Here’s some more information on Word vs LaTeX: &lt;a href=&quot;http://web.mit.edu/klund/www/urk/texvword.html&quot;&gt;MIT&lt;/a&gt;, &lt;a href=&quot;https://www.researchgate.net/post/Why_LaTex_is_better_choice_than_Microsoft_Word&quot;&gt;ResearchGate&lt;/a&gt;,  &lt;a href=&quot;https://tex.stackexchange.com/questions/1756/why-should-i-use-latex&quot;&gt;StackExchange&lt;/a&gt;, &lt;a href=&quot;https://www.reddit.com/r/LaTeX/comments/26z3ii/why_is_latex_better_than_the_current_version_of/&quot;&gt;Reddit&lt;/a&gt;, &lt;a href=&quot;http://www.andy-roberts.net/writing/latex/benefits&quot;&gt;Andrew Roberts&lt;/a&gt;.&lt;/p&gt;</content><author><name>L1Cafe</name></author><category term="opinion" /><category term="Microsoft" /><summary type="html">It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.</summary></entry><entry><title type="html">Making an open source security system: part 1</title><link href="https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html" rel="alternate" type="text/html" title="Making an open source security system: part 1" /><published>2017-03-21T18:45:54+01:00</published><updated>2017-03-21T18:45:54+01:00</updated><id>https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1</id><content type="html" xml:base="https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1.html">&lt;p&gt;It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from &lt;a href=&quot;http://www.chuango.com/english/&quot;&gt;Chuango&lt;/a&gt;. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;First issue&lt;/strong&gt;: lack of encryption. After a little investigation I found out that, despite their claims on the official website, the communications with the wireless sensors were not encrypted.&lt;/p&gt;
 
@@ -217,7 +320,7 @@
 
 &lt;p&gt;In general, it’s a device that might suit some people’s needs, but it isn’t very reliable. I believe that using open source hardware and software, and the help of the community, we can bring a new meaning to DIY alarm systems, and create a more reliable, modular, and customisable solution that will fit everyone’s need while staying as cheap as the hardware can get.&lt;/p&gt;
 
-&lt;p&gt;I will soon start developing an alternative open source burglar alarm in &lt;a href=&quot;https://github.com/L1Cafe/SafeSpace&quot;&gt;GitHub&lt;/a&gt;. Based on Arduino, and maybe Raspberry Pi.&lt;/p&gt;</content><author><name>L-Cafe</name></author><category term="project" /><summary type="html">It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).</summary></entry><entry><title type="html">Hello world</title><link href="https://l1cafe.github.io/2017/03/20/hello-world.html" rel="alternate" type="text/html" title="Hello world" /><published>2017-03-20T16:28:03+01:00</published><updated>2017-03-20T16:28:03+01:00</updated><id>https://l1cafe.github.io/2017/03/20/hello-world</id><content type="html" xml:base="https://l1cafe.github.io/2017/03/20/hello-world.html">&lt;p&gt;This is my first post.&lt;/p&gt;
+&lt;p&gt;I will soon start developing an alternative open source burglar alarm in &lt;a href=&quot;https://github.com/L1Cafe/SafeSpace&quot;&gt;GitHub&lt;/a&gt;. Based on Arduino, and maybe Raspberry Pi.&lt;/p&gt;</content><author><name>L1Cafe</name></author><category term="project" /><summary type="html">It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).</summary></entry><entry><title type="html">Hello world</title><link href="https://l1cafe.github.io/2017/03/20/hello-world.html" rel="alternate" type="text/html" title="Hello world" /><published>2017-03-20T16:28:03+01:00</published><updated>2017-03-20T16:28:03+01:00</updated><id>https://l1cafe.github.io/2017/03/20/hello-world</id><content type="html" xml:base="https://l1cafe.github.io/2017/03/20/hello-world.html">&lt;p&gt;This is my first post.&lt;/p&gt;
 
 &lt;p&gt;In this blog, I’ll be sharing my projects, opinions and tips on various matters.&lt;/p&gt;
 
@@ -234,4 +337,4 @@
   &lt;li&gt;Graphical design&lt;/li&gt;
   &lt;li&gt;Mathematics&lt;/li&gt;
   &lt;li&gt;Science&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>L-Cafe</name></author><summary type="html">This is my first post.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>L1Cafe</name></author><summary type="html">This is my first post.</summary></entry></feed>
