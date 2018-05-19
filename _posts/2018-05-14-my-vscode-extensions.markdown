@@ -2,14 +2,16 @@
 title:      "My favourite Visual Studio Code extensions"
 date:       2018-05-14 17:28:03 +0100
 tags:       VSCode Microsoft
+published:  false
 ---
 
 At first, I really disliked Electron and JS-based text editors, like Atom and
 VSCode, but after learning Vim, and finding many problems with my plug-ins, on
 different languages (such as MIPS assembly, Java and VHDL), I decided to give
-VSCode a try. And I have been very impressed by how well Visual Studio Code
+VSCode a try, and I have been very impressed by how well Visual Studio Code
 works. It's much faster than JS-based editors used to be, it has amazing
-community support, and I'm generally faster, and more productive using it.
+community support, and I'm generally faster, and more productive using it. It 
+has fixed a lot of its shortcomings, like its speed.
 
 So it's been a few months since I first started using VSCode, and I found a few
 extensions that I really like now and use often. Here are some of them:
