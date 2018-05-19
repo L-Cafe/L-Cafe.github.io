@@ -1,10 +1,7 @@
 ---
-layout: post
-title:  "My favourite Visual Studio Code extensions"
-date:   2018-05-13 17:28:03 +0100
-author: L1Cafe
-tags: VSCode
-published: false
+title:      "My favourite Visual Studio Code extensions"
+date:       2018-05-14 17:28:03 +0100
+tags:       VSCode Microsoft
 ---
 
 At first, I really disliked Electron and JS-based text editors, like Atom and
@@ -70,3 +67,44 @@ such.
 
 Allows you to browse any git repository graphically, compare branches, commits,
 as well as perform merges, revert commits, view GitHub avatars...
+
+# [Git Lens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
+
+Adds many features, like inline blame (to see who edited what line, and when), 
+opening commit directly in GitHub, view diff from commit and current file, and 
+more.
+
+# [Gruvbox Themes](https://marketplace.visualstudio.com/items?itemName=tomphilbin.gruvbox-themes)
+
+![]({{site.url}}/assets/images/2018-05-14-my-vscode-extensions/gruvbox.png)
+
+Definitely my favourite theme: The light version is not completely white, but 
+beige, which is much more pleasant to see even in dark environments, but it also
+ ships with a dark theme which uses the same color scheme. It has good contrast 
+while at the same time not being soft enough to use for hours on end.
+
+# [IP Address](https://marketplace.visualstudio.com/items?itemName=Compulim.vscode-ipaddress)
+
+![]({{site.url}}/assets/images/2018-05-14-my-vscode-extensions/ip.gif)
+
+Shows your IP address in the status bar, which helps greatly when using a laptop
+ and moving around often, as you don't need to pull up a terminal or a web 
+browser to check your IP.
+
+# [Jekyll Snippets](https://marketplace.visualstudio.com/items?itemName=ginfuru.vscode-jekyll-snippets)
+
+Helpful when dealing with Jekyll websites (did you know this website runs on 
+Jekyll and is completely static?) which is my favourite static site generator. 
+Adds features such as syntax highlighting for Jekyll Front Matter, as well as 
+ERB snippets.
+
+# [NightSwitch-Lite](https://marketplace.visualstudio.com/items?itemName=gharveymn.nightswitch-lite)
+
+Toggles to light/dark themes as specified in your configuration automatically 
+based on the time of day and location, but it also allows to manually set the 
+switching time.
+
+# [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
+
+Adds modal editing, Vim shortcuts, command remapping, and some popular Vim 
+plugins like EasyMotion, Surround, and such.

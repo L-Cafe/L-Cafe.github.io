@@ -4,6 +4,8 @@ title: About me
 permalink: /about/
 ---
 
+If you have a job offer, use the "Contact me" section to request my CV.
+
 I'm L1Cafe. I'm a Higher Technician Cross-Platform Application Developer.
 Currently studying Computer Science & Engineering at
 [URJC](http://www.urjc.es/), a Spanish university located in Madrid.
@@ -35,7 +37,8 @@ experimentation platform.
 
 On GitHub, I maintain some of my settings for a few applications of my choice.
 
-For editing code, I enjoy using Vim and Visual Studio Code. You can find my `.vimrc` settings
+For editing code, I enjoy using Vim and Visual Studio Code. You can find my
+`.vimrc` settings
 [here](https://github.com/L1Cafe/My-Preferences/tree/master/vim).
 
 My shell of choice is zsh. My settings are published
@@ -48,8 +51,15 @@ whether what I write will be published on the web (for which I use Markdown,
 with LaTeX math formulas through MathJax), or needs to be printed, or released
 as a PDF file, (for which I use plain LaTeX).
 
-I enjoy producing audiovisual content. Specifically, I play the piano, and enjoy making chiptunes (8-bit music) with [Pico-8](http://www.lexaloffle.com/pico-8.php). As well as photo editing.
+I enjoy producing audiovisual content. Specifically, I play the piano, and enjoy
+ making chiptunes (8-bit music) wit˛h
+ [Pico-8](http://www.lexaloffle.com/pico-8.php). As well as photo editing.
 
 For my photo editing and graphical design needs, I rely on
 [Affinity Photo](https://affinity.serif.com/en-gb/photo/), and 
 [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
+
+## Me across the web
+
+- [myNoise Friends](https://mynoise.net/myNoiseFriends.ph) - Listed as "white hat hacker", helped secure the website and perform penetration testing and responsible vulnerability disclosure.
+- [Tutorio.es](https://www.tutorio.es/) - Listed as "sysadmin", responsible for server maintenance, management, and hardening.

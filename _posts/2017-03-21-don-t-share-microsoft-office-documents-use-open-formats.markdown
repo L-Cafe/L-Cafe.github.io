@@ -1,9 +1,7 @@
 ---
-layout: post
-title: "Don't share Microsoft Office documents: use open formats"
-date: "2017-03-21 18:59:32 +0100"
-author: L1Cafe
-tags: FOSS rant opinion
+title:      "Don't share Microsoft Office documents: use open formats"
+date:       2017-03-21 18:59:32 +0100
+tags:       opinion Microsoft
 ---
 
 
@@ -37,5 +35,5 @@ People sometimes use Office documents to send blank forms to be filled in by the
 
 # Microsoft Office has terrible formula support
 
-When producing documents with math and physics formulas, Microsoft Office has a tool for inserting equations, however, this tool, while easy to use for sporadic situations, becomes a nightmare in terms of UX, because it's too difficult to insert reasonably complex formulas using Microsoft Office's system. The most reasonable option, and what most math university teachers and doctors use is LaTeX. LaTeX typically produces PDF documents, and has a very solid syntax, built on top of TeX. Both are open source typesetting systems that produce beautiful, solid, and consistent output and it's the desirable choice for productivity. Here's some more information on Word vs LaTeX: [MIT](http://web.mit.edu/klund/www/urk/texvword.html), [ResearchGate](https://www.researchgate.net/post/Why_LaTex_is_better_choice_than_Microsoft_Word),  [StackExchange](https://tex.stackexchange.com/questions/1756/why-should-i-use-latex), [Reddit](https://www.reddit.com/r/LaTeX/comments/26z3ii/why_is_latex_better_than_the_current_version_of/), [Andrew Roberts](http://www.andy-roberts.net/writing/latex/benefits.
+When producing documents with math and physics formulas, Microsoft Office has a tool for inserting equations, however, this tool, while easy to use for sporadic situations, becomes a nightmare in terms of UX, because it's too difficult to insert reasonably complex formulas using Microsoft Office's system. The most reasonable option, and what most math university teachers and doctors use is LaTeX. LaTeX typically produces PDF documents, and has a very solid syntax, built on top of TeX. Both are open source typesetting systems that produce beautiful, solid, and consistent output and it's the desirable choice for productivity. Here's some more information on Word vs LaTeX: [MIT](http://web.mit.edu/klund/www/urk/texvword.html), [ResearchGate](https://www.researchgate.net/post/Why_LaTex_is_better_choice_than_Microsoft_Word),  [StackExchange](https://tex.stackexchange.com/questions/1756/why-should-i-use-latex), [Reddit](https://www.reddit.com/r/LaTeX/comments/26z3ii/why_is_latex_better_than_the_current_version_of/), [Andrew Roberts](http://www.andy-roberts.net/writing/latex/benefits).
 

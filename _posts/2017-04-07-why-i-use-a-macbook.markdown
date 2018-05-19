@@ -1,11 +1,8 @@
 ---
-layout: post
-title: "Why I use a MacBook"
-date: "2017-04-07 19:26:48 +0200"
-author: L1Cafe
-tags: opinion macOS Apple MacBook
+title:      "Why I use a MacBook"
+date:       2017-04-07 19:26:48 +0200
+tags:       opinion Apple
 ---
-
 
 In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.
 

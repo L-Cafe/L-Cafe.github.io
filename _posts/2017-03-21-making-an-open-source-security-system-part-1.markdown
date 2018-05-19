@@ -1,9 +1,8 @@
 ---
-layout: post
-title: "Making an open source security system: part 1"
-date: "2017-03-21 18:45:54 +0100"
-author: L1Cafe
-tags: security IoT GitHub SafeSpace
+title:      "Making an open source security system: part 1"
+date:       "2017-03-21 18:45:54 +0100"
+tags:       project
+categories: SafeSpace
 ---
 
 It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from [Chuango](http://www.chuango.com/english/). They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).

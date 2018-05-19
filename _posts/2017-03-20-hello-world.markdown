@@ -1,9 +1,6 @@
 ---
-layout: post
-title:  "Hello world"
-date:   2017-03-20 16:28:03 +0100
-author: L1Cafe
-categories: 
+title:      "Hello world"
+date:       2017-03-20 16:28:03 +0100
 ---
 This is my first post.
 

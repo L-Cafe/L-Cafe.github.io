@@ -36,6 +36,15 @@ url: "https://l1cafe.github.io"
 cover: "/assets/images/header_image.jpg"
 logo: "/assets/images/logo.png"
 
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: "L-Cafe"
+
 # Build settings
 markdown: kramdown
 paginate: 5
