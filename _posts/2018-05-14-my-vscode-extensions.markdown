@@ -2,7 +2,6 @@
 title:      "My favourite Visual Studio Code extensions"
 date:       2018-05-14 17:28:03 +0100
 tags:       VSCode Microsoft
-published:  false
 ---
 
 At first, I really disliked Electron and JS-based text editors, like Atom and
