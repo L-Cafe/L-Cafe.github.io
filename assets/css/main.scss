@@ -1,14 +1,8 @@
 ---
-#// Only the main Sass file needs front matter (the dashes are enough)
+# Only the main Sass file needs front matter (the dashes are enough)
 ---
 
 @charset "utf-8";
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-// Includes Bourbon, Neat, and Bitters (thanks, thoughtbot!)
-@import
-  "bourbon/bourbon",
-  "base/base",
-  "neat/neat",
-  "layout"
-;
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials

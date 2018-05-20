@@ -1,0 +1,666 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Making an open source security system: part 1 | L1Cafe</title>
+<meta name="description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="L1Cafe">
+<meta property="og:title" content="Making an open source security system: part 1">
+<meta property="og:url" content="http://localhost:4000/safespace/making-an-open-source-security-system-part-1/">
+
+
+  <meta property="og:description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/logo-bordered.png">
+
+
+
+  <meta name="twitter:site" content="@L1Cafe">
+  <meta name="twitter:title" content="Making an open source security system: part 1">
+  <meta name="twitter:description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
+  <meta name="twitter:url" content="http://localhost:4000/safespace/making-an-open-source-security-system-part-1/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/assets/images/logo-bordered.png">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2017-03-21T18:45:54+01:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/safespace/making-an-open-source-security-system-part-1/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/assets/images/logo-bordered.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "León Castillejos",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://twitter.com/L1Cafe","https://www.linkedin.com/in/l1cafe","https://github.com/L1Cafe","https://gitlab.com/L1Cafe","https://soundcloud.com/l1cafe","https://keybase.io/l1cafe"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="L1Cafe Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">L1Cafe</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/about/" >About me</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/projects/" >My projects</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/bookmarks/" >Bookmarks</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/tags/" >Tags</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/categories/" >Categories</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/year-archive/" >Posts</a>
+            </li>
+          
+        </ul>
+        
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        
+        <a href="https://L1Cafe.github.io">
+          <img src="/assets/images/avatar.jpg" alt="León Castillejos" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <a href="https://L1Cafe.github.io"><h3 class="author__name" itemprop="name">León Castillejos</h3></a>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Cybersecurity enthusiast
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Details</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">European Union</span>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:L1Cafe-github@tuta.io">
+            <meta itemprop="email" content="L1Cafe-github@tuta.io" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://keybase.io/l1cafe" itemprop="sameAs">
+            <i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://twitter.com/L1Cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/l1cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/L1Cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://gitlab.com/L1Cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://soundcloud.com/l1cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-soundcloud" aria-hidden="true"></i> SoundCloud
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Making an open source security system: part 1">
+    <meta itemprop="description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
+    <meta itemprop="datePublished" content="March 21, 2017">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Making an open source security system: part 1
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from <a href="http://www.chuango.com/english/">Chuango</a>. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).</p>
+
+<p><strong>First issue</strong>: lack of encryption. After a little investigation I found out that, despite their claims on the official website, the communications with the wireless sensors were not encrypted.</p>
+
+<p>These devices use a standard 433 Mhz radio band, and communicate with a central alarm panel, that has GSM and PSTN features. The GSM in this control panel is GPRS, so, again, not very secure, because GPRS is vulnerable to somewhat easy attacks, can be spoofed, intercepted and decrypted, jammed, etc. I found this out after I ordered an SDR dongle and tuned it to the appropriate frequency. Their command sequences work as follows: Every device seems to have a unique identifier, that is sent right before the command. So, on every command sent from a remote, the remote sends its own ID, and the disarm/arm command. This works because the control panel, when pairing devices, reads the first part of the command and stores it in an internal database, so every time the control panel receives a command, it first compares the first part of the command, containing the ID, and if it matches what’s stored in memory, it executes the second part.</p>
+
+<p>My investigation suggests there are at least 9 remote commands: arm, partial arm (home arm), disarm, panic button, duress alarm, sensor trigger, low battery, tamper trigger, and finally, normal alarm.</p>
+
+<p>Some devices only listen for signals, like sirens, which are triggered on arming and disarming, and obviously on panic triggers and normal alarms.</p>
+
+<p>Some other devices only send signals, such as remote controls and presence sensors.</p>
+
+<p>The <strong>second issue</strong> with these home alarms is that their GSM module isn’t really configurable, and seems to be making regular connections to (presumably) a control center you can access from a smartphone application. There is no way to disable network Internet connectivity unless the SIM card carrier offers this possibility (the alarm panel can be controlled through SMS).</p>
+
+<p><strong>Third issue</strong> is that their PSTN (Public Switched Telephone Network), or basically, what’s known as “landline phones” feature is extremely intrusive and doesn’t respect the whitelisted phone number list, so anyone who dials in the PSTN phone number, will get 5 dial tones, and after that, the alarm’s PSTN will be triggered, letting anyone enter the code to set up the alarm, disarm, arm, and so on. This is both a good and a bad thing: Good because you can access your alarm from anywhere in the world you have access to a landline phone. Bad because it tends to interrupt conversations if you pick up before the 5th tone, or might interfere picking up after the 5th tone: It won’t stop talking, asking for a passcode, on regular intervals even when there’s another phone picked up in the line.</p>
+
+<p><strong>Fourth issue</strong>: it’s not a very fully featured device and lacks modern functionality such as IoT connectivity, interoperability with other brands and devices, video feeds.</p>
+
+<p><strong>Fifth issue</strong>: it’s not very reliable. The alarm will sometimes fail to be triggered on wireless sensors (I’m still investigating if this is a problem with the sensors themselves not sending the signal, but I do know that the PIR sensor doesn’t detect presence very well). The alarm panel is touch enabled, but sometimes stops responding to touch, so you can’t really interact with it.</p>
+
+<p>In general, it’s a device that might suit some people’s needs, but it isn’t very reliable. I believe that using open source hardware and software, and the help of the community, we can bring a new meaning to DIY alarm systems, and create a more reliable, modular, and customisable solution that will fit everyone’s need while staying as cheap as the hardware can get.</p>
+
+<p>I will soon start developing an alternative open source burglar alarm in <a href="https://github.com/L1Cafe/SafeSpace">GitHub</a>. Based on Arduino, and maybe Raspberry Pi.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#project" class="page__taxonomy-item" rel="tag">project</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#safespace" class="page__taxonomy-item" rel="tag">SafeSpace</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-03-21T18:45:54+01:00">March 21, 2017</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/hello-world/" class="pagination--pager" title="Hello world
+">Previous</a>
+    
+    
+      <a href="/don-t-share-microsoft-office-documents-use-open-formats/" class="pagination--pager" title="Don’t share Microsoft Office documents: use open formats
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/teaser.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/my-vscode-extensions/" rel="permalink">My favourite Visual Studio Code extensions
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">At first, I really disliked Electron and JS-based text editors, like Atom and
+VSCode, but after learning Vim, and finding many problems with my plug-ins, on
+...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/teaser.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/why-i-use-a-macbook/" rel="permalink">Why I use a MacBook
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. I...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/teaser.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/password-managers/" rel="permalink">Password managers
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, acco...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/teaser.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/don-t-share-microsoft-office-documents-use-open-formats/" rel="permalink">Don’t share Microsoft Office documents: use open formats
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen mo...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/L1Cafe"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="https://github.com/L1Cafe"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+      <li><a href="https://gitlab.com/L1Cafe"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> Gitlab</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 L1Cafe.
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+  </body>
+</html>

@@ -1,365 +1,596 @@
-<!DOCTYPE html>
-<link rel="shortcut icon" type="image/png" href="/favicon.png" >
-<html lang="en">
-
-<script type="text/javascript"
-    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
 
-  <title>L1Cafe</title>
-  <meta name="description" content="Software, infosec, system administration projects, opinions and tips.">
-  
+<!-- begin _includes/seo.html --><title>L1Cafe</title>
+<meta name="description" content="Software, infosec, system administration projects, opinions and tips.">
 
-  <!-- External libraries -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/monokai-sublime.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
 
-  <meta name="theme-color" content="#ffffff">
 
-  <!-- Facebook OGP cards -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="L1Cafe" />
-  <meta property="og:title" content="L1Cafe" />
-  <meta property="og:description" content="Software, infosec, system administration projects, opinions and tips." />
-  <meta property="og:url" content="https://l1cafe.github.io" />
-  <meta property="og:image" content="https://l1cafe.github.io/assets/images/logo.png" />
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="L1Cafe">
+<meta property="og:title" content="L1Cafe">
+<meta property="og:url" content="http://localhost:4000/">
 
-  <!-- Twitter: card tags -->
-  <meta name="twitter:card" content="summary">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/header_image.jpg">
+
+
+
+  <meta name="twitter:site" content="@L1Cafe">
   <meta name="twitter:title" content="L1Cafe">
   <meta name="twitter:description" content="Software, infosec, system administration projects, opinions and tips.">
-  <meta name="twitter:url" content="https://l1cafe.github.io">
-  <meta name="twitter:image" content="https://l1cafe.github.io/assets/images/logo.png">
+  <meta name="twitter:url" content="http://localhost:4000/">
 
-  <!-- Site styles -->
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="https://l1cafe.github.io/">
-  <link rel="alternate" type="application/rss+xml" title="L1Cafe" href="https://l1cafe.github.io/feed.xml" />
-</head>
+  
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/header_image.jpg">
+  
+
+  
 
 
-  <body>
 
-    <header class="navigation" role="banner">
-  <div class="navigation-wrapper">
-    <a href="/" class="logo">
-      
-      <img src="/assets/images/logo.png" alt="L1Cafe">
-      
-    </a>
-    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <nav role="navigation">
-      <ul id="js-navigation-menu" class="navigation-menu show">
-        
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/assets/images/logo-bordered.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "León Castillejos",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://twitter.com/L1Cafe","https://www.linkedin.com/in/l1cafe","https://github.com/L1Cafe","https://gitlab.com/L1Cafe","https://soundcloud.com/l1cafe","https://keybase.io/l1cafe"]
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="L1Cafe Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--home">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">L1Cafe</a>
+        <ul class="visible-links">
           
             
-              <li class="nav-link"><a href="/about/">About me</a>
-            
-          
-        
-          
-        
-          
-        
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/about/" >About me</a>
+            </li>
           
             
-              <li class="nav-link"><a href="/projects/">My projects</a>
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/projects/" >My projects</a>
+            </li>
+          
             
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/bookmarks/" >Bookmarks</a>
+            </li>
           
-        
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/tags/" >Tags</a>
+            </li>
           
-        
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/categories/" >Categories</a>
+            </li>
           
-        
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/year-archive/" >Posts</a>
+            </li>
           
+        </ul>
         
-          
+        <button class="search__toggle" type="button">
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
         
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
-    <div class="page-content">
-        <div class="home">
-
-<div class="site-header-container has-cover" style="background-image: url(/assets/images/header_image.jpg);">
-  <div class="scrim has-cover">
-    <header class="site-header">
-      <h1 class="title">L1Cafe</h1>
-      <p class="subtitle">Software, infosec, system administration projects, opinions and tips.</p>
-    </header>
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
   </div>
 </div>
 
-<div class="wrapper">
-<ul class="post-list">
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/2018/05/14/my-vscode-extensions.html">My favourite Visual Studio Code extensions</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>At first, I really disliked Electron and JS-based text editors, like Atom and VSCode, but after learning Vim, and finding many problems with my plug-ins, on different languages (such as MIPS assembly, Java and VHDL), I decided to give VSCode a try, and I have been very impressed by how...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">May 14, 2018</div>
-      <div class="post-categories">
+    <div class="initial-content">
       
-      </div>
-    </section>
-  </li>
   
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/2017/04/07/why-i-use-a-macbook.html">Why I use a MacBook</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS. It’s familiar Even though I’ve been using macOS for less than 6...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">April 7, 2017</div>
-      <div class="post-categories">
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/2017/03/21/password-managers.html">Password managers</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft… If you have ever read basic security and privacy tips you might be aware of some basic...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">March 21, 2017</div>
-      <div class="post-categories">
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats.html">Don't share Microsoft Office documents: use open formats</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea. It’s not the...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">March 21, 2017</div>
-      <div class="post-categories">
-      
-      </div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="/safespace/2017/03/21/making-an-open-source-security-system-part-1.html">Making an open source security system: part 1</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have...</p>
-    </section>
-    <section class="post-meta">
-      <div class="post-date">March 21, 2017</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/posts/#SafeSpace">Safespace</a>
-        
-      
-      </div>
-    </section>
-  </li>
-  
-  
-</ul>
 
-<nav class="pagination" role="navigation">
-	<p>
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #DCE2F8; background-image: url('/assets/images/header_image.jpg');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          Software, infosec, system administration projects, opinions and tips.
+
+        
+      </h1>
+      
+      
+      
+    </div>
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        
+        <a href="https://L1Cafe.github.io">
+          <img src="/assets/images/avatar.jpg" alt="León Castillejos" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
     
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
-		
-		<span class="page-number">Page 1 of 2</span>
-		
-		<a class="newer-posts" href="/page2">
-      <span class="fa-stack fa-lg">
-        <i class="fa fa-square fa-stack-2x"></i>
-        <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-      </span>
-    </a>
-		
-	</p>
-</nav>
+      <a href="https://L1Cafe.github.io"><h3 class="author__name" itemprop="name">León Castillejos</h3></a>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Cybersecurity enthusiast
+      </p>
+    
+  </div>
 
-</div>
-</div>
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Details</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">European Union</span>
+        </li>
+      
 
-    </div>
+      
 
-    <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <p class="footer-description"><q>Keep your eyes on the stars, and your feet on the ground.</q> - Theodore Roosevelt
-</p>
-
-    <div class="site-navigation">
-
-      <p><strong>Site Map</strong></p>
-      <ul class="pages">
-        
-        
-          <li class="nav-link"><a href="/about/">About me</a>
-        
-        
-        
-        
-        
-        
-        
-          <li class="nav-link"><a href="/projects/">My projects</a>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      </ul>
-    </div>
-
-    <div class="site-contact">
-
-      <p><strong>Contact me</strong></p>
-      <ul class="social-media-list">
+      
         <li>
           <a href="mailto:L1Cafe-github@tuta.io">
-            <i class="fa fa-envelope-o"></i>
-            <span class="username">L1Cafe-github@tuta.io</span>
+            <meta itemprop="email" content="L1Cafe-github@tuta.io" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email
           </a>
         </li>
+      
 
-        
-          
-          <li>
-            <a href="https://twitter.com/L1Cafe" title="Follow me on Twitter">
-              <i class="fa fa-twitter"></i>
-              <span class="username">L1Cafe</span>
-            </a>
-          </li>
-          
-        
-          
-        
-          
-          <li>
-            <a href="https://github.com/L1Cafe" title="Follow me on GitHub">
-              <i class="fa fa-github"></i>
-              <span class="username">L1Cafe</span>
-            </a>
-          </li>
-          
-        
-          
-          <li>
-            <a href="https://www.linkedin.com/in/l1cafe/" title="Connect with me on LinkedIn">
-              <i class="fa fa-linkedin"></i>
-              <span class="username">L1Cafe</span>
-            </a>
-          </li>
-          
-        
-          
-        
-          
-        
-          
-          <li>
-            <a href="https://soundcloud.com/l1cafe" title="Follow me on SoundCloud">
-              <i class="fa fa-soundcloud"></i>
-              <span class="username">L1Cafe</span>
-            </a>
-          </li>
-          
-        
-          
-        
-          
-        
-          
-        
+      
+        <li>
+          <a href="https://keybase.io/l1cafe" itemprop="sameAs">
+            <i class="fas fa-fw fa-key" aria-hidden="true"></i> Keybase
+          </a>
+        </li>
+      
 
-      </ul>
-    </div>
+      
+        <li>
+          <a href="https://twitter.com/L1Cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
 
-    <div class="site-signature">
-      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-    </div>
+      
 
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/l1cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/L1Cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://gitlab.com/L1Cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> GitLab
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://soundcloud.com/l1cafe" itemprop="sameAs">
+            <i class="fab fa-fw fa-soundcloud" aria-hidden="true"></i> SoundCloud
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
   </div>
 
-</footer>
 
-<!-- Scripts -->
-<script
-			  src="https://code.jquery.com/jquery-1.12.4.min.js"
-			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-			  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
+  <div class="archive">
+    
+    <h3 class="archive__subtitle">Recent Posts</h3>
 
-<script type="text/javascript">
-$(document).ready(function() {
-  // Default syntax highlighting
-  hljs.initHighlightingOnLoad();
 
-  // Header
-  var menuToggle = $('#js-mobile-menu').unbind();
-  $('#js-navigation-menu').removeClass("show");
-  menuToggle.on('click', function(e) {
-    e.preventDefault();
-    $('#js-navigation-menu').slideToggle(function(){
-      if($('#js-navigation-menu').is(':hidden')) {
-        $('#js-navigation-menu').removeAttr('style');
-      }
-    });
-  });
-});
+  
 
-</script>
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/my-vscode-extensions/" rel="permalink">My favourite Visual Studio Code extensions
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">At first, I really disliked Electron and JS-based text editors, like Atom and
+VSCode, but after learning Vim, and finding many problems with my plug-ins, on
+...</p>
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/why-i-use-a-macbook/" rel="permalink">Why I use a MacBook
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. I...</p>
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/password-managers/" rel="permalink">Password managers
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, acco...</p>
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/don-t-share-microsoft-office-documents-use-open-formats/" rel="permalink">Don’t share Microsoft Office documents: use open formats
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen mo...</p>
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/safespace/making-an-open-source-security-system-part-1/" rel="permalink">Making an open source security system: part 1
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm ve...</p>
+  </article>
+</div>
+
+  
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/hello-world/" rel="permalink">Hello world
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">This is my first post.
+
+</p>
+  </article>
+</div>
+
+
+
+
+
+  </div>
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><input type="text" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <div id="results" class="results"></div></div>
+      </div>
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/L1Cafe"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="https://github.com/L1Cafe"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+      <li><a href="https://gitlab.com/L1Cafe"><i class="fab fa-fw fa-gitlab" aria-hidden="true"></i> Gitlab</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 L1Cafe.
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
 
 
 
   </body>
-
 </html>

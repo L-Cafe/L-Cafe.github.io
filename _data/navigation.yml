@@ -1,0 +1,23 @@
+# main links
+main:
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  # KEEP THESE AT THE BOTTOM
+  - title: "About me"
+    url:   /about/
+  - title: "My projects"
+    url:   /projects/
+  - title: "Bookmarks"
+    url:   /bookmarks/
+  - title: "Tags"
+    url:   /tags/
+  - title: "Categories"
+    url:   /categories/
+  - title: "Posts"
+    url:   /year-archive/
