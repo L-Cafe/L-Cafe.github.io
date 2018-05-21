@@ -54,7 +54,7 @@ with LaTeX math formulas through MathJax), or needs to be printed, or released
 as a PDF file, (for which I use plain LaTeX).
 
 I enjoy producing audiovisual content. Specifically, I play the piano, and enjoy
- making chiptunes (8-bit music) wit˛h
+ making chiptunes (8-bit music) with
  [Pico-8](http://www.lexaloffle.com/pico-8.php). As well as photo editing.
 
 For my photo editing and graphical design needs, I rely on
