@@ -111,7 +111,7 @@ everything after the exam.
 
 ## Energy drinks and sugary, caffeinated beverages
 
-![](/assets/images/2018-05-20-productivity/sugar-in-red-bull.png)
+![](/assets/images/2018-05-20-productivity/monster-energy.jpg)
 
 Of course they taste great, they are specifically designed for that!
 And they promise energy and focus for athletes, what could go wrong? Well,
@@ -216,8 +216,6 @@ down the road will be much easier, as they will be tied with other memories, and
 will form a bigger cluster of chunks.
 
 ### Method of Ioci (memory palace)
-
-![](/assets/images/2018-05-20-productivity/memory-palace.jpg)
 
 The method consists in visually imagining a place, like your living
 room, bedroom, or bathroom, and embedding knowledge in the environment. For
