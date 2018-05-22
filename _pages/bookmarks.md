@@ -17,6 +17,7 @@ projects, check out the links in the top navigation bar.
 lists.
 - [Awesome Video Channels](https://github.com/L1Cafe/Awesome-Video-Channels) - A curated list of online video channels for learning just about anything!
 - [Better Crypto](https://bettercrypto.org) - Comprehensive list of settings for many server software to achieve the best levels of encryption.
+- [Build your own X](https://blog.tartanllama.xyz/writing-a-linux-debugger-setup/) - Tutorials on learning through creating.
 - [DigitalOcean](https://m.do.co/c/7b24f032f8cc) - (Referrer) Deploy full Linux virtual machines in seconds.
 - [Duolingo](https://www.duolingo.com) - Free language learning.
 - [edX](https://www.edx.org) - High quality educational material.

@@ -22,8 +22,11 @@ A configuration guide for SSH clients and servers.
 
 ## [Messaging Apps Comparision](https://github.com/L1Cafe/Messaging-Apps-Comparision)
 
-An ongoing effort to have an up-to-date comprehensive and exhaustive comparision of
-different messaging apps and protocols.
+An ongoing effort to have an up-to-date comprehensive and exhaustive comparision of different messaging apps and protocols.
+
+## [Cryptocurrency Price Telegram Bot](https://github.com/L1Cafe/cryptocurrency-price-telegram-bot)
+
+Periodically fetches and saves the price of different cryptocurrencies. Allows users to get subscribed to price updates and get notified when configurable thresholds are reached.
 
 ## [VSCode-Jekyllfy](https://github.com/L1Cafe/VSCode-Jekyllfy)
 
