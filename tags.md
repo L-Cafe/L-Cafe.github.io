@@ -1,0 +1,7 @@
+- Apple: For Apple products, services, and software
+- Microsoft: For Windows, Office, etc
+- opinion: subjective posts and thinkings
+- passwords
+- project: For my own projects
+- software-dev: For text editors, IDEs and related tools
+- tip: Life hacks, recommendations, and insight

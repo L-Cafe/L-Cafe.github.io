@@ -40,3 +40,9 @@ services such as SendGrid, or MailGun.
 
 An open source burglar alarm consisting of Arduino hardware, schematics, and
 wireless protocol, and firmware for the central panel, sensonrs, etc.
+
+# Finished projects
+
+## Sonar
+
+Ruby on Rails based monitoring suite to track clusters of computers, built from scratch, consisting in a lightweight multiplatform agent to be installed in the machines to remotely monitor, and a centralised web UI that acts as a dashboard and collects metrics for the system data, such as RAM, storage, temperature sensors, CPU usage, etc. The dashboard also allows for notifications to be configured when a threshold is reached in any of the metrics, that will result in customisable e-mail notifications being sent.
