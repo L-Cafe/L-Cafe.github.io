@@ -2,6 +2,7 @@
 title: "Bookmarks"
 permalink: /bookmarks/
 layout: single
+classes: wide
 author_profile: true
 ---
 Some interesting resources and websites I collect across the web.
