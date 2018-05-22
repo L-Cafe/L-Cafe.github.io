@@ -2,7 +2,10 @@
 title:      "Productivity"
 date:       2018-05-20 17:20:50 +0100
 tags:       tip
-published:  true
+header:
+  image:	/assets/images/2018-05-20-productivity/productivity-header.jpg
+  teaser:	/assets/images/2018-05-20-productivity/productivity-header.jpg
+  caption:	"Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 In the past, I used to struggle with my productivity, no matter how hard I

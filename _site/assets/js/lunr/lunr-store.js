@@ -28,9 +28,9 @@ var store = [{
         "excerpt":"At first, I really disliked Electron and JS-based text editors, like Atom andVSCode, but after learning Vim, and finding many problems with my plug-ins, ondifferent languages (such as MIPS assembly, Java and VHDL), I decided to giveVSCode a try, and I have been very impressed by how well Visual Studio...","categories": [],
         "tags": ["software-dev","Microsoft"],
         "url": "https://l1cafe.github.io/my-vscode-extensions/",
-        "teaser":"https://l1cafe.github.io/assets/images/teaser.jpg"},{
+        "teaser":"https://l1cafe.github.io/assets/images/2018-05-14-my-vscode-extensions/vscode-header.jpg"},{
         "title": "Productivity",
         "excerpt":"In the past, I used to struggle with my productivity, no matter how hard Iseemed to study, my grades didn’t reflect it. I was quite stubborn in believingI wasn’t at fault, like some kind of genius who nobody understood, and readingquotes like this one certainly didn’t help me understand it...","categories": [],
         "tags": ["tip"],
         "url": "https://l1cafe.github.io/productivity/",
-        "teaser":"https://l1cafe.github.io/assets/images/teaser.jpg"}]
+        "teaser":"https://l1cafe.github.io/assets/images/2018-05-20-productivity/productivity-header.jpg"}]

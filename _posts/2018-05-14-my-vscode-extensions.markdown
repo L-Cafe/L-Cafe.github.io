@@ -2,6 +2,10 @@
 title:      "My favourite Visual Studio Code extensions"
 date:       2018-05-14 17:28:03 +0100
 tags:       software-dev Microsoft
+header:
+  image:	/assets/images/2018-05-14-my-vscode-extensions/vscode-header.jpg
+  teaser:	/assets/images/2018-05-14-my-vscode-extensions/vscode-header.jpg
+  caption:	"Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
 At first, I really disliked Electron and JS-based text editors, like Atom and
