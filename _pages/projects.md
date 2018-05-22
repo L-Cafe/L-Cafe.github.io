@@ -6,6 +6,7 @@ classes: wide
 author_profile: true
 ---
 
+If you want to join any of these projects, feel free to contact me, or submit pull requests.
 
 ## [Awesome Video Channels](https://github.com/L1Cafe/Awesome-Video-Channels)
 
