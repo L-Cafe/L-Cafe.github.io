@@ -250,7 +250,7 @@ relationship can be symbiotic, in that you know more about a topic X, and they
 know more about a topic Y, and so each other's knowledge complements both
 perfectly.
 
-## Abandon perfection
+## Abandon perfection
 
 Often times, I found myself striving for such perfection, it got in the way of
 my performance. For example, my essays have always been of comparatively high
