@@ -33,4 +33,9 @@ var store = [{
         "excerpt":"In the past, I used to struggle with my productivity, no matter how hard Iseemed to study, my grades didn’t reflect it. I was quite stubborn in believingI wasn’t at fault, like some kind of genius who nobody understood, and readingquotes like this one certainly didn’t help me understand it...","categories": [],
         "tags": ["tip"],
         "url": "https://l1cafe.github.io/productivity/",
-        "teaser":"https://l1cafe.github.io/assets/images/2018-05-20-productivity/productivity-header.jpg"}]
+        "teaser":"https://l1cafe.github.io/assets/images/2018-05-20-productivity/productivity-header.jpg"},{
+        "title": "Comments enabled!",
+        "excerpt":"The blog now supports comments! They’re human-reviewed, so inappropriate comments will not be published. And the best part is that they’re fully static comments. No JavaScript required, no tracking plugins and no external comment systems! Staticman is truly awesome. Give it a try if you want, but please don’t comment...","categories": [],
+        "tags": [],
+        "url": "https://l1cafe.github.io/enabled-comments/",
+        "teaser":"https://l1cafe.github.io/assets/images/teaser.jpg"}]
