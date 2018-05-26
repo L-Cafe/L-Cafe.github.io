@@ -27,36 +27,10 @@ repository               : "L1Cafe/L1Cafe.github.io"
 teaser                   : "/assets/images/teaser.jpg"
 # breadcrumbs            : false # true, false (default) # Beta apparently not working
 words_per_minute         : 200
-comments: # * maybe use StaticMan v2
-  provider               : false # (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman: # * Interesting
-  allowedFields          : # ['name', 'email', 'url', 'message']
-  branch                 : # "master"
-  commitMessage          : # "New comment."
-  filename               : # comment-{@timestamp}
-  format                 : # "yml"
-  moderation             : # true
-  path                   : # "/_data/comments/{options.slug}" (default)
-  requiredFields         : # ['name', 'email', 'message']
-  transforms:
-    email                : # "md5"
-  generatedFields:
-    date:
-      type               : # "date"
-      options:
-        format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-# reCaptcha: # Probably useless
-#   siteKey                :
-#   secret                 :
+comments:
+  provider               : "staticman_v2" # (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+staticman:
+  branch                 : "master"
 atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true #, false (default)
@@ -272,7 +246,7 @@ defaults:
       classes: wide
       author_profile: true
       read_time: true
-      comments: false #! Need to enable when I enable comments
+      comments: true
       share: false
       related: true
       sitemap: true
