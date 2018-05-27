@@ -1,5 +1,4 @@
-All tags must be a single word, British spelling, capitalised when proper nouns,
- compressed when necessary (Visual Studio Code -> VSCode).
+All tags must be a single word, British spelling, capitalised when proper nouns, compressed when necessary (Visual Studio Code -> VSCode).
 
 # Apple
 
@@ -10,5 +9,9 @@ All tags must be a single word, British spelling, capitalised when proper nouns,
 # passwords
 
 # project
+
+# software-dev
+
+# tip
 
 # VSCode
