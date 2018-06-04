@@ -9,12 +9,12 @@ author_profile: true
 If you have a job offer, please use the links to the left of this page to
 contact me on your preferred communication method and request my CV.
 
-I'm L1Cafe. I'm a Higher Technician Cross-Platform Application Developer.
+I'm L1Cafe. I'm a Higher Technician in Multi-Platform Applications Development.
 Currently studying Computer Science & Engineering at
 [URJC](http://www.urjc.es/), a Spanish university located in Madrid.
 
-I consider myself a passionate and creative individual, I’m always looking forward to learn more and
-better ways to do things, I love challenges.
+I consider myself a passionate and creative individual, I thrive in highly
+competitive and intellectually demanding environments.
 
 My native country is Spain, so my primary language is Spanish. I can also speak
 and write (British) English fluently, and I'm currently learning Chinese.

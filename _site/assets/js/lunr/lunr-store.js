@@ -38,4 +38,9 @@ var store = [{
         "excerpt":"The blog now supports comments! They’re human-reviewed, so inappropriate comments will not be published. And the best part is that they’re fully static comments. No JavaScript required, no tracking plugins and no external comment systems! Staticman is truly awesome. Give it a try if you want, but please don’t comment...","categories": [],
         "tags": [],
         "url": "https://l1cafe.github.io/enabled-comments/",
-        "teaser":"https://l1cafe.github.io/assets/images/teaser.jpg"}]
+        "teaser":"https://l1cafe.github.io/assets/images/teaser.jpg"},{
+        "title": "The power of silence",
+        "excerpt":"I find silence to be grossly underestimated. We live in an era of permanent distraction. Companies use loud, aggressive marketing in the form of advertisements to grab your attention and get you to buy whatever it is they’re selling. Our smartphones have become distraction devices that instead of boosting our...","categories": [],
+        "tags": ["opinion"],
+        "url": "https://l1cafe.github.io/silence/",
+        "teaser":"https://l1cafe.github.io/assets/images/2018-06-04-silence/header.jpg"}]
