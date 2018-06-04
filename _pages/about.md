@@ -64,5 +64,5 @@ For my photo editing and graphical design needs, I rely on
 
 ## Me across the web
 
-- [myNoise Friends](https://mynoise.net/myNoiseFriends.ph) - Listed as "white hat hacker", helped secure the website and perform penetration testing and responsible vulnerability disclosure.
+- [myNoise Friends](https://mynoise.net/myNoiseFriends.php) - Listed as "white hat hacker", helped secure the website and perform penetration testing and responsible vulnerability disclosure.
 - [Tutorio.es](https://www.tutorio.es/) - Listed as "sysadmin", responsible for server maintenance, management, and hardening.
