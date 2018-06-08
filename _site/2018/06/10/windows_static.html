@@ -9,50 +9,48 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Making an open source security system: part 1 | L1Cafe</title>
-<meta name="description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
+<!-- begin _includes/seo.html --><title>Static analysis tools for Windows | L1Cafe</title>
+<meta name="description" content="I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="L1Cafe">
-<meta property="og:title" content="Making an open source security system: part 1">
-<meta property="og:url" content="https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1">
+<meta property="og:title" content="Static analysis tools for Windows">
+<meta property="og:url" content="http://localhost:4000/2018/06/10/windows_static">
 
 
-  <meta property="og:description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
+  <meta property="og:description" content="I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing.">
 
 
 
-  <meta property="og:image" content="https://l1cafe.github.io/assets/images/logo-bordered.png">
+  <meta property="og:image" content="http://localhost:4000/assets/images/2018-06-10-windows_static/header.jpg">
 
 
 
   <meta name="twitter:site" content="@L1Cafe">
-  <meta name="twitter:title" content="Making an open source security system: part 1">
-  <meta name="twitter:description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
-  <meta name="twitter:url" content="https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1">
+  <meta name="twitter:title" content="Static analysis tools for Windows">
+  <meta name="twitter:description" content="I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing.">
+  <meta name="twitter:url" content="http://localhost:4000/2018/06/10/windows_static">
 
   
-    <meta name="twitter:card" content="summary">
-    
-      <meta name="twitter:image" content="https://l1cafe.github.io/assets/images/logo-bordered.png">
-    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/2018-06-10-windows_static/header.jpg">
   
 
   
 
 
 
-  <meta property="article:published_time" content="2017-03-21T18:45:54+01:00">
+  <meta property="article:published_time" content="2018-06-10T13:08:50+02:00">
 
 
 
 
 
 
-<link rel="canonical" href="https://l1cafe.github.io/safespace/2017/03/21/making-an-open-source-security-system-part-1">
+<link rel="canonical" href="http://localhost:4000/2018/06/10/windows_static">
 
 
 
@@ -62,8 +60,8 @@
     {
       "@context": "http://schema.org",
       "@type": "Organization",
-      "url": "https://L1Cafe.github.io",
-      "logo": "https://l1cafe.github.io/assets/images/logo-bordered.png"
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/assets/images/logo-bordered.png"
     }
   </script>
 
@@ -74,7 +72,7 @@
       "@context": "http://schema.org",
       "@type": "Person",
       "name": "León Castillejos",
-      "url": "https://L1Cafe.github.io",
+      "url": "http://localhost:4000",
       "sameAs": ["https://twitter.com/L1Cafe","https://www.linkedin.com/in/l1cafe","https://github.com/L1Cafe","https://gitlab.com/L1Cafe","https://soundcloud.com/l1cafe","https://keybase.io/l1cafe"]
     }
   </script>
@@ -141,32 +139,32 @@
           
             
             <li class="masthead__menu-item">
-              <a href="https://L1Cafe.github.io/about/" >About me</a>
+              <a href="http://localhost:4000/about/" >About me</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="https://L1Cafe.github.io/projects/" >My projects</a>
+              <a href="http://localhost:4000/projects/" >My projects</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="https://L1Cafe.github.io/bookmarks/" >Bookmarks</a>
+              <a href="http://localhost:4000/bookmarks/" >Bookmarks</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="https://L1Cafe.github.io/tags/" >Tags</a>
+              <a href="http://localhost:4000/tags/" >Tags</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="https://L1Cafe.github.io/categories/" >Categories</a>
+              <a href="http://localhost:4000/categories/" >Categories</a>
             </li>
           
             
             <li class="masthead__menu-item">
-              <a href="https://L1Cafe.github.io/year-archive/" >Posts</a>
+              <a href="http://localhost:4000/year-archive/" >Posts</a>
             </li>
           
         </ul>
@@ -189,6 +187,31 @@
 
     <div class="initial-content">
       
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="/assets/images/2018-06-10-windows_static/header.jpg" alt="Static analysis tools for Windows" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com"><strong>Unsplash</strong></a>
+</span>
+  
+</div>
+
+
 
 
 
@@ -217,10 +240,6 @@
     
       <a href="https://L1Cafe.github.io"><h3 class="author__name" itemprop="name">León Castillejos</h3></a>
     
-    
-      <p class="author__bio" itemprop="description">
-        Cybersecurity enthusiast
-      </p>
     
   </div>
 
@@ -342,15 +361,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Making an open source security system: part 1">
-    <meta itemprop="description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
-    <meta itemprop="datePublished" content="March 21, 2017">
+    <meta itemprop="headline" content="Static analysis tools for Windows">
+    <meta itemprop="description" content="I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing.">
+    <meta itemprop="datePublished" content="June 10, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Making an open source security system: part 1
+          <h1 id="page-title" class="page__title" itemprop="headline">Static analysis tools for Windows
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -358,7 +377,7 @@
 
 
 
-  3 minute read
+  2 minute read
 </p>
           
         </header>
@@ -366,29 +385,81 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from <a href="http://www.chuango.com/english/">Chuango</a>. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).</p>
+        <p>I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing.</p>
 
-<p><strong>First issue</strong>: lack of encryption. After a little investigation I found out that, despite their claims on the official website, the communications with the wireless sensors were not encrypted.</p>
+<p>Some tools will have functionality that overlaps with other of the listed tools. It’s up to you which one to use.</p>
 
-<p>These devices use a standard 433 Mhz radio band, and communicate with a central alarm panel, that has GSM and PSTN features. The GSM in this control panel is GPRS, so, again, not very secure, because GPRS is vulnerable to somewhat easy attacks, can be spoofed, intercepted and decrypted, jammed, etc. I found this out after I ordered an SDR dongle and tuned it to the appropriate frequency. Their command sequences work as follows: Every device seems to have a unique identifier, that is sent right before the command. So, on every command sent from a remote, the remote sends its own ID, and the disarm/arm command. This works because the control panel, when pairing devices, reads the first part of the command and stores it in an internal database, so every time the control panel receives a command, it first compares the first part of the command, containing the ID, and if it matches what’s stored in memory, it executes the second part.</p>
+<h1 id="free-tools">Free tools</h1>
 
-<p>My investigation suggests there are at least 9 remote commands: arm, partial arm (home arm), disarm, panic button, duress alarm, sensor trigger, low battery, tamper trigger, and finally, normal alarm.</p>
+<p>Either fully open source, or freeware (unrestricted, so no shareware).</p>
 
-<p>Some devices only listen for signals, like sirens, which are triggered on arming and disarming, and obviously on panic triggers and normal alarms.</p>
+<h2 id="dependency-walker"><a href="http://dependencywalker.com/">Dependency Walker</a></h2>
 
-<p>Some other devices only send signals, such as remote controls and presence sensors.</p>
+<p>Displays a hierarchical tree diagram of all dependent module, with exported, and imported functions.</p>
 
-<p>The <strong>second issue</strong> with these home alarms is that their GSM module isn’t really configurable, and seems to be making regular connections to (presumably) a control center you can access from a smartphone application. There is no way to disable network Internet connectivity unless the SIM card carrier offers this possibility (the alarm panel can be controlled through SMS).</p>
+<h2 id="filealyzer"><a href="https://www.safer-networking.org/products/filealyzer/">FileAlyzer</a></h2>
 
-<p><strong>Third issue</strong> is that their PSTN (Public Switched Telephone Network), or basically, what’s known as “landline phones” feature is extremely intrusive and doesn’t respect the whitelisted phone number list, so anyone who dials in the PSTN phone number, will get 5 dial tones, and after that, the alarm’s PSTN will be triggered, letting anyone enter the code to set up the alarm, disarm, arm, and so on. This is both a good and a bad thing: Good because you can access your alarm from anywhere in the world you have access to a landline phone. Bad because it tends to interrupt conversations if you pick up before the 5th tone, or might interfere picking up after the 5th tone: It won’t stop talking, asking for a passcode, on regular intervals even when there’s another phone picked up in the line.</p>
+<p>Application with functionality to show resources, PE headers, hex dumps, INI contents, and more. It can read UPX compressed files, ELF (Linux) as well as regular DLL and EXE files.</p>
 
-<p><strong>Fourth issue</strong>: it’s not a very fully featured device and lacks modern functionality such as IoT connectivity, interoperability with other brands and devices, video feeds.</p>
+<h2 id="hxd"><a href="https://mh-nexus.de/en/hxd/">HxD</a></h2>
 
-<p><strong>Fifth issue</strong>: it’s not very reliable. The alarm will sometimes fail to be triggered on wireless sensors (I’m still investigating if this is a problem with the sensors themselves not sending the signal, but I do know that the PIR sensor doesn’t detect presence very well). The alarm panel is touch enabled, but sometimes stops responding to touch, so you can’t really interact with it.</p>
+<p>Hexadecimal editor. Everyone has their own favourite, but this one works well and is free.</p>
 
-<p>In general, it’s a device that might suit some people’s needs, but it isn’t very reliable. I believe that using open source hardware and software, and the help of the community, we can bring a new meaning to DIY alarm systems, and create a more reliable, modular, and customisable solution that will fit everyone’s need while staying as cheap as the hardware can get.</p>
+<h2 id="malcode-analyst-pack"><a href="http://www.sandsprite.com/iDef/MAP/">Malcode Analyst Pack</a></h2>
 
-<p>I will soon start developing an alternative open source burglar alarm in <a href="https://github.com/L1Cafe/SafeSpace">GitHub</a>. Based on Arduino, and maybe Raspberry Pi.</p>
+<p>Pack containing lots of useful software and added functionality to aid in static analysis. Among other utilities, it installs shell extensions (that appear upon right-clicking files and folders) for computing MD5 tools, or showing the strings on a file.</p>
+
+<h2 id="pebrowse"><a href="http://www.smidgeonsoft.prohosting.com/pebrowse-pro-file-viewer.html">PEBrowse</a></h2>
+
+<p>Windows disassembler for 64 and 32 bit programs. Presents the PE structure, with its headers, imports, exports, debug symbols and more in an intuitive GUI. Comes with helpful tools such as hex/ASCII equivalents, window messages and error codes. It also displays metadata for .NET assemblies.</p>
+
+<h2 id="peid">PEiD</h2>
+
+<p>Detects common packers, cryptors and compilers for PE files.</p>
+
+<p>The official website seems to have been discontinued, but you can download it <a href="http://localhost:4000/assets/other/PEiD-0.95-20081103.zip">here</a>.</p>
+
+<h2 id="pev"><a href="http://pev.sourceforge.net/">pev</a></h2>
+
+<p>Command-line open source tool to analyse PE files. Runs on Windows, macOS and Linux.</p>
+
+<h2 id="peview"><a href="http://wjradburn.com/software/">PEView</a></h2>
+
+<p>Shows the structure of a PE and COFF file, dispalying headers, sections, import/export tables, and resource information in file types such as EXE and DLL.</p>
+
+<h2 id="resource-hacker"><a href="http://angusj.com/resourcehacker/">Resource Hacker</a></h2>
+
+<p>Shows resources, such as images, dialogs, executables and binaries embedded in PE files such as EXE and DLL.</p>
+
+<h2 id="radare2"><a href="http://www.radare.org/r/">Radare2</a></h2>
+
+<p>Better known for its dynamic analysis capabilities, it is also capable of performing binary diffing, extract relocation tables, and of course disassemble binaries written in multiple languages for many different architectures.</p>
+
+<h2 id="sysinternals-suite"><a href="https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite">Sysinternals Suite</a></h2>
+
+<p>Not exactly a tool, but a collection of tools, as the name implies.</p>
+
+<p>Here are a few interesting ones:</p>
+
+<ul>
+  <li><strong>Sigcheck</strong>: Shows file version number, timestamp and digital signature details, and optionally allows for VirusTotal sample uploads.</li>
+  <li><strong>Strings</strong>: Shows hardcoded strings in an executable file.</li>
+  <li><strong>Whois</strong>: Similar to the Unix tool, shows details on a given Internet address. Maybe you want to investigate a certain string pointing to a domain?</li>
+</ul>
+
+<h2 id="upx"><a href="https://upx.github.io/">UPX</a></h2>
+
+<p>Very popular executable packer used by malware authors. You can unpack some UPX-packed executables by supplying the command-line option <code class="highlighter-rouge">-d</code> to the <code class="highlighter-rouge">upx</code> tool.</p>
+
+<h1 id="paid-tools">Paid tools</h1>
+
+<h2 id="pe-explorer"><a href="http://heaventools.com/">PE Explorer</a></h2>
+
+<p>Resource editor, UPX unpacker, disassembler, dependency scanner and more.</p>
+
+<h2 id="pestudio"><a href="https://winitor.com/">PEStudio</a></h2>
+
+<p>PEStudio implements very useful features aimed to help detecting anomalies and suspicious patterns. It ships with VirusTotal functionality that queries the service for MD5 hashes of a file. It also list imports and resources. Ships with both a GUI and CLI versions.</p>
 
         
       </section>
@@ -409,7 +480,15 @@
     
       
       
-      <a href="/tags/#project" class="page__taxonomy-item" rel="tag">project</a>
+      <a href="/tags/#microsoft" class="page__taxonomy-item" rel="tag">Microsoft</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#software-rev" class="page__taxonomy-item" rel="tag">software-rev</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#static-analysis" class="page__taxonomy-item" rel="tag">static-analysis</a>
     
     </span>
   </p>
@@ -430,14 +509,14 @@
     
       
       
-      <a href="/categories/#safespace" class="page__taxonomy-item" rel="tag">SafeSpace</a>
+      <a href="/categories/#cybersecurity" class="page__taxonomy-item" rel="tag">Cybersecurity</a>
     
     </span>
   </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-03-21T18:45:54+01:00">March 21, 2017</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-06-10T13:08:50+02:00">June 10, 2018</time></p>
         
       </footer>
 
@@ -446,12 +525,11 @@
       
   <nav class="pagination">
     
-      <a href="/2017/03/20/hello-world" class="pagination--pager" title="Hello world
+      <a href="/2018/06/04/silence" class="pagination--pager" title="The power of silence
 ">Previous</a>
     
     
-      <a href="/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats" class="pagination--pager" title="Don’t share Microsoft Office documents: use open formats
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -610,6 +688,7 @@ VSCode, but after learning Vim, and finding many problems with my plug-ins, on
         
       </div>
     </div>
+  
   
 </div>
     </div>

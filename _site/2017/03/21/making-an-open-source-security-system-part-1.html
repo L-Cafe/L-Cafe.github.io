@@ -9,19 +9,19 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Hello world | L1Cafe</title>
-<meta name="description" content="This is my first post.">
+<!-- begin _includes/seo.html --><title>Making an open source security system: part 1 | L1Cafe</title>
+<meta name="description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="L1Cafe">
-<meta property="og:title" content="Hello world">
-<meta property="og:url" content="http://localhost:4000/2017/03/20/hello-world">
+<meta property="og:title" content="Making an open source security system: part 1">
+<meta property="og:url" content="http://localhost:4000/2017/03/21/making-an-open-source-security-system-part-1">
 
 
-  <meta property="og:description" content="This is my first post.">
+  <meta property="og:description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
 
 
 
@@ -30,9 +30,9 @@
 
 
   <meta name="twitter:site" content="@L1Cafe">
-  <meta name="twitter:title" content="Hello world">
-  <meta name="twitter:description" content="This is my first post.">
-  <meta name="twitter:url" content="http://localhost:4000/2017/03/20/hello-world">
+  <meta name="twitter:title" content="Making an open source security system: part 1">
+  <meta name="twitter:description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
+  <meta name="twitter:url" content="http://localhost:4000/2017/03/21/making-an-open-source-security-system-part-1">
 
   
     <meta name="twitter:card" content="summary">
@@ -45,14 +45,14 @@
 
 
 
-  <meta property="article:published_time" content="2017-03-20T16:28:03+01:00">
+  <meta property="article:published_time" content="2017-03-21T18:45:54+01:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/2017/03/20/hello-world">
+<link rel="canonical" href="http://localhost:4000/2017/03/21/making-an-open-source-security-system-part-1">
 
 
 
@@ -338,15 +338,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Hello world">
-    <meta itemprop="description" content="This is my first post.">
-    <meta itemprop="datePublished" content="March 20, 2017">
+    <meta itemprop="headline" content="Making an open source security system: part 1">
+    <meta itemprop="description" content="It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from Chuango. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).">
+    <meta itemprop="datePublished" content="March 21, 2017">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Hello world
+          <h1 id="page-title" class="page__title" itemprop="headline">Making an open source security system: part 1
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -354,7 +354,7 @@
 
 
 
-  less than 1 minute read
+  3 minute read
 </p>
           
         </header>
@@ -362,25 +362,29 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>This is my first post.</p>
+        <p>It has been a while since I wanted to make an alarm system. This idea has been on my mind ever since I got an alarm from <a href="http://www.chuango.com/english/">Chuango</a>. They are a burglar alarm vendor that releases kits you can install yourself. These kits communicate over wired and wireless connections, have no maintenance fees and have varying features depending on the kit chosen (some kits have GSM and PSTN, some others have WiFi, etc).</p>
 
-<p>In this blog, I’ll be sharing my projects, opinions and tips on various matters.</p>
+<p><strong>First issue</strong>: lack of encryption. After a little investigation I found out that, despite their claims on the official website, the communications with the wireless sensors were not encrypted.</p>
 
-<p>I’m a Computer Science / Engineering student, currently on my first year at
-<a href="http://www.urjc.es/">URJC</a>.</p>
+<p>These devices use a standard 433 Mhz radio band, and communicate with a central alarm panel, that has GSM and PSTN features. The GSM in this control panel is GPRS, so, again, not very secure, because GPRS is vulnerable to somewhat easy attacks, can be spoofed, intercepted and decrypted, jammed, etc. I found this out after I ordered an SDR dongle and tuned it to the appropriate frequency. Their command sequences work as follows: Every device seems to have a unique identifier, that is sent right before the command. So, on every command sent from a remote, the remote sends its own ID, and the disarm/arm command. This works because the control panel, when pairing devices, reads the first part of the command and stores it in an internal database, so every time the control panel receives a command, it first compares the first part of the command, containing the ID, and if it matches what’s stored in memory, it executes the second part.</p>
 
-<p>My areas of interest:</p>
+<p>My investigation suggests there are at least 9 remote commands: arm, partial arm (home arm), disarm, panic button, duress alarm, sensor trigger, low battery, tamper trigger, and finally, normal alarm.</p>
 
-<ul>
-  <li>Software development (Ruby, Rust, Swift, C…)</li>
-  <li>Privacy and digital rights</li>
-  <li>System administration</li>
-  <li>Information security</li>
-  <li>Graphical design</li>
-  <li>Mathematics</li>
-  <li>Science</li>
-</ul>
+<p>Some devices only listen for signals, like sirens, which are triggered on arming and disarming, and obviously on panic triggers and normal alarms.</p>
 
+<p>Some other devices only send signals, such as remote controls and presence sensors.</p>
+
+<p>The <strong>second issue</strong> with these home alarms is that their GSM module isn’t really configurable, and seems to be making regular connections to (presumably) a control center you can access from a smartphone application. There is no way to disable network Internet connectivity unless the SIM card carrier offers this possibility (the alarm panel can be controlled through SMS).</p>
+
+<p><strong>Third issue</strong> is that their PSTN (Public Switched Telephone Network), or basically, what’s known as “landline phones” feature is extremely intrusive and doesn’t respect the whitelisted phone number list, so anyone who dials in the PSTN phone number, will get 5 dial tones, and after that, the alarm’s PSTN will be triggered, letting anyone enter the code to set up the alarm, disarm, arm, and so on. This is both a good and a bad thing: Good because you can access your alarm from anywhere in the world you have access to a landline phone. Bad because it tends to interrupt conversations if you pick up before the 5th tone, or might interfere picking up after the 5th tone: It won’t stop talking, asking for a passcode, on regular intervals even when there’s another phone picked up in the line.</p>
+
+<p><strong>Fourth issue</strong>: it’s not a very fully featured device and lacks modern functionality such as IoT connectivity, interoperability with other brands and devices, video feeds.</p>
+
+<p><strong>Fifth issue</strong>: it’s not very reliable. The alarm will sometimes fail to be triggered on wireless sensors (I’m still investigating if this is a problem with the sensors themselves not sending the signal, but I do know that the PIR sensor doesn’t detect presence very well). The alarm panel is touch enabled, but sometimes stops responding to touch, so you can’t really interact with it.</p>
+
+<p>In general, it’s a device that might suit some people’s needs, but it isn’t very reliable. I believe that using open source hardware and software, and the help of the community, we can bring a new meaning to DIY alarm systems, and create a more reliable, modular, and customisable solution that will fit everyone’s need while staying as cheap as the hardware can get.</p>
+
+<p>I will soon start developing an alternative open source burglar alarm in <a href="https://github.com/L1Cafe/SafeSpace">GitHub</a>. Based on Arduino, and maybe Raspberry Pi.</p>
 
         
       </section>
@@ -388,10 +392,48 @@
       <footer class="page__meta">
         
         
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#project" class="page__taxonomy-item" rel="tag">project</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#safespace" class="page__taxonomy-item" rel="tag">SafeSpace</a>
+    
+    </span>
+  </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-03-20T16:28:03+01:00">March 20, 2017</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-03-21T18:45:54+01:00">March 21, 2017</time></p>
         
       </footer>
 
@@ -400,10 +442,11 @@
       
   <nav class="pagination">
     
-      <a href="#" class="pagination--pager disabled">Previous</a>
+      <a href="/2017/03/20/hello-world" class="pagination--pager" title="Hello world
+">Previous</a>
     
     
-      <a href="/2017/03/21/making-an-open-source-security-system-part-1" class="pagination--pager" title="Making an open source security system: part 1
+      <a href="/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats" class="pagination--pager" title="Don’t share Microsoft Office documents: use open formats
 ">Next</a>
     
   </nav>

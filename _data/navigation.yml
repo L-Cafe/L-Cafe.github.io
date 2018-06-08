@@ -8,13 +8,13 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-  # KEEP THESE AT THE BOTTOM
   - title: "About me"
     url:   /about/
   - title: "My projects"
     url:   /projects/
   - title: "Bookmarks"
     url:   /bookmarks/
+  # KEEP THESE AT THE BOTTOM
   - title: "Tags"
     url:   /tags/
   - title: "Categories"

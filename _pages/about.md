@@ -9,7 +9,7 @@ author_profile: true
 If you have a job offer, please use the links to the left of this page to
 contact me on your preferred communication method and request my CV.
 
-I'm L1Cafe. I'm a Higher Technician in Multi-Platform Applications Development.
+My name is León Castillejos. I'm a Higher Technician in Multi-Platform Applications Development.
 Currently studying Computer Science & Engineering at
 [URJC](http://www.urjc.es/), a Spanish university located in Madrid.
 
