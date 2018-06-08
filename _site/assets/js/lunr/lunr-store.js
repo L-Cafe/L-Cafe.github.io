@@ -47,5 +47,5 @@ var store = [{
         "title": "Static analysis tools for Windows",
         "excerpt":"I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing. Some tools will have functionality that overlaps with other of the listed tools. It’s up to...","categories": ["Cybersecurity"],
         "tags": ["Microsoft","software-rev","static-analysis"],
-        "url": "http://localhost:4000/2018/06/10/windows_static",
-        "teaser":"http://localhost:4000/assets/images/2018-06-10-windows_static/header.jpg"}]
+        "url": "http://localhost:4000/2018/06/08/windows_static",
+        "teaser":"http://localhost:4000/assets/images/2018-06-08-windows_static/header.jpg"}]

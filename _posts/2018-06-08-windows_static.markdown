@@ -1,12 +1,12 @@
 ---
 title:      "Static analysis tools for Windows"
-date:       2018-06-10 12:08:50 +0100
+date:       2018-06-08 12:08:50 +0100
 tags:       Microsoft software-rev static-analysis
 category:   Cybersecurity
 comment:    header sizes are 2000x750
 header:
-  image:	/assets/images/2018-06-10-windows_static/header.jpg
-  teaser:	/assets/images/2018-06-10-windows_static/header.jpg
+  image:	/assets/images/2018-06-08-windows_static/header.jpg
+  teaser:	/assets/images/2018-06-08-windows_static/header.jpg
   caption:	"Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
