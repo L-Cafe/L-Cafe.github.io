@@ -42,7 +42,7 @@ Windows disassembler for 64 and 32 bit programs. Presents the PE structure, with
 
 Detects common packers, cryptors and compilers for PE files.
 
-The official website seems to have been discontinued, but you can download it [here]({{site.url}}/assets/other/PEiD-0.95-20081103.zip).
+The official website seems to have been discontinued, but you can download it [here]({{site.url}}/assets/other/PEiD-0.95.zip).
 
 ## [pev](http://pev.sourceforge.net/)
 
