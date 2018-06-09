@@ -9,50 +9,48 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Why I use a MacBook | L1Cafe</title>
-<meta name="description" content="In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.">
+<!-- begin _includes/seo.html --><title>x86 Function call conventions | L1Cafe</title>
+<meta name="description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="L1Cafe">
-<meta property="og:title" content="Why I use a MacBook">
-<meta property="og:url" content="https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook">
+<meta property="og:title" content="x86 Function call conventions">
+<meta property="og:url" content="https://l1cafe.github.io/2018/06/09/function-calls">
 
 
-  <meta property="og:description" content="In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.">
+  <meta property="og:description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
 
 
 
-  <meta property="og:image" content="https://l1cafe.github.io/assets/images/logo-bordered.png">
+  <meta property="og:image" content="https://l1cafe.github.io/assets/images/2018-06-09-function-calls/header.jpg">
 
 
 
   <meta name="twitter:site" content="@L1Cafe">
-  <meta name="twitter:title" content="Why I use a MacBook">
-  <meta name="twitter:description" content="In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.">
-  <meta name="twitter:url" content="https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook">
+  <meta name="twitter:title" content="x86 Function call conventions">
+  <meta name="twitter:description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
+  <meta name="twitter:url" content="https://l1cafe.github.io/2018/06/09/function-calls">
 
   
-    <meta name="twitter:card" content="summary">
-    
-      <meta name="twitter:image" content="https://l1cafe.github.io/assets/images/logo-bordered.png">
-    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://l1cafe.github.io/assets/images/2018-06-09-function-calls/header.jpg">
   
 
   
 
 
 
-  <meta property="article:published_time" content="2017-04-07T19:26:48+02:00">
+  <meta property="article:published_time" content="2018-06-09T11:57:04+02:00">
 
 
 
 
 
 
-<link rel="canonical" href="https://l1cafe.github.io/2017/04/07/why-i-use-a-macbook">
+<link rel="canonical" href="https://l1cafe.github.io/2018/06/09/function-calls">
 
 
 
@@ -189,6 +187,31 @@
 
     <div class="initial-content">
       
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="/assets/images/2018-06-09-function-calls/header.jpg" alt="x86 Function call conventions" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com"><strong>Unsplash</strong></a>
+</span>
+  
+</div>
+
+
 
 
 
@@ -338,15 +361,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Why I use a MacBook">
-    <meta itemprop="description" content="In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.">
-    <meta itemprop="datePublished" content="April 07, 2017">
+    <meta itemprop="headline" content="x86 Function call conventions">
+    <meta itemprop="description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
+    <meta itemprop="datePublished" content="June 09, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Why I use a MacBook
+          <h1 id="page-title" class="page__title" itemprop="headline">x86 Function call conventions
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -354,7 +377,7 @@
 
 
 
-  7 minute read
+  2 minute read
 </p>
           
         </header>
@@ -362,59 +385,101 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.</p>
+        <p>Another cybersecurity post. Focused on binary (dis)assembly.</p>
 
-<h1 id="its-familiar">It’s familiar</h1>
+<p>This time it’s about how different compilers turn high-level programming language code into low-level assembly code, in regards to function calling.</p>
 
-<p>Even though I’ve been using macOS for less than 6 months so far, I find it a very familiar and comfortable experience. Apart from the GUI, which may take a little bit to get used to, the OS is Unix-like. It ships with bash, vim, and many POSIX utilities, this means I can apply my ample experience with Unix-like OSes, such as different Linux and BSD distributions.</p>
+<p>As a sample, I’ll use a pseudocode call like <code class="highlighter-rouge">test(a,b,c,d)</code> to demonstrate how it would look like in regards to different conventions.</p>
 
-<h1 id="lots-of-commercial-software-available">Lots of commercial software available</h1>
+<p>Keep in mind <code class="highlighter-rouge">push</code> is a pseudoinstruction that subtracts 4 from the stack pointer (ESP), and then writes the value onto the memory ESP points to. <code class="highlighter-rouge">pop</code> is the opposite: reads from the address ESP points to, and then adds 4.</p>
 
-<p>I love and use Linux regularly. I think it’s a very solid operating system for the desktop, but the truth is… It just doesn’t suit my needs sometimes. Sure, there are open-source alternatives to most commercial software, for example, GIMP is an Adobe Photoshop alternative, LMMS is a Fruity Loops/Logic Pro alternative, Inkscape is an Adobe Illustrator alternative, LibreOffice is a Microsoft Office alternative… But the reality is that these tools aren’t up to speed and lack many features that make working with them unproductive. One example is the lack of non-destructive filters on GIMP, LMMS doesn’t have nearly as many third party commercial plug-ins as the other two, LibreOffice has a TERRIBLE user interface (although this seems to be improving), and this lack of features is generally true for most open-source software. Even if I like open-source, and really want to use it and discard closed-source software, it simply doesn’t work for me. I’m less productive on open-source software than on their closed-source counterparts.</p>
+<h1 id="cdecl">cdecl</h1>
 
-<h1 id="great-trackpad">Great trackpad</h1>
+<p>It’s used by many C compilers.</p>
 
-<p>MacBooks have brilliant trackpads. Considering they are the primary input device on laptops, this is a huge deal. Before this MacBook, I used to carry a little mouse around because that trackpad was simply atrocious. Now I like it so much, I actually prefer it. It’s much more precise, and with its huge surface area combined with accurate palm rejection, I really have no need for a mouse.</p>
+<p>In Linux, the GNU Compiler Collection (GCC) sets the cdecl de facto standard.</p>
 
-<h1 id="usb-c-all-the-things">USB-C all the things!</h1>
+<h2 id="conditions">Conditions</h2>
 
-<p>People complain because this laptop has no “normal USB ports”. What they are referring to is “USB type A ports”, which are very badly designed (non-reversable), big, bulky, and obsolete. USB-C (actually, Thunderbolt 3), supports Ethernet networking, power delivery, video output, USB 3.1, digital and analog audio… I can charge my computer or output video from any of the 4 ports. USB-C is the future, and a USB-C to USB-A adaptor isn’t expensive, in case I need to use legacy hardware. I want this laptop to last me a while. In 5 years, nobody will be using USB-A, and people will carry that port on their older laptops like some still carry VGA, HDMI and ethernet ports around.Thunderbolt 3 does all this and much more, including external GPUs.</p>
+<p>The registers ST0 through ST7 are empty when calling a function.</p>
 
-<h1 id="theres-no-linux-laptop-alternative">There’s no Linux laptop alternative</h1>
+<p>ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST(0) is empty too.</p>
 
-<p>I paid good money for this laptop, but I’m very willing to pay even more for a better Linux laptop. It simply does not exist. Sure, there are companies like System76 which build very powerful laptops, but, let’s be honest, their design is ugly as hell. And, after a little investigation, I found that other laptops may outperform the Mac in a certain area, but not all. For example: One might be better at battery, but only because it has a Core i7 U CPU, which offers poor performance for my needs. Other computer might have a beefier GPU, but also be much more thicker, I carry this laptop everyday and I don’t appreciate any extra weight, my back suffers. Other laptop could have a much higher resolution 4K touch screen, but also be made out of creaky plastic. Hell no!</p>
+<h2 id="arguments-and-return-values">Arguments and return values</h2>
 
-<p>So, I love POSIX and Unix, and this is as close as I can get while also owning good quality hardware. I don’t wish to use Windows. Windows is an objectively inferior OS, and Microsoft’s pathetic attempts at attracting Linux users by including a Bash shell and some other stuff are definitely not enticing me to use Windows if I can help it.</p>
+<p>Arguments are passed on the stack, right-to-left (C style).</p>
 
-<h1 id="apple-is-global">Apple is global</h1>
+<p>For returns, integers and memory addresses are in EAX, whereas floating points will be in the ST0 x87 register.</p>
 
-<p>Where I live, the only Microsoft Surface product I can buy are the non-Book variants. There are very good Samsung laptops, but they don’t sell in Europe anymore. Razer has a great laptop: The Razer Blade Stealth, but, again, not available in Spain. Asus, MSI, only sell a few laptops, and, to be honest, their lineup is insane: too many models to choose from, where Apple only offers a few base models, with customisations. Sure, I could probably buy them through Amazon, but I want to buy them on their respective official stores, directly. Even if that means paying a little bit more in shipping prices, I really don’t want to deal with a third party. Apple allows me to buy every single product on their line-up, both online, and in a physical Apple store. Apple allows me to configure my product with a US ANSI keyboard, which, in my opinion, is a must for us programmers, and that’s what I have done.</p>
+<h2 id="clean-up">Clean-up</h2>
 
-<p>The only real alternative I have to this MacBook Pro is one of the newest Dell XPS 15, which I can buy on their official online store, but I finally decided on the MacBook Pro because the XPS 15 only supports Windows officially (the Developer Edition, which runs Ubuntu, is an XPS 13 model, too small for my needs).</p>
+<p>Registers EAX, ECX and EDX are caller-saved, and the rest are callee-saved.</p>
 
-<h1 id="its-well-designed">It’s well designed</h1>
+<h2 id="pseudocode-assembly">Pseudocode assembly</h2>
 
-<p>The model I own, the MacBook Pro 2016 15 inch with Touch Bar, has received very tough criticism for a few things, and I would like to comment on that:</p>
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">push</span>  <span class="n">d</span>
+<span class="k">push</span>  <span class="n">c</span>
+<span class="k">push</span>  <span class="n">b</span>
+<span class="k">push</span>  <span class="n">a</span>
+<span class="k">call</span>  <span class="k">test</span>
+</code></pre></div></div>
 
-<h2 id="battery-life">Battery life</h2>
+<p>The result will be in EAX, and floating point values in ST0.</p>
 
-<p>This machine has received lots of hate due to some people claiming ridiculous battery runtimes: As low as 4 hours of continuous use. Battery life was something Apple used to be proud of, MacBooks have always maintained a great balance of processing power, and thickness, so some people were worried and annoyed this MacBook performed worse than before.</p>
+<h1 id="syscall">syscall</h1>
 
-<p>This has not been my experience, however. This machine lasts me from 8 to 11 hours of usage, editing code, compiling, and even opening virtual machines, but it’s true that when I use the GPU intensively, battery life decreases significantly faster than before, this is because the GPU is a very power-hungry AMD card, which, by the way, also produces a lot of heat, that must be quickly dissipated by the integrated fans. This is expected behaviour, as GPUs consume more power than CPUs when working hard, so, if you’re editing video, you’ll see worse battery life, obviously, but, think again: Do you <strong>REALLY</strong> need to edit video on the go? If I were to edit video, I’d be in a room, with a wall plug nearby, probably, so I don’t think this is an issue.</p>
+<p>Similar to cdecl.</p>
 
-<h2 id="butterfly-2-keyboard">Butterfly 2 keyboard</h2>
+<p>It’s the convention for the 32 bit OS/2 API.</p>
 
-<p>When the Apple Butterfly keyboard mechanism was first launched (on the standard MacBook), many people disliked it due to the lack of feedback: Me included. It feels as if you were typing on a glass surface, and because there’s basically no key travel, fingers hurt after a while in my experience, due to the fingers constantly hitting a hard surface. Butterfly 2 is much different, though. It has a very satisfying, but not obnoxiously loud clicking feel. The key travel has been improved, although not dramatically, but enough for me to love it. I’m starting to like it even more than my Cherry Red mechanical keyboard, and I’ve used this for more than 10 years now! I would definitely like to see this mechanism on more keyboards.</p>
+<h2 id="arguments-and-return-values-1">Arguments and return values</h2>
 
-<h2 id="touch-bar">Touch Bar</h2>
+<p>Arguments are passed on the stack, right-to-left (C style). The size of the parameter list in doublewords is passed in AL.</p>
 
-<p>Not only it allows you to perform certain quick commands easier (such as clicking “OK” or “cancel” on typical dialog boxes, accessing your bookmarked sites on Safari, switching tools on Affinity Photo, Pixelmator, Apple Pages, Microsoft Word, etc), but it also adds an extra layer of security. Because the Touch Bar has its own isolated CPU, it cannot be infected by normal means, and only talks to the OS through a dedicated bus (USB I believe), it means authentication dialogs cannot be forged, especially the ones that ask for your fingerprint, like on the App Store, which, by the way, is a very fast and convenient way of authenticating the user, and also allows for quick unlocking.</p>
+<p>Return values are in EAX.</p>
 
-<p>The lack of function keys is irrelevant, as the Touch Bar provides a far quicker and flexible way of operating the computer.</p>
+<h2 id="clean-up-1">Clean-up</h2>
 
-<h2 id="it-simply-is-pretty">It simply is pretty</h2>
+<p>ECX, and EDX are cleared upon exiting the function call.</p>
 
-<p>The truth is that design is a very important part of productivity: a study found that when people worked in well designed offices, and used nicely designed hardware and appliances, were much more productive than on ugly environments and devices.</p>
+<h2 id="pseudocode-assembly-1">Pseudocode assembly</h2>
+
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mov</span>   <span class="mi">4</span><span class="p">,</span> <span class="n">al</span>
+<span class="k">push</span>  <span class="n">d</span>
+<span class="k">push</span>  <span class="n">c</span>
+<span class="k">push</span>  <span class="n">b</span>
+<span class="k">push</span>  <span class="n">a</span>
+<span class="k">call</span>  <span class="k">test</span>
+</code></pre></div></div>
+
+<p>The result will be in EAX, and floating point values in ST0.</p>
+
+<h1 id="microsoft-fastcall">Microsoft fastcall</h1>
+
+<p>This convention is better than the previous two in terms of performance, hence its “fast” prefix.</p>
+
+<p>However, the fastcall convention is not standarised, and varies a lot from compiler to compiler, so I’ll focus in the Microsoft implementation. In this case, GCC’s <code class="highlighter-rouge">__msfastcall</code> is similar.</p>
+
+<h2 id="arguments-and-return-values-2">Arguments and return values</h2>
+
+<p>First two arguments are passed left-to-right into ECX and EDX. The remaining arguments are pushed onto the stack from right to left.</p>
+
+<p>Microsoft compilers behave differently for IA64 and AMD64 architectures, because of additional registers. They simply use their own x64 calling convention, regardless of what was specified to the compiler.</p>
+
+<h2 id="clean-up-2">Clean-up</h2>
+
+<p>The callee is responsible for cleaning the stack.</p>
+
+<h2 id="pseudocode-assembly-2">Pseudocode assembly</h2>
+
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mov</span>   <span class="n">a</span><span class="p">,</span> <span class="n">ecx</span>
+<span class="k">mov</span>   <span class="n">b</span><span class="p">,</span> <span class="n">edx</span>
+<span class="k">push</span>  <span class="n">d</span>
+<span class="k">push</span>  <span class="n">c</span>
+<span class="k">call</span>  <span class="k">test</span>
+</code></pre></div></div>
+
+<p>The result will be in EAX, and floating point values in ST0.</p>
 
         
       </section>
@@ -435,11 +500,15 @@
     
       
       
-      <a href="/tags/#apple" class="page__taxonomy-item" rel="tag">Apple</a><span class="sep">, </span>
+      <a href="/tags/#assembly" class="page__taxonomy-item" rel="tag">assembly</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#opinion" class="page__taxonomy-item" rel="tag">opinion</a>
+      <a href="/tags/#software-rev" class="page__taxonomy-item" rel="tag">software-rev</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#x86" class="page__taxonomy-item" rel="tag">x86</a>
     
     </span>
   </p>
@@ -447,8 +516,27 @@
 
 
 
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#cybersecurity" class="page__taxonomy-item" rel="tag">Cybersecurity</a>
+    
+    </span>
+  </p>
+
+
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-04-07T19:26:48+02:00">April 07, 2017</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-06-09T11:57:04+02:00">June 09, 2018</time></p>
         
       </footer>
 
@@ -457,12 +545,11 @@
       
   <nav class="pagination">
     
-      <a href="/2017/03/21/password-managers" class="pagination--pager" title="Password managers
+      <a href="/2018/06/08/windows-static" class="pagination--pager" title="Static analysis tools for Windows
 ">Previous</a>
     
     
-      <a href="/2018/05/14/my-vscode-extensions" class="pagination--pager" title="My favourite Visual Studio Code extensions
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -476,42 +563,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/2018-06-09-function-calls/header.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/2018/06/09/function-calls" rel="permalink">x86 Function call conventions
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Another cybersecurity post. Focused on binary (dis)assembly.
-
-</p>
-  </article>
-</div>
         
           
 
@@ -617,8 +668,45 @@
   </article>
 </div>
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/2018-05-20-productivity/productivity-header.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2018/05/20/productivity" rel="permalink">Productivity
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  17 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In the past, I used to struggle with my productivity, no matter how hard I
+seemed to study, my grades didn’t reflect it. I was quite stubborn in believing
+I ...</p>
+  </article>
+</div>
+        
       </div>
     </div>
+  
   
 </div>
     </div>

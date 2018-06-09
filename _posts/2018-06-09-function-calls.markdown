@@ -1,14 +1,13 @@
 ---
 title:      "x86 Function call conventions"
-date:       2018-06-10 10:57:04 +0100
+date:       2018-06-09 10:57:04 +0100
 tags:       software-rev assembly x86
 category:   Cybersecurity
 comment:    header sizes are 2000x750
 header:
-  image:	/assets/images/2018-06-10-function-calls/header.jpg
-  teaser:	/assets/images/2018-06-10-function-calls/header.jpg
+  image:	/assets/images/2018-06-09-function-calls/header.jpg
+  teaser:	/assets/images/2018-06-09-function-calls/header.jpg
   caption:	"Photo credit: [**Unsplash**](https://unsplash.com)"
-published: false
 ---
 
 Another cybersecurity post. Focused on binary (dis)assembly.
