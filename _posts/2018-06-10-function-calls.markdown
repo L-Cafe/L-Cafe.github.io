@@ -8,6 +8,7 @@ header:
   image:	/assets/images/2018-06-10-function-calls/header.jpg
   teaser:	/assets/images/2018-06-10-function-calls/header.jpg
   caption:	"Photo credit: [**Unsplash**](https://unsplash.com)"
+published: false
 ---
 
 Another cybersecurity post. Focused on binary (dis)assembly.

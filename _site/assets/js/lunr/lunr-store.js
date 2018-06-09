@@ -48,9 +48,4 @@ var store = [{
         "excerpt":"I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing. Some tools will have functionality that overlaps with other of the listed tools. It’s up to...","categories": ["Cybersecurity"],
         "tags": ["Microsoft","software-rev","static-analysis"],
         "url": "http://localhost:4000/2018/06/08/windows-static",
-        "teaser":"http://localhost:4000/assets/images/2018-06-08-windows-static/header.jpg"},{
-        "title": "x86 Function call conventions",
-        "excerpt":"Another cybersecurity post. Focused on binary (dis)assembly. This time it’s about how different compilers turn high-level programming language code into low-level assembly code, in regards to function calling. As a sample, I’ll use a pseudocode call like test(a,b,c,d) to demonstrate how it would look like in regards to different conventions....","categories": ["Cybersecurity"],
-        "tags": ["software-rev","assembly","x86"],
-        "url": "http://localhost:4000/2018/06/10/function-calls",
-        "teaser":"http://localhost:4000/assets/images/2018-06-10-function-calls/header.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/2018-06-08-windows-static/header.jpg"}]

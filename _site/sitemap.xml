@@ -41,10 +41,6 @@
 <lastmod>2018-06-08T13:08:50+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2018/06/10/function-calls</loc>
-<lastmod>2018-06-10T11:57:04+02:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
@@ -67,8 +63,5 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page3/</loc>
 </url>
 </urlset>
