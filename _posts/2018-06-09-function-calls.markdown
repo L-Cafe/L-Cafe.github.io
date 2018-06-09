@@ -40,6 +40,8 @@ For returns, integers and memory addresses are in EAX, whereas floating points w
 
 Registers EAX, ECX and EDX are caller-saved, and the rest are callee-saved.
 
+The stack pointer (ESP) is cleaned by the caller.
+
 ## Pseudocode assembly
 
 ```nasm
@@ -48,6 +50,7 @@ push  c
 push  b
 push  a
 call  test
+add   esp, 16
 ```
 
 The result will be in EAX, and floating point values in ST*.
@@ -68,6 +71,8 @@ Return values are in EAX.
 
 ECX, and EDX are cleared upon exiting the function call.
 
+The stack pointer (ESP) is cleaned by the caller.
+
 ## Pseudocode assembly
 
 ```nasm
@@ -77,6 +82,8 @@ push  c
 push  b
 push  a
 call  test
+add   esp, 16
+mov   0, al
 ```
 
 The result will be in EAX, and floating point values in ST*.
@@ -95,7 +102,7 @@ Microsoft compilers behave differently for IA64 and AMD64 architectures, because
 
 ## Clean-up
 
-The callee is responsible for cleaning the stack.
+The callee is responsible for cleaning the stack, as well as the ECX and EDX registers.
 
 ## Pseudocode assembly
 
