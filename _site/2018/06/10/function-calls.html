@@ -9,48 +9,48 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>My favourite Visual Studio Code extensions | L1Cafe</title>
-<meta name="description" content="At first, I really disliked Electron and JS-based text editors, like Atom andVSCode, but after learning Vim, and finding many problems with my plug-ins, ondifferent languages (such as MIPS assembly, Java and VHDL), I decided to giveVSCode a try, and I have been very impressed by how well Visual Studio Codeworks. It’s much faster than JS-based editors used to be, it has amazingcommunity support, and I’m generally faster, and more productive using it. It has fixed a lot of its shortcomings, like its speed.">
+<!-- begin _includes/seo.html --><title>x86 Function call conventions | L1Cafe</title>
+<meta name="description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="L1Cafe">
-<meta property="og:title" content="My favourite Visual Studio Code extensions">
-<meta property="og:url" content="http://localhost:4000/2018/05/14/my-vscode-extensions">
+<meta property="og:title" content="x86 Function call conventions">
+<meta property="og:url" content="http://localhost:4000/2018/06/10/function-calls">
 
 
-  <meta property="og:description" content="At first, I really disliked Electron and JS-based text editors, like Atom andVSCode, but after learning Vim, and finding many problems with my plug-ins, ondifferent languages (such as MIPS assembly, Java and VHDL), I decided to giveVSCode a try, and I have been very impressed by how well Visual Studio Codeworks. It’s much faster than JS-based editors used to be, it has amazingcommunity support, and I’m generally faster, and more productive using it. It has fixed a lot of its shortcomings, like its speed.">
+  <meta property="og:description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/vscode-header.jpg">
+  <meta property="og:image" content="http://localhost:4000/assets/images/2018-06-10-function-calls/header.jpg">
 
 
 
   <meta name="twitter:site" content="@L1Cafe">
-  <meta name="twitter:title" content="My favourite Visual Studio Code extensions">
-  <meta name="twitter:description" content="At first, I really disliked Electron and JS-based text editors, like Atom andVSCode, but after learning Vim, and finding many problems with my plug-ins, ondifferent languages (such as MIPS assembly, Java and VHDL), I decided to giveVSCode a try, and I have been very impressed by how well Visual Studio Codeworks. It’s much faster than JS-based editors used to be, it has amazingcommunity support, and I’m generally faster, and more productive using it. It has fixed a lot of its shortcomings, like its speed.">
-  <meta name="twitter:url" content="http://localhost:4000/2018/05/14/my-vscode-extensions">
+  <meta name="twitter:title" content="x86 Function call conventions">
+  <meta name="twitter:description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
+  <meta name="twitter:url" content="http://localhost:4000/2018/06/10/function-calls">
 
   
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/vscode-header.jpg">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/2018-06-10-function-calls/header.jpg">
   
 
   
 
 
 
-  <meta property="article:published_time" content="2018-05-14T18:28:03+02:00">
+  <meta property="article:published_time" content="2018-06-10T11:57:04+02:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/2018/05/14/my-vscode-extensions">
+<link rel="canonical" href="http://localhost:4000/2018/06/10/function-calls">
 
 
 
@@ -203,7 +203,7 @@
   style=" "
 >
   
-    <img src="/assets/images/2018-05-14-my-vscode-extensions/vscode-header.jpg" alt="My favourite Visual Studio Code extensions" class="page__hero-image">
+    <img src="/assets/images/2018-06-10-function-calls/header.jpg" alt="x86 Function call conventions" class="page__hero-image">
   
   
     <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com"><strong>Unsplash</strong></a>
@@ -361,15 +361,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="My favourite Visual Studio Code extensions">
-    <meta itemprop="description" content="At first, I really disliked Electron and JS-based text editors, like Atom andVSCode, but after learning Vim, and finding many problems with my plug-ins, ondifferent languages (such as MIPS assembly, Java and VHDL), I decided to giveVSCode a try, and I have been very impressed by how well Visual Studio Codeworks. It’s much faster than JS-based editors used to be, it has amazingcommunity support, and I’m generally faster, and more productive using it. It has fixed a lot of its shortcomings, like its speed.">
-    <meta itemprop="datePublished" content="May 14, 2018">
+    <meta itemprop="headline" content="x86 Function call conventions">
+    <meta itemprop="description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
+    <meta itemprop="datePublished" content="June 10, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">My favourite Visual Studio Code extensions
+          <h1 id="page-title" class="page__title" itemprop="headline">x86 Function call conventions
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -385,110 +385,101 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>At first, I really disliked Electron and JS-based text editors, like Atom and
-VSCode, but after learning Vim, and finding many problems with my plug-ins, on
-different languages (such as MIPS assembly, Java and VHDL), I decided to give
-VSCode a try, and I have been very impressed by how well Visual Studio Code
-works. It’s much faster than JS-based editors used to be, it has amazing
-community support, and I’m generally faster, and more productive using it. It 
-has fixed a lot of its shortcomings, like its speed.</p>
+        <p>Another cybersecurity post. Focused on binary (dis)assembly.</p>
 
-<p>So it’s been a few months since I first started using VSCode, and I found a few
-extensions that I really like now and use often. Here are some of them:</p>
+<p>This time it’s about how different compilers turn high-level programming language code into low-level assembly code, in regards to function calling.</p>
 
-<h1 id="auto-close-tag"><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag">Auto Close Tag</a></h1>
+<p>As a sample, I’ll use a pseudocode call like <code class="highlighter-rouge">test(a,b,c,d)</code> to demonstrate how it would look like in regards to different conventions.</p>
 
-<p><img src="http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/autoclosetag.gif" alt="" /></p>
+<p>Keep in mind <code class="highlighter-rouge">push</code> is a pseudoinstruction that subtracts 4 from the stack pointer (ESP), and then writes the value onto the memory ESP points to. <code class="highlighter-rouge">pop</code> is the opposite: reads from the address ESP points to, and then adds 4.</p>
 
-<p>Very useful extension for web development.</p>
+<h1 id="cdecl">cdecl</h1>
 
-<h1 id="beautify"><a href="https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify">Beautify</a></h1>
+<p>It’s used by many C compilers.</p>
 
-<p>Much more powerful than the js-beautify built into VSCode.</p>
+<p>In Linux, the GNU Compiler Collection (GCC) sets the cdecl de facto standard.</p>
 
-<h1 id="better-comments"><a href="https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments">Better Comments</a></h1>
+<h2 id="conditions">Conditions</h2>
 
-<p><img src="http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/bettercomments.png" alt="" /></p>
+<p>The registers ST0 through ST7 are empty when calling a function.</p>
 
-<p>When a project size grows, keeping track of things to do, questions, and other
-special comments you leave in the code to improve readability can quickly become
-a challenge. This extension essentially proposes a few tiers of comments you
-can use to categorise comments and notes, so it’s easier to keep track of them.</p>
+<p>ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST(0) is empty too.</p>
 
-<h1 id="code-runner"><a href="https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner">Code Runner</a></h1>
+<h2 id="arguments-and-return-values">Arguments and return values</h2>
 
-<p>This extension supports running code with custom commands, as well as running
-fragments of source code in a file, for lots of programming languages.</p>
+<p>Arguments are passed on the stack, right-to-left (C style).</p>
 
-<h1 id="devskim"><a href="https://marketplace.visualstudio.com/items?itemName=MS-DevSkim.vscode-devskim">DevSkim</a></h1>
+<p>For returns, integers and memory addresses are in EAX, whereas floating points will be in the ST0 x87 register.</p>
 
-<p>Great extension that detects lots of common mistakes that may result in security
-issues, such as plain HTTP links, secrets and tokens stored in plain text,
- disabled certificate validation, and so on.</p>
+<h2 id="clean-up">Clean-up</h2>
 
-<h1 id="docker"><a href="https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker">Docker</a></h1>
+<p>Registers EAX, ECX and EDX are caller-saved, and the rest are callee-saved.</p>
 
-<p><img src="http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/docker.gif" alt="" /></p>
+<h2 id="pseudocode-assembly">Pseudocode assembly</h2>
 
-<p>Adds functionality for automatic Dockerfile generation, syntax highlighting
-for docker files, IntelliSense, linting, the ability to deploy images
-directly from VSCode and more.</p>
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">push</span>  <span class="n">d</span>
+<span class="k">push</span>  <span class="n">c</span>
+<span class="k">push</span>  <span class="n">b</span>
+<span class="k">push</span>  <span class="n">a</span>
+<span class="k">call</span>  <span class="k">test</span>
+</code></pre></div></div>
 
-<h1 id="editorconfig"><a href="https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig">EditorConfig</a></h1>
+<p>The result will be in EAX, and floating point values in ST0.</p>
 
-<p>This extension is based on the <a href="http://editorconfig.org">EditorConfig</a> standard
-which aims to maintain consistency across environments where code is shared,
-even when different people editing the same file are using different editors,
-by abstracting and overriding common settings such as tab spacing, charsets, and
-such.</p>
+<h1 id="syscall">syscall</h1>
 
-<h1 id="git-history"><a href="https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory">Git History</a></h1>
+<p>Similar to cdecl.</p>
 
-<p><img src="http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/git_history.gif" alt="" /></p>
+<p>It’s the convention for the 32 bit OS/2 API.</p>
 
-<p>Allows you to browse any git repository graphically, compare branches, commits,
-as well as perform merges, revert commits, view GitHub avatars…</p>
+<h2 id="arguments-and-return-values-1">Arguments and return values</h2>
 
-<h1 id="git-lens"><a href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens">Git Lens</a></h1>
+<p>Arguments are passed on the stack, right-to-left (C style). The size of the parameter list in doublewords is passed in AL.</p>
 
-<p>Adds many features, like inline blame (to see who edited what line, and when), 
-opening commit directly in GitHub, view diff from commit and current file, and 
-more.</p>
+<p>Return values are in EAX.</p>
 
-<h1 id="gruvbox-themes"><a href="https://marketplace.visualstudio.com/items?itemName=tomphilbin.gruvbox-themes">Gruvbox Themes</a></h1>
+<h2 id="clean-up-1">Clean-up</h2>
 
-<p><img src="http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/gruvbox.png" alt="" /></p>
+<p>ECX, and EDX are cleared upon exiting the function call.</p>
 
-<p>Definitely my favourite theme: The light version is not completely white, but 
-beige, which is much more pleasant to see even in dark environments, but it also
- ships with a dark theme which uses the same color scheme. It has good contrast 
-while at the same time not being soft enough to use for hours on end.</p>
+<h2 id="pseudocode-assembly-1">Pseudocode assembly</h2>
 
-<h1 id="ip-address"><a href="https://marketplace.visualstudio.com/items?itemName=Compulim.vscode-ipaddress">IP Address</a></h1>
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mov</span>   <span class="mi">4</span><span class="p">,</span> <span class="n">al</span>
+<span class="k">push</span>  <span class="n">d</span>
+<span class="k">push</span>  <span class="n">c</span>
+<span class="k">push</span>  <span class="n">b</span>
+<span class="k">push</span>  <span class="n">a</span>
+<span class="k">call</span>  <span class="k">test</span>
+</code></pre></div></div>
 
-<p><img src="http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/ip.gif" alt="" /></p>
+<p>The result will be in EAX, and floating point values in ST0.</p>
 
-<p>Shows your IP address in the status bar, which helps greatly when using a laptop
- and moving around often, as you don’t need to pull up a terminal or a web 
-browser to check your IP.</p>
+<h1 id="microsoft-fastcall">Microsoft fastcall</h1>
 
-<h1 id="jekyll-snippets"><a href="https://marketplace.visualstudio.com/items?itemName=ginfuru.vscode-jekyll-snippets">Jekyll Snippets</a></h1>
+<p>This convention is better than the previous two in terms of performance, hence its “fast” prefix.</p>
 
-<p>Helpful when dealing with Jekyll websites (did you know this website runs on 
-Jekyll and is completely static?) which is my favourite static site generator. 
-Adds features such as syntax highlighting for Jekyll Front Matter, as well as 
-ERB snippets.</p>
+<p>However, the fastcall convention is not standarised, and varies a lot from compiler to compiler, so I’ll focus in the Microsoft implementation. In this case, GCC’s <code class="highlighter-rouge">__msfastcall</code> is similar.</p>
 
-<h1 id="nightswitch-lite"><a href="https://marketplace.visualstudio.com/items?itemName=gharveymn.nightswitch-lite">NightSwitch-Lite</a></h1>
+<h2 id="arguments-and-return-values-2">Arguments and return values</h2>
 
-<p>Toggles to light/dark themes as specified in your configuration automatically 
-based on the time of day and location, but it also allows to manually set the 
-switching time.</p>
+<p>First two arguments are passed left-to-right into ECX and EDX. The remaining arguments are pushed onto the stack from right to left.</p>
 
-<h1 id="vim"><a href="https://marketplace.visualstudio.com/items?itemName=vscodevim.vim">Vim</a></h1>
+<p>Microsoft compilers behave differently for IA64 and AMD64 architectures, because of additional registers. They simply use their own x64 calling convention, regardless of what was specified to the compiler.</p>
 
-<p>Adds modal editing, Vim shortcuts, command remapping, and some popular Vim 
-plugins like EasyMotion, Surround, and such.</p>
+<h2 id="clean-up-2">Clean-up</h2>
+
+<p>The callee is responsible for cleaning the stack.</p>
+
+<h2 id="pseudocode-assembly-2">Pseudocode assembly</h2>
+
+<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mov</span>   <span class="n">a</span><span class="p">,</span> <span class="n">ecx</span>
+<span class="k">mov</span>   <span class="n">b</span><span class="p">,</span> <span class="n">edx</span>
+<span class="k">push</span>  <span class="n">d</span>
+<span class="k">push</span>  <span class="n">c</span>
+<span class="k">call</span>  <span class="k">test</span>
+</code></pre></div></div>
+
+<p>The result will be in EAX, and floating point values in ST0.</p>
 
         
       </section>
@@ -509,11 +500,15 @@ plugins like EasyMotion, Surround, and such.</p>
     
       
       
-      <a href="/tags/#microsoft" class="page__taxonomy-item" rel="tag">Microsoft</a><span class="sep">, </span>
+      <a href="/tags/#assembly" class="page__taxonomy-item" rel="tag">assembly</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#software-dev" class="page__taxonomy-item" rel="tag">software-dev</a>
+      <a href="/tags/#software-rev" class="page__taxonomy-item" rel="tag">software-rev</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#x86" class="page__taxonomy-item" rel="tag">x86</a>
     
     </span>
   </p>
@@ -521,8 +516,27 @@ plugins like EasyMotion, Surround, and such.</p>
 
 
 
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#cybersecurity" class="page__taxonomy-item" rel="tag">Cybersecurity</a>
+    
+    </span>
+  </p>
+
+
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-05-14T18:28:03+02:00">May 14, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-06-10T11:57:04+02:00">June 10, 2018</time></p>
         
       </footer>
 
@@ -531,12 +545,11 @@ plugins like EasyMotion, Surround, and such.</p>
       
   <nav class="pagination">
     
-      <a href="/2017/04/07/why-i-use-a-macbook" class="pagination--pager" title="Why I use a MacBook
+      <a href="/2018/06/08/windows-static" class="pagination--pager" title="Static analysis tools for Windows
 ">Previous</a>
     
     
-      <a href="/2018/05/20/productivity" class="pagination--pager" title="Productivity
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -550,42 +563,6 @@ plugins like EasyMotion, Surround, and such.</p>
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/2018-06-10-function-calls/header.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/2018/06/10/function-calls" rel="permalink">x86 Function call conventions
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Another cybersecurity post. Focused on binary (dis)assembly.
-
-</p>
-  </article>
-</div>
         
           
 
@@ -691,8 +668,45 @@ plugins like EasyMotion, Surround, and such.</p>
   </article>
 </div>
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/2018-05-20-productivity/productivity-header.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2018/05/20/productivity" rel="permalink">Productivity
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  17 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">In the past, I used to struggle with my productivity, no matter how hard I
+seemed to study, my grades didn’t reflect it. I was quite stubborn in believing
+I ...</p>
+  </article>
+</div>
+        
       </div>
     </div>
+  
   
 </div>
     </div>

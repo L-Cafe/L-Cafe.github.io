@@ -2,6 +2,10 @@ All tags must be a single word, British spelling, capitalised when proper nouns,
 
 # Apple
 
+# Assembly
+
+For topics related to the assembly language.
+
 # cybersecurity
 
 Umbrella term for all computer security related topics
@@ -33,3 +37,5 @@ Static analysis focused reverse engineering of software.
 # tip
 
 # VSCode
+
+# x86
