@@ -28,7 +28,7 @@ In Linux, the GNU Compiler Collection (GCC) sets the cdecl de facto standard.
 
 The registers ST0 through ST7 are empty when calling a function.
 
-ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST(0) is empty too.
+ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST0 is empty too.
 
 ## Arguments and return values
 
@@ -50,7 +50,7 @@ push  a
 call  test
 ```
 
-The result will be in EAX, and floating point values in ST0.
+The result will be in EAX, and floating point values in ST*.
 
 # syscall
 
@@ -79,7 +79,7 @@ push  a
 call  test
 ```
 
-The result will be in EAX, and floating point values in ST0.
+The result will be in EAX, and floating point values in ST*.
 
 # Microsoft fastcall
 
@@ -107,4 +107,4 @@ push  c
 call  test
 ```
 
-The result will be in EAX, and floating point values in ST0.
+The result will be in EAX, and floating point values in ST*.

@@ -403,7 +403,7 @@
 
 <p>The registers ST0 through ST7 are empty when calling a function.</p>
 
-<p>ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST(0) is empty too.</p>
+<p>ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST0 is empty too.</p>
 
 <h2 id="arguments-and-return-values">Arguments and return values</h2>
 
@@ -424,7 +424,7 @@
 <span class="k">call</span>  <span class="k">test</span>
 </code></pre></div></div>
 
-<p>The result will be in EAX, and floating point values in ST0.</p>
+<p>The result will be in EAX, and floating point values in ST*.</p>
 
 <h1 id="syscall">syscall</h1>
 
@@ -452,7 +452,7 @@
 <span class="k">call</span>  <span class="k">test</span>
 </code></pre></div></div>
 
-<p>The result will be in EAX, and floating point values in ST0.</p>
+<p>The result will be in EAX, and floating point values in ST*.</p>
 
 <h1 id="microsoft-fastcall">Microsoft fastcall</h1>
 
@@ -479,7 +479,7 @@
 <span class="k">call</span>  <span class="k">test</span>
 </code></pre></div></div>
 
-<p>The result will be in EAX, and floating point values in ST0.</p>
+<p>The result will be in EAX, and floating point values in ST*.</p>
 
         
       </section>

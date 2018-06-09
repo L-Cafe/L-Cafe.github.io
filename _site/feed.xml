@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://l1cafe.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://l1cafe.github.io/" rel="alternate" type="text/html" /><updated>2018-06-09T13:24:59+02:00</updated><id>https://l1cafe.github.io/</id><title type="html">L1Cafe</title><subtitle>Software, infosec, system administration projects, opinions and tips.</subtitle><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><entry><title type="html">x86 Function call conventions</title><link href="https://l1cafe.github.io/2018/06/09/function-calls" rel="alternate" type="text/html" title="x86 Function call conventions" /><published>2018-06-09T11:57:04+02:00</published><updated>2018-06-09T11:57:04+02:00</updated><id>https://l1cafe.github.io/2018/06/09/function-calls</id><content type="html" xml:base="https://l1cafe.github.io/2018/06/09/function-calls">&lt;p&gt;Another cybersecurity post. Focused on binary (dis)assembly.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="https://l1cafe.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://l1cafe.github.io/" rel="alternate" type="text/html" /><updated>2018-06-09T13:29:28+02:00</updated><id>https://l1cafe.github.io/</id><title type="html">L1Cafe</title><subtitle>Software, infosec, system administration projects, opinions and tips.</subtitle><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><entry><title type="html">x86 Function call conventions</title><link href="https://l1cafe.github.io/2018/06/09/function-calls" rel="alternate" type="text/html" title="x86 Function call conventions" /><published>2018-06-09T11:57:04+02:00</published><updated>2018-06-09T11:57:04+02:00</updated><id>https://l1cafe.github.io/2018/06/09/function-calls</id><content type="html" xml:base="https://l1cafe.github.io/2018/06/09/function-calls">&lt;p&gt;Another cybersecurity post. Focused on binary (dis)assembly.&lt;/p&gt;
 
 &lt;p&gt;This time it’s about how different compilers turn high-level programming language code into low-level assembly code, in regards to function calling.&lt;/p&gt;
 
@@ -16,7 +16,7 @@
 
 &lt;p&gt;The registers ST0 through ST7 are empty when calling a function.&lt;/p&gt;
 
-&lt;p&gt;ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST(0) is empty too.&lt;/p&gt;
+&lt;p&gt;ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST0 is empty too.&lt;/p&gt;
 
 &lt;h2 id=&quot;arguments-and-return-values&quot;&gt;Arguments and return values&lt;/h2&gt;
 
@@ -37,7 +37,7 @@
 &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;test&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The result will be in EAX, and floating point values in ST0.&lt;/p&gt;
+&lt;p&gt;The result will be in EAX, and floating point values in ST*.&lt;/p&gt;
 
 &lt;h1 id=&quot;syscall&quot;&gt;syscall&lt;/h1&gt;
 
@@ -65,7 +65,7 @@
 &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;test&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The result will be in EAX, and floating point values in ST0.&lt;/p&gt;
+&lt;p&gt;The result will be in EAX, and floating point values in ST*.&lt;/p&gt;
 
 &lt;h1 id=&quot;microsoft-fastcall&quot;&gt;Microsoft fastcall&lt;/h1&gt;
 
@@ -92,7 +92,7 @@
 &lt;span class=&quot;k&quot;&gt;call&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;test&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The result will be in EAX, and floating point values in ST0.&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="Cybersecurity" /><category term="software-rev" /><category term="assembly" /><category term="x86" /><summary type="html">Another cybersecurity post. Focused on binary (dis)assembly.</summary></entry><entry><title type="html">Static analysis tools for Windows</title><link href="https://l1cafe.github.io/2018/06/08/windows-static" rel="alternate" type="text/html" title="Static analysis tools for Windows" /><published>2018-06-08T13:08:50+02:00</published><updated>2018-06-08T13:08:50+02:00</updated><id>https://l1cafe.github.io/2018/06/08/windows-static</id><content type="html" xml:base="https://l1cafe.github.io/2018/06/08/windows-static">&lt;p&gt;I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing.&lt;/p&gt;
+&lt;p&gt;The result will be in EAX, and floating point values in ST*.&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="Cybersecurity" /><category term="software-rev" /><category term="assembly" /><category term="x86" /><summary type="html">Another cybersecurity post. Focused on binary (dis)assembly.</summary></entry><entry><title type="html">Static analysis tools for Windows</title><link href="https://l1cafe.github.io/2018/06/08/windows-static" rel="alternate" type="text/html" title="Static analysis tools for Windows" /><published>2018-06-08T13:08:50+02:00</published><updated>2018-06-08T13:08:50+02:00</updated><id>https://l1cafe.github.io/2018/06/08/windows-static</id><content type="html" xml:base="https://l1cafe.github.io/2018/06/08/windows-static">&lt;p&gt;I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for anyone interested in binary reversing.&lt;/p&gt;
 
 &lt;p&gt;Some tools will have functionality that overlaps with other of the listed tools. It’s up to you which one to use.&lt;/p&gt;
 
