@@ -6,13 +6,11 @@ All tags must be a single word, British spelling, capitalised when proper nouns,
 
 For topics related to the assembly language.
 
-# cybersecurity
-
-Umbrella term for all computer security related topics
-
 # dynamic-analysis
 
 Dynamic analysis focused reverse engineering of software.
+
+# HackTheBox
 
 # Microsoft
 

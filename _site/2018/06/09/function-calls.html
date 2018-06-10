@@ -415,6 +415,8 @@
 
 <p>Registers EAX, ECX and EDX are caller-saved, and the rest are callee-saved.</p>
 
+<p>The stack pointer (ESP) is cleaned by the caller.</p>
+
 <h2 id="pseudocode-assembly">Pseudocode assembly</h2>
 
 <div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">push</span>  <span class="n">d</span>
@@ -422,6 +424,7 @@
 <span class="k">push</span>  <span class="n">b</span>
 <span class="k">push</span>  <span class="n">a</span>
 <span class="k">call</span>  <span class="k">test</span>
+<span class="k">add</span>   <span class="n">esp</span><span class="p">,</span> <span class="mi">16</span>
 </code></pre></div></div>
 
 <p>The result will be in EAX, and floating point values in ST*.</p>
@@ -442,6 +445,8 @@
 
 <p>ECX, and EDX are cleared upon exiting the function call.</p>
 
+<p>The stack pointer (ESP) is cleaned by the caller.</p>
+
 <h2 id="pseudocode-assembly-1">Pseudocode assembly</h2>
 
 <div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mov</span>   <span class="mi">4</span><span class="p">,</span> <span class="n">al</span>
@@ -450,6 +455,8 @@
 <span class="k">push</span>  <span class="n">b</span>
 <span class="k">push</span>  <span class="n">a</span>
 <span class="k">call</span>  <span class="k">test</span>
+<span class="k">add</span>   <span class="n">esp</span><span class="p">,</span> <span class="mi">16</span>
+<span class="k">mov</span>   <span class="mi">0</span><span class="p">,</span> <span class="n">al</span>
 </code></pre></div></div>
 
 <p>The result will be in EAX, and floating point values in ST*.</p>
@@ -468,7 +475,7 @@
 
 <h2 id="clean-up-2">Clean-up</h2>
 
-<p>The callee is responsible for cleaning the stack.</p>
+<p>The callee is responsible for cleaning the stack, as well as the ECX and EDX registers.</p>
 
 <h2 id="pseudocode-assembly-2">Pseudocode assembly</h2>
 
@@ -549,7 +556,8 @@
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/2018/06/10/fun-begins" class="pagination--pager" title="The fun begins: HackTheBox.eu
+">Next</a>
     
   </nav>
 
@@ -563,6 +571,40 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/2018-06-10-fun-begins/header.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2018/06/10/fun-begins" rel="permalink">The fun begins: HackTheBox.eu
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">It’s been a while since I joined https://www.hackthebox.eu/. Probably more than a year. And I haven’t really had the time to spend trying to break into the m...</p>
+  </article>
+</div>
         
           
 
@@ -665,42 +707,6 @@
     <p class="archive__item-excerpt" itemprop="description">The blog now supports comments!
 
 </p>
-  </article>
-</div>
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/2018-05-20-productivity/productivity-header.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/2018/05/20/productivity" rel="permalink">Productivity
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  17 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">In the past, I used to struggle with my productivity, no matter how hard I
-seemed to study, my grades didn’t reflect it. I was quite stubborn in believing
-I ...</p>
   </article>
 </div>
         

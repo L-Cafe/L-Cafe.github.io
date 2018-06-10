@@ -53,4 +53,9 @@ var store = [{
         "excerpt":"Another cybersecurity post. Focused on binary (dis)assembly. This time it’s about how different compilers turn high-level programming language code into low-level assembly code, in regards to function calling. As a sample, I’ll use a pseudocode call like test(a,b,c,d) to demonstrate how it would look like in regards to different conventions....","categories": ["Cybersecurity"],
         "tags": ["software-rev","assembly","x86"],
         "url": "https://l1cafe.github.io/2018/06/09/function-calls",
-        "teaser":"https://l1cafe.github.io/assets/images/2018-06-09-function-calls/header.jpg"}]
+        "teaser":"https://l1cafe.github.io/assets/images/2018-06-09-function-calls/header.jpg"},{
+        "title": "The fun begins: HackTheBox.eu",
+        "excerpt":"It’s been a while since I joined https://www.hackthebox.eu/. Probably more than a year. And I haven’t really had the time to spend trying to break into the machines, because of my university studies, but now summer is coming, so I will be able to dedicate more resources to it. In...","categories": ["Cybersecurity"],
+        "tags": ["HackTheBox"],
+        "url": "https://l1cafe.github.io/2018/06/10/fun-begins",
+        "teaser":"https://l1cafe.github.io/assets/images/2018-06-10-fun-begins/header.jpg"}]
