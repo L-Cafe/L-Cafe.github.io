@@ -33,3 +33,13 @@ projects, check out the links in the top navigation bar.
 
 - [Codewars](https://www.codewars.com/dashboard)
 - [HackerRank](https://www.hackerrank.com/dashboard)
+
+## Cybersecurity
+
+- [HackTheBox](https://www.hackthebox.eu) - Practice exploiting and hacking machines legally.
+
+## Cybersecurity resources
+
+- [Hakluke’s Ultimate OSCP Guide](https://medium.com/@hakluke/haklukes-ultimate-oscp-guide-part-3-practical-hacking-tips-and-tricks-c38486f5fc97)
+- [Offensive Computer Security Videos by Florida State University](https://www.cs.fsu.edu/%7Eredwood/OffensiveComputerSecurity/lectures.html)
+- [OSCP by ferreirasc](https://github.com/ferreirasc/oscp)

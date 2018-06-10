@@ -20,7 +20,7 @@ Either fully open source, or freeware (unrestricted, so no shareware).
 
 ## [Dependency Walker](http://dependencywalker.com/)
 
-Displays a hierarchical tree diagram of all dependent module, with exported, and imported functions.
+Displays a hierarchical tree diagram of all dependant modules, with exported, and imported functions.
 
 ## [FileAlyzer](https://www.safer-networking.org/products/filealyzer/)
 
