@@ -41,5 +41,5 @@ projects, check out the links in the top navigation bar.
 ## Cybersecurity resources
 
 - [Hakluke’s Ultimate OSCP Guide](https://medium.com/@hakluke/haklukes-ultimate-oscp-guide-part-3-practical-hacking-tips-and-tricks-c38486f5fc97)
-- [Offensive Computer Security Videos by Florida State University](https://www.cs.fsu.edu/%7Eredwood/OffensiveComputerSecurity/lectures.html)
-- [OSCP by ferreirasc](https://github.com/ferreirasc/oscp)
+- [Offensive Computer Security Videos](https://www.cs.fsu.edu/%7Eredwood/OffensiveComputerSecurity/lectures.html) by Florida State University
+- [OSCP](https://github.com/ferreirasc/oscp) by ferreirasc
