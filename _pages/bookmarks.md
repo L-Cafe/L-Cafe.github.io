@@ -36,7 +36,11 @@ projects, check out the links in the top navigation bar.
 
 ## Cybersecurity
 
+- [Google Gruyere](http://google-gruyere.appspot.com) - Hosted vulnerable application instance.
 - [HackTheBox](https://www.hackthebox.eu) - Practice exploiting and hacking machines legally.
+- [Metasploitable 3](https://github.com/rapid7/metasploitable3)
+- [VulnHub](https://www.vulnhub.com) - Free, downloadable VMs for practice.
+
 
 ## Cybersecurity resources
 
