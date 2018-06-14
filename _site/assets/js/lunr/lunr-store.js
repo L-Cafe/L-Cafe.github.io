@@ -58,4 +58,9 @@ var store = [{
         "excerpt":"It’s been a while since I joined https://www.hackthebox.eu/. Probably more than a year. And I haven’t really had the time to spend trying to break into the machines, because of my university studies, but now summer is coming, so I will be able to dedicate more resources to it. In...","categories": ["Cybersecurity"],
         "tags": ["HackTheBox"],
         "url": "https://l1cafe.github.io/2018/06/10/fun-begins",
-        "teaser":"https://l1cafe.github.io/assets/images/2018-06-10-fun-begins/header.jpg"}]
+        "teaser":"https://l1cafe.github.io/assets/images/2018-06-10-fun-begins/header.jpg"},{
+        "title": "The DEFINITIVE guide to defeating spammers",
+        "excerpt":"Nowadays, spamming is a very common technique, and nobody can deny that. Spamming is so cheap that even a 10% opening rate is a tremendous success, because sending e-mails doesn’t require paying fees to ISPs (like you would with mass SMSs and robocalls), and it also doesn’t require hiring anyone...","categories": [],
+        "tags": ["productivity","tip"],
+        "url": "https://l1cafe.github.io/2018/06/14/defeat-spammers",
+        "teaser":"https://l1cafe.github.io/assets/images/2018-06-14-defeat-spammers/header.jpg"}]
