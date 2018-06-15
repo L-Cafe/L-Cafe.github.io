@@ -61,6 +61,6 @@ var store = [{
         "teaser":"https://l1cafe.github.io/assets/images/2018-06-10-fun-begins/header.jpg"},{
         "title": "The DEFINITIVE guide to defeating spammers",
         "excerpt":"Nowadays, spamming is a very common technique, and nobody can deny that. Spamming is so cheap that even a 10% opening rate is a tremendous success, because sending e-mails doesn’t require paying fees to ISPs (like you would with mass SMSs and robocalls), and it also doesn’t require hiring anyone...","categories": [],
-        "tags": ["productivity","tip"],
+        "tags": ["productivity","tip","privacy"],
         "url": "https://l1cafe.github.io/2018/06/14/defeat-spammers",
         "teaser":"https://l1cafe.github.io/assets/images/2018-06-14-defeat-spammers/header.jpg"}]
