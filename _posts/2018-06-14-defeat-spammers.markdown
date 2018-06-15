@@ -1,7 +1,7 @@
 ---
 title:      "The DEFINITIVE guide to defeating spammers"
 date:       2018-06-14 08:35:20 +0100
-tags:       productivity tip
+tags:       productivity tip privacy
 comment:    header sizes are 2000x750
 header:
   image:	/assets/images/2018-06-14-defeat-spammers/header.jpg

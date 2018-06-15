@@ -18,6 +18,8 @@ Dynamic analysis focused reverse engineering of software.
 
 # passwords
 
+# privacy
+
 # project
 
 # software-dev
