@@ -6,8 +6,8 @@ classes: wide
 author_profile: true
 ---
 
-If you have a job offer, please use the links to the left of this page to
-contact me on your preferred communication method and request my CV.
+If you have a job offer, please use the social links on this page to
+contact me on your preferred communication method and request my resume.
 
 My name is León Castillejos. I'm a Higher Technician in Multi-Platform Applications Development.
 Currently studying Computer Science & Engineering at
@@ -18,31 +18,38 @@ competitive and intellectually demanding environments.
 
 My native country is Spain, so my primary language is Spanish. I can also speak
 and write (British) English fluently, and I'm currently learning Chinese.
-I generally only speak Spanish with Spaniards and hispanic people. All the code
-I release is fully in English, including variable names, functions, and
-comments, unless explicitly required to use Spanish.
+
+I love travelling. I have visited the following countries:
+🇪🇸 🇷🇺 🇵🇹 🇫🇷 🇬🇧 🇱🇺 🇩🇪 🇺🇸 🇨🇦 🇯🇵 🇨🇳 🇭🇰
+
+I want to visit these countries:
+🇰🇷 🇹🇼 🇲🇴 🇹🇭 🇨🇺 🇦🇺 🇳🇿 🇮🇸 🇸🇪 🇩🇰 🇳🇴 🇳🇱 🇨🇭 🇧🇷 🇪🇬 🇪🇪 🇨🇾 🇦🇹 🇲🇳 🇸🇬 🇨🇷 🇮🇹 🇷🇺
 
 I created this blog in order to have a centralised place to express my opinion
 and share what I know with the world.
 
-If you need to contact me, you can use the links at the bottom, to reach me on
-e-mail and different social media platforms.
+## Me across the web
 
-Additionally, you can fetch my PGP public key, and/or follow me on
-[Keybase](https://keybase.io/l1cafe).
+- [myNoise Friends](https://mynoise.net/myNoiseFriends.php) - Listed as "white hat hacker", helped secure the website and perform penetration testing and responsible vulnerability disclosure.
+- [Tutorio.es](https://www.tutorio.es/) - Listed as "sysadmin", responsible for server maintenance, management, and hardening.
+
+### My publications
+
+- [Ataques homógrafos - The Hacker Way](https://thehackerway.com/2017/04/21/ataques-homografos/)
 
 ## How I do my computing
 
 I own a MacBook Pro 2016, 15 inch (with Touch Bar) and use macOS on a daily
-basis. I also use Linux very often, and maintain some Linux servers, which run
+basis. I also use Linux very often, and maintain some Linux servers running
 Debian, Proxmox, CentOS, Fedora Server, and a Windows Server as an
 experimentation platform.
 
-On GitHub, I maintain some of my settings for a few applications of my choice.
-
 For editing code, I enjoy using Vim and Visual Studio Code. You can find my
 `.vimrc` settings
-[here](https://github.com/L1Cafe/My-Preferences/tree/master/vim).
+[here](https://github.com/L1Cafe/My-Preferences/tree/master/vim), for Visual
+Studio Code, I wrote a
+[post]({% post_url 2018-05-14-my-vscode-extensions %}) on the
+extensions I use the most.
 
 My shell of choice is zsh. My settings are published
 [here](https://github.com/L1Cafe/My-Preferences/tree/master/macOS).
@@ -61,12 +68,3 @@ I enjoy producing audiovisual content. Specifically, I play the piano, and enjoy
 For my photo editing and graphical design needs, I rely on
 [Affinity Photo](https://affinity.serif.com/en-gb/photo/), and 
 [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
-
-## Me across the web
-
-- [myNoise Friends](https://mynoise.net/myNoiseFriends.php) - Listed as "white hat hacker", helped secure the website and perform penetration testing and responsible vulnerability disclosure.
-- [Tutorio.es](https://www.tutorio.es/) - Listed as "sysadmin", responsible for server maintenance, management, and hardening.
-
-### My publications
-
-- [Ataques homógrafos - The Hacker Way](https://thehackerway.com/2017/04/21/ataques-homografos/)

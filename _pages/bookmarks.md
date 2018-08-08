@@ -27,6 +27,12 @@ projects, check out the links in the top navigation bar.
 - [Learn Anything](https://learn-anything.xyz/) - Directions for learning anything with easy to understand, interactive maps.
 - [MIT OpenCourseWare](https://ocw.mit.edu/index.htm) - Free, high quality college lesson recordings.
 - [myNoise.net](https://mynoise.net/) - White noise, rain, fireplaces... Noises to help you focus, relax, or sleep.
+
+## Administration tools
+
+- [MxToolbox](https://mxtoolbox.com) - Multiple tests for mail servers, especially spam list checking for seeing if your E-mail server is tagged as a spammer by some list.
+- [Secure Email](https://www.checktls.com/#test) - Free SPF/DKIM/DMARC and STARTTLS checking for E-mail servers.
+- [Security Headers](https://securityheaders.com) - Free web server header tests and grading.
 - [Qualys SSL Labs](https://www.ssllabs.com/) - Free SSL/TLS server and browser tests.
 
 ## Competitive programming
