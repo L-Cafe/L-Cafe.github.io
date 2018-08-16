@@ -13,6 +13,12 @@ links.
 I may or may not be related to these projects. To find out more about me and my
 projects, check out the links in the top navigation bar.
 
+## People
+
+- [Scott Helme](https://scotthelme.co.uk) - He presents himself as a Security Researcher, and runs a blog with very up-to-date and accurate information for hardening servers. He also runs two free, very popular tools that help you deploy better security.
+
+## General resources
+
 - [Awesome](https://github.com/sindresorhus/awesome) - Master list of awesome lists.
 - [Awesome Video Channels](https://github.com/L1Cafe/Awesome-Video-Channels) - A curated list of online video channels for learning just about anything!
 - [Better Crypto](https://bettercrypto.org) - Comprehensive list of settings for many server software to achieve the best levels of encryption.
@@ -31,9 +37,12 @@ projects, check out the links in the top navigation bar.
 ## Administration tools
 
 - [HackerTarget.com Tools](https://hackertarget.com/ip-tools/) - Multiple network tools, like port scanning, HTTP headers, and nameserver zone transfer tests.
+- [Hardenize](https://www.hardenize.com) - Multiple tests and scores for encryption and general web security.
+- [MTA-STS validator](https://aykevl.nl/apps/mta-sts/) - MTA-STS is similar to HSTS, but applied to SMPT mail servers.
 - [MxToolbox](https://mxtoolbox.com) - Multiple tests for mail servers, especially spam list checking for seeing if your E-mail server is tagged as a spammer by some list.
 - [Secure Email](https://www.checktls.com/#test) - Free SPF/DKIM/DMARC and STARTTLS checking for E-mail servers.
 - [Security Headers](https://securityheaders.com) - Free web server header tests and grading.
+- [SSL email check](https://ssl-tools.net/mailservers/kydara.com) - Checks mail servers for encryption their supported SSL/TLS protocols and certificates offered.
 - [Qualys SSL Labs](https://www.ssllabs.com/) - Free SSL/TLS server and browser tests.
 
 ## Competitive programming
