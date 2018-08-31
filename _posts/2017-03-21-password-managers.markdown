@@ -1,7 +1,7 @@
 ---
 title:      "Password managers"
 date:       2017-03-21 19:29:29 +0100
-tags:       opinion passwords
+tags:       opinion
 ---
 
 The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank's information, scammers, identity theft...

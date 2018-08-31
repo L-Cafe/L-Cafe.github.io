@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-08T14:48:41+02:00</updated><id>http://localhost:4000/</id><title type="html">L1Cafe</title><subtitle>Software, infosec, system administration projects, opinions and tips.</subtitle><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><entry><title type="html">The DEFINITIVE guide to defeating spammers</title><link href="http://localhost:4000/2018/06/14/defeat-spammers" rel="alternate" type="text/html" title="The DEFINITIVE guide to defeating spammers" /><published>2018-06-14T09:35:20+02:00</published><updated>2018-06-14T09:35:20+02:00</updated><id>http://localhost:4000/2018/06/14/defeat-spammers</id><content type="html" xml:base="http://localhost:4000/2018/06/14/defeat-spammers">&lt;p&gt;Nowadays, spamming is a very common technique, and nobody can deny that. Spamming is so cheap that even a 10% opening rate is a tremendous success, because sending e-mails doesn’t require paying fees to ISPs (like you would with mass SMSs and robocalls), and it also doesn’t require hiring anyone to take the time to manually write and send e-mails (as opposed to postal spam, which have to be physically delivered into mailboxes by people), when you can just buy e-mail addresses in bulks by thousands of providers that sell active e-mail addresses by prices so ridiculously affordable, it lowers the barrier to entry dramatically.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-31T15:58:22+02:00</updated><id>http://localhost:4000/</id><title type="html">L1Cafe</title><subtitle>Software, infosec, system administration projects, opinions and tips.</subtitle><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><entry><title type="html">Proxmox tip: “Failed to start VNC server: Failed to bind socket: Cannot assign requested address”</title><link href="http://localhost:4000/2018/08/30/proxmox-vnc" rel="alternate" type="text/html" title="Proxmox tip: &quot;Failed to start VNC server: Failed to bind socket: Cannot assign requested address&quot;" /><published>2018-08-30T15:44:32+02:00</published><updated>2018-08-30T15:44:32+02:00</updated><id>http://localhost:4000/2018/08/30/proxmox-vnc</id><content type="html" xml:base="http://localhost:4000/2018/08/30/proxmox-vnc">&lt;p&gt;Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.&lt;/p&gt;
+
+&lt;p&gt;I stumbled across this particularly interesting error when I was moving KVM backups from a Proxmox host to another host. For some reason, I wasn’t able to find any information on the Internet regarding this issue.&lt;/p&gt;
+
+&lt;p&gt;Let’s get to it!&lt;/p&gt;
+
+&lt;h2 id=&quot;steps-to-reproduce-it&quot;&gt;Steps to reproduce it:&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Back up a KVM machine from a Proxmox host. If you back up to the default local storage, there will be a tarball file in &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/lib/vz/dump/&lt;/code&gt; (GZIP or LZO, depending on what you selected when backing up)&lt;/li&gt;
+  &lt;li&gt;Copy that file to a different Proxmox host. You can use rsync, SFTP, FTP, it doesn’t really matter.&lt;/li&gt;
+  &lt;li&gt;Place that file in &lt;code class=&quot;highlighter-rouge&quot;&gt;/var/lib/vz/dump&lt;/code&gt; in the second host (or wherever you want that’s set up in Proxmox to use as VZDump backup file directory).&lt;/li&gt;
+  &lt;li&gt;Try to restore the tarball through the Proxmox Web GUI by choosing the file in the appropriate storage and clicking “Restore”.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The machine is now copied to the second server, but if you try to start it, an error will appear. It will look like this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;kvm: -vnc 192.168.33.5:85: Failed to start VNC server: Failed to bind socket: Cannot assign requested address
+TASK ERROR: start failed: command '/usr/bin/kvm -id 115 -name xyz -chardev 'socket,id=qmp,path=/var/run/qemu-server/115.qmp,server,nowait' -mon 'chardev=qmp,mode=control' -pidfile /var/run/qemu-server/115.pid -daemonize -smbios 'type=1,uuid=abcd' -smp '1,sockets=1,cores=1,maxcpus=1' -nodefaults -boot 'menu=on,strict=on,reboot-timeout=1000,splash=/usr/share/qemu-server/bootsplash.jpg' -vga std -vnc unix:/var/run/qemu-server/115.vnc,x509,password -no-hpet -cpu 'kvm64,+lahf_lm,+sep,+kvm_pv_unhalt,+kvm_pv_eoi,hv_spinlocks=0x1fff,hv_vapic,hv_time,hv_reset,hv_vpindex,hv_runtime,hv_relaxed,enforce' -m 5120 -vnc 192.168.33.5:85 -device 'pci-bridge,id=pci.1,chassis_nr=1,bus=pci.0,addr=0x1e' -device 'pci-bridge,id=pci.2,chassis_nr=2,bus=pci.0,addr=0x1f' -device 'piix3-usb-uhci,id=uhci,bus=pci.0,addr=0x1.0x2' -device 'usb-tablet,id=tablet,bus=uhci.0,port=1' -device 'virtio-balloon-pci,id=balloon0,bus=pci.0,addr=0x3' -drive 'file=/var/lib/vz/images/115/vm-115-disk-1.raw,if=none,id=drive-ide0,cache=writeback,format=raw,aio=threads,detect-zeroes=on' -device 'ide-hd,bus=ide.0,unit=0,drive=drive-ide0,id=ide0,bootindex=100' -drive 'if=none,id=drive-ide2,media=cdrom,aio=threads' -device 'ide-cd,bus=ide.1,unit=0,drive=drive-ide2,id=ide2,bootindex=200' -netdev 'type=tap,id=net0,ifname=tap115i0,script=/var/lib/qemu-server/pve-bridge,downscript=/var/lib/qemu-server/pve-bridgedown' -device 'e1000,mac=xx:xx:xx:xx:xx:xx,netdev=net0,bus=pci.0,addr=0x12,id=net0,bootindex=300' -rtc 'driftfix=slew,base=localtime' -global 'kvm-pit.lost_tick_policy=discard'' failed: exit code 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;(Note: everything was copied from the Proxmox Web GUI, but the name, MAC and BIOS UUID have been altered)&lt;/p&gt;
+
+&lt;p&gt;At first glance, it could look like a ports issue. But we’re not opening ports, are we? Why is this machine throwing a VNC error when I didn’t even try to open up VNC?&lt;/p&gt;
+
+&lt;h2 id=&quot;the-solution&quot;&gt;The solution&lt;/h2&gt;
+
+&lt;p&gt;Well, Proxmox opens a VNC virtual screen when booting up a KVM machine, and the problem is that the backup carried the IP from the first Proxmox server, and now we’re asking the second Proxmox server to open a port in an IP that doesn’t belong to it.&lt;/p&gt;
+
+&lt;p&gt;Specifically, the first line is a dead giveaway: “kvm: -vnc &lt;strong&gt;192.168.33.5:85&lt;/strong&gt;: Failed to start VNC server: Failed to bind socket: Cannot assign requested address”&lt;/p&gt;
+
+&lt;p&gt;What we have to do is go into the virtual machine Proxmox config file, which should be located in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/pve/qemu-server/&amp;lt;VM ID&amp;gt;.conf&lt;/code&gt;, and in this case, because the machine ID is 115, the config file would be in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/pve/qemu-server/115.conf&lt;/code&gt;. The ID is manually selected when restoring the backup.&lt;/p&gt;
+
+&lt;p&gt;The original contents of the file are as follows.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;args: -vnc 192.168.33.5:85
+balloon: 1024
+bootdisk: ide0
+cores: 1
+ide0: local:115/vm-115-disk-1.raw,cache=writeback,size=50G
+ide2: none,media=cdrom
+memory: 5120
+name: xyz
+net0: e1000=xx:xx:xx:xx:xx:xx,bridge=vmbr1
+numa: 0
+onboot: 1
+ostype: win8
+scsihw: virtio-scsi-pci
+smbios1: uuid=abcd
+sockets: 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Our second machine has the IP &lt;code class=&quot;highlighter-rouge&quot;&gt;192.168.33.10&lt;/code&gt;, but this depends on your Proxmox and network configuration. The IP address of any Linux machine can be consulted by running &lt;code class=&quot;highlighter-rouge&quot;&gt;ip addr show&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We only need to change the first line, to have the correct IP. Once this is done, the machine will boot successfully, but if you haven’t already, it might be desirable to change the MAC address of the network adapter as well, depending on your network configuration, to avoid collisions, and maybe the network bridge in case the NAT in your second Proxmox server is set up differently.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;args: -vnc 192.168.33.10:85
+[...]
+net0: e1000=yy:yy:yy:yy:yy:yy,bridge=vmbr1
+[...]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s it!&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="Proxmox" /><category term="tip" /><summary type="html">Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.</summary></entry><entry><title type="html">The DEFINITIVE guide to defeating spammers</title><link href="http://localhost:4000/2018/06/14/defeat-spammers" rel="alternate" type="text/html" title="The DEFINITIVE guide to defeating spammers" /><published>2018-06-14T09:35:20+02:00</published><updated>2018-06-14T09:35:20+02:00</updated><id>http://localhost:4000/2018/06/14/defeat-spammers</id><content type="html" xml:base="http://localhost:4000/2018/06/14/defeat-spammers">&lt;p&gt;Nowadays, spamming is a very common technique, and nobody can deny that. Spamming is so cheap that even a 10% opening rate is a tremendous success, because sending e-mails doesn’t require paying fees to ISPs (like you would with mass SMSs and robocalls), and it also doesn’t require hiring anyone to take the time to manually write and send e-mails (as opposed to postal spam, which have to be physically delivered into mailboxes by people), when you can just buy e-mail addresses in bulks by thousands of providers that sell active e-mail addresses by prices so ridiculously affordable, it lowers the barrier to entry dramatically.&lt;/p&gt;
 
 &lt;p&gt;This is why, nowadays, postmasters and system administrators need to be aware of (and correctly implement) the many technologies that exist to reduce the amount of spam received. Among them:&lt;/p&gt;
 &lt;ul&gt;
@@ -817,119 +879,4 @@ plugins like EasyMotion, Surround, and such.&lt;/p&gt;</content><author><name>Le
 
 &lt;h2 id=&quot;it-simply-is-pretty&quot;&gt;It simply is pretty&lt;/h2&gt;
 
-&lt;p&gt;The truth is that design is a very important part of productivity: a study found that when people worked in well designed offices, and used nicely designed hardware and appliances, were much more productive than on ugly environments and devices.&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="opinion" /><category term="Apple" /><summary type="html">In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.</summary></entry><entry><title type="html">Password managers</title><link href="http://localhost:4000/2017/03/21/password-managers" rel="alternate" type="text/html" title="Password managers" /><published>2017-03-21T19:29:29+01:00</published><updated>2017-03-21T19:29:29+01:00</updated><id>http://localhost:4000/2017/03/21/password-managers</id><content type="html" xml:base="http://localhost:4000/2017/03/21/password-managers">&lt;p&gt;The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft…&lt;/p&gt;
-
-&lt;p&gt;If you have ever read basic security and privacy tips you might be aware of some basic points:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Don’t share your password with anyone, especially people claiming to be employees of these companies.&lt;/li&gt;
-  &lt;li&gt;Always use hard to guess and long passwords, combining symbols, uppercase and lowercase letters, numbers, and never reuse them across services.&lt;/li&gt;
-  &lt;li&gt;Don’t use obvious passwords such as your e-mail address, your name, your wife’s name, your birthdate or words like “password” or “1234”.&lt;/li&gt;
-  &lt;li&gt;Enable two factor authentication when possible, this adds an extra layer which, in case your password gets stolen, will make it more difficult to gain unauthorised access to your account.&lt;/li&gt;
-  &lt;li&gt;Do a regular check-up of your online accounts, and change passwords.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;These tips, while valid, are sometimes difficult to accomplish. Nowadays, almost every online service asks us to make an account, so that will be another new password we’ll need to remember. As we sign up for more and more services, this becomes more and more unlikely until we reach the point of simply using the same password or using variations that are difficult for computers to guess but easy for human attackers, like changing Os for zeroes, or intentionally misspelling words (like writing “twtter” instead of “twitter”). This is not very wise, but fortunately, we have a better tool: password managers.&lt;/p&gt;
-
-&lt;p&gt;In this article, I will summarise a few options regarding password management, sorted by popularity ranking as per &lt;a href=&quot;https://alternativeto.net/&quot;&gt;AlternativeTo&lt;/a&gt; ratings.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-most-well-known&quot;&gt;The most well known&lt;/h2&gt;
-
-&lt;h3 id=&quot;lastpass&quot;&gt;&lt;a href=&quot;https://www.lastpass.com/&quot;&gt;LastPass&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2017-03-21-password-managers/lastpass.png&quot; alt=&quot;LastPass' interface&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Probably the most famous password manager. Released in 2008, their team of experts deliver a cross-platform experience, with extensions for the most used browsers, but also for less well known browsers like Vivaldi, Maxthon or Dolphin. Can work independently of the operating system because it can be used as a browser extension, so all you need is a compatible browser, and you can carry your passwords wherever you go. There are also applications for Android, iPhone, iPad, Windows Phone, etc. The premium plan, at 1 USD/month is rather affordable. It also has a few extra features, such as one that watches websites for breaches and notifies you if you have a stored password for a website that may have been compromised, or a password change wizard that allows for semi-automated fast password changing in supported sites that requires very little manual intervention.&lt;/p&gt;
-
-&lt;h4 id=&quot;pros&quot;&gt;Pros&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Well established&lt;/li&gt;
-  &lt;li&gt;Unified experience across devices&lt;/li&gt;
-  &lt;li&gt;Cloud sync&lt;/li&gt;
-  &lt;li&gt;Free plan&lt;/li&gt;
-  &lt;li&gt;Auto-fill features&lt;/li&gt;
-  &lt;li&gt;Can store encrypted files (with limits depending on the plan)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;cons&quot;&gt;Cons&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Closed source, so it cannot be independently audited&lt;/li&gt;
-  &lt;li&gt;Cloud-based, local storage or third party sync (like Dropbox) is not feasible&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;keepass&quot;&gt;&lt;a href=&quot;http://keepass.info/&quot;&gt;KeePass&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2017-03-21-password-managers/keepass.png&quot; alt=&quot;KeePass' interface&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It isn’t exactly an application, but rather, a standard. The application is completely open source and the most used implementation (KeePass), uses the .Net framework on Windows, and Mono on macOS and Linux. Because of its open nature, there are lots of third party implementations such as KeePassX (which uses Qt, much more desirable for non-Windows machines), KeePassDroid, and others. It is absolutely free to use, forever, and it doesn’t carry a service or cloud with it: it focuses exclusively on password vaults as files. These files can then be easily synchronised using Dropbox, Resilio Sync, or your cloud storage tool of choice. These vaults are encrypted and they can be tuned to use stronger encryption (increasing the open delay, and decreasing the effectiveness of brute-force attacks). KeePass/X allows specifying a key file, a password, or a combination of both, making it a multi-factor solution. There are third party ports for Android, iOS, Windows Phone, Windows Mobile, and even web apps.&lt;/p&gt;
-
-&lt;h4 id=&quot;pros-1&quot;&gt;Pros&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Completely open source&lt;/li&gt;
-  &lt;li&gt;Cross-platform&lt;/li&gt;
-  &lt;li&gt;Fully free&lt;/li&gt;
-  &lt;li&gt;(Partly) audited&lt;/li&gt;
-  &lt;li&gt;Rudimentary auto-fill&lt;/li&gt;
-  &lt;li&gt;Allows storing arbitrary files inside the database&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;cons-1&quot;&gt;Cons&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Does not have cloud sync&lt;/li&gt;
-  &lt;li&gt;Notably uglier than other solutions&lt;/li&gt;
-  &lt;li&gt;Third party implementations sometimes lack minor functionality&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1password&quot;&gt;&lt;a href=&quot;https://1password.com/&quot;&gt;1Password&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2017-03-21-password-managers/1password.png&quot; alt=&quot;1Password's interface&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;1Password has long been the prettiest of the bunch. It offers both a subscription based service, and allows paying a single time for a major version and subsequent updates. It has apps for Windows, and Mac, along with Android and iOS, and ships primarily as an app, rather than as a plug-in (although, browser plug-ins are available for integration). It supports a few OS specific features, such as the Touch Bar and the Touch ID on macOS and iOS, fingerprint authentication on Android, and, like LastPass, it has a service that watches for data breaches.&lt;/p&gt;
-
-&lt;h4 id=&quot;pros-2&quot;&gt;Pros&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Very well-designed interface&lt;/li&gt;
-  &lt;li&gt;Allows for both cloud and local storage&lt;/li&gt;
-  &lt;li&gt;Can store files&lt;/li&gt;
-  &lt;li&gt;Auto-fill features&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;cons-2&quot;&gt;Cons&lt;/h4&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;A bit pricier than its alternatives, no free plan&lt;/li&gt;
-  &lt;li&gt;No other desktop OS support besides Windows or macOS&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;other-alternatives&quot;&gt;Other alternatives&lt;/h2&gt;
-
-&lt;p&gt;While less known, there are other ways to manage your passwords.&lt;/p&gt;
-
-&lt;h3 id=&quot;encryptr&quot;&gt;&lt;a href=&quot;https://spideroak.com/personal/encryptr&quot;&gt;Encryptr&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2017-03-21-password-managers/encryptr.png&quot; alt=&quot;Encryptr's interface&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Tiny little app that allows for fast password management. It’s clean-looking, and it’s cloud-based, so you’ll never lose your passwords. It’s cross-platform and it uses the Electron framework to bring a unified experience across operating systems. It has apps for Windows, Linux, macOS, as well as Android, iOS. It’s free and open source. Doesn’t allow storing files, only plain text.&lt;/p&gt;
-
-&lt;h3 id=&quot;enpass&quot;&gt;&lt;a href=&quot;https://www.enpass.io/&quot;&gt;Enpass&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2017-03-21-password-managers/enpass.png&quot; alt=&quot;Enpass' interface&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;A newcomer to the password management industry. It is completely free to use on desktop (Windows, macOS, Linux), but its mobile apps (Android, iOS, Blackberry, Windows Phone, Android Wear, Apple Watch) have a one-time fee. It looks good and allows for both local and third party cloud-based storage. Supports Windows Hello, Touch ID, Android fingerprint, etc.&lt;/p&gt;
-
-&lt;h3 id=&quot;true-key&quot;&gt;&lt;a href=&quot;https://www.truekey.com/&quot;&gt;True Key&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2017-03-21-password-managers/truekey.jpg&quot; alt=&quot;True Key's interface&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Backed by Intel, it features biometric authentication, and is free for up to 15 passwords. After that, it requires a yearly subscription to use on Windows, macOS, iOS, and Android.&lt;/p&gt;
-
-&lt;h3 id=&quot;master-password&quot;&gt;&lt;a href=&quot;http://masterpasswordapp.com/&quot;&gt;Master Password&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2017-03-21-password-managers/masterpassword.png&quot; alt=&quot;Master Password's interface&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This one is a bit different. Instead of saving passwords in a file database or saving them on the cloud, it generates your passwords based on your master password, name, and website, so it never stores data.&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="opinion" /><category term="passwords" /><summary type="html">The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft…</summary></entry></feed>
+&lt;p&gt;The truth is that design is a very important part of productivity: a study found that when people worked in well designed offices, and used nicely designed hardware and appliances, were much more productive than on ugly environments and devices.&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="opinion" /><category term="Apple" /><summary type="html">In this article, I want to explain why I use a MacBook. I am convinced it is the superior desktop OS, but I also think everyone should use what suits them. In my case, that would be macOS.</summary></entry></feed>

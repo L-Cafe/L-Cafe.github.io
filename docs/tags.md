@@ -16,11 +16,11 @@ Dynamic analysis focused reverse engineering of software.
 
 # opinion
 
-# passwords
-
 # privacy
 
 # project
+
+# Proxmox
 
 # software-dev
 

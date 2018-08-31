@@ -16,7 +16,7 @@ var store = [{
         "teaser":"http://localhost:4000/assets/images/teaser.jpg"},{
         "title": "Password managers",
         "excerpt":"The Internet nowadays is a very messy place. Identity theft, e-mail confirmations, instant notifications, mobile devices, multiple accounts, data leaks, account dumps, service breaches, malware that steals your bank’s information, scammers, identity theft… If you have ever read basic security and privacy tips you might be aware of some basic...","categories": [],
-        "tags": ["opinion","passwords"],
+        "tags": ["opinion"],
         "url": "http://localhost:4000/2017/03/21/password-managers",
         "teaser":"http://localhost:4000/assets/images/teaser.jpg"},{
         "title": "Why I use a MacBook",
@@ -63,4 +63,9 @@ var store = [{
         "excerpt":"Nowadays, spamming is a very common technique, and nobody can deny that. Spamming is so cheap that even a 10% opening rate is a tremendous success, because sending e-mails doesn’t require paying fees to ISPs (like you would with mass SMSs and robocalls), and it also doesn’t require hiring anyone...","categories": [],
         "tags": ["productivity","tip","privacy"],
         "url": "http://localhost:4000/2018/06/14/defeat-spammers",
-        "teaser":"http://localhost:4000/assets/images/2018-06-14-defeat-spammers/header.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/2018-06-14-defeat-spammers/header.jpg"},{
+        "title": "Proxmox tip: \"Failed to start VNC server: Failed to bind socket: Cannot assign requested address\"",
+        "excerpt":"Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems. I stumbled across this particularly interesting error when I was moving KVM backups from a Proxmox host to another host. For some reason, I wasn’t able to find any information on the...","categories": [],
+        "tags": ["Proxmox","tip"],
+        "url": "http://localhost:4000/2018/08/30/proxmox-vnc",
+        "teaser":"http://localhost:4000/assets/images/2018-08-30-proxmox-vnc/header.jpg"}]

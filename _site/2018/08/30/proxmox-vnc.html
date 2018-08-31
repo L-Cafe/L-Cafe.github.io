@@ -9,50 +9,48 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Don’t share Microsoft Office documents: use open formats | L1Cafe</title>
-<meta name="description" content="It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.">
+<!-- begin _includes/seo.html --><title>Proxmox tip: “Failed to start VNC server: Failed to bind socket: Cannot assign requested address” | L1Cafe</title>
+<meta name="description" content="Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="L1Cafe">
-<meta property="og:title" content="Don’t share Microsoft Office documents: use open formats">
-<meta property="og:url" content="http://localhost:4000/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats">
+<meta property="og:title" content="Proxmox tip: “Failed to start VNC server: Failed to bind socket: Cannot assign requested address”">
+<meta property="og:url" content="http://localhost:4000/2018/08/30/proxmox-vnc">
 
 
-  <meta property="og:description" content="It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.">
+  <meta property="og:description" content="Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/logo-bordered.png">
+  <meta property="og:image" content="http://localhost:4000/assets/images/2018-08-30-proxmox-vnc/header.jpg">
 
 
 
   <meta name="twitter:site" content="@L1Cafe">
-  <meta name="twitter:title" content="Don’t share Microsoft Office documents: use open formats">
-  <meta name="twitter:description" content="It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.">
-  <meta name="twitter:url" content="http://localhost:4000/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats">
+  <meta name="twitter:title" content="Proxmox tip: “Failed to start VNC server: Failed to bind socket: Cannot assign requested address”">
+  <meta name="twitter:description" content="Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.">
+  <meta name="twitter:url" content="http://localhost:4000/2018/08/30/proxmox-vnc">
 
   
-    <meta name="twitter:card" content="summary">
-    
-      <meta name="twitter:image" content="http://localhost:4000/assets/images/logo-bordered.png">
-    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/2018-08-30-proxmox-vnc/header.jpg">
   
 
   
 
 
 
-  <meta property="article:published_time" content="2017-03-21T18:59:32+01:00">
+  <meta property="article:published_time" content="2018-08-30T15:44:32+02:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/2017/03/21/don-t-share-microsoft-office-documents-use-open-formats">
+<link rel="canonical" href="http://localhost:4000/2018/08/30/proxmox-vnc">
 
 
 
@@ -189,6 +187,31 @@
 
     <div class="initial-content">
       
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="/assets/images/2018-08-30-proxmox-vnc/header.jpg" alt="Proxmox tip: “Failed to start VNC server: Failed to bind socket: Cannot assign requested address”" class="page__hero-image">
+  
+  
+    <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com"><strong>Unsplash</strong></a>
+</span>
+  
+</div>
+
+
 
 
 
@@ -338,15 +361,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Don’t share Microsoft Office documents: use open formats">
-    <meta itemprop="description" content="It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.">
-    <meta itemprop="datePublished" content="March 21, 2017">
+    <meta itemprop="headline" content="Proxmox tip: “Failed to start VNC server: Failed to bind socket: Cannot assign requested address”">
+    <meta itemprop="description" content="Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.">
+    <meta itemprop="datePublished" content="August 30, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Don’t share Microsoft Office documents: use open formats
+          <h1 id="page-title" class="page__title" itemprop="headline">Proxmox tip: “Failed to start VNC server: Failed to bind socket: Cannot assign requested address”
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -354,7 +377,7 @@
 
 
 
-  4 minute read
+  2 minute read
 </p>
           
         </header>
@@ -362,38 +385,69 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>It’s very common, in certain situations, to share OOXML files such as .docx from Microsoft Word and .pptx from Microsoft PowerPoint. I’ve seen this happen most often in schools, universities, and educational institutions in general. I will try to explain why this is generally a bad idea.</p>
+        <p>Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.</p>
 
-<p>It’s not the first, and probably won’t be the last time, people complain about OOXML, Microsoft Office, and their dirty tricks. Here’s a few references in no particular order: <a href="http://www.consortiuminfo.org/standardsblog/article.php?story=20070117145745854">consortiuminfo.org</a>, <a href="https://www.gnu.org/philosophy/no-word-attachments.en.html">GNU</a>, <a href="https://www.fsf.org/campaigns/opendocument/reject">FSF</a>, <a href="http://stephesblog.blogs.com/my_weblog/2007/08/microsofts-fail.html">stephesblog.blogs.com</a>, <a href="https://arstechnica.com/information-technology/2008/02/ibm-responds-to-microsoft-ooxml-is-technically-inferior/">Ars Technica</a>, <a href="http://www.goldmark.org/netrants/no-word/attach.html">GoldMark</a>, <a href="https://logological.org/word">Tristan Miller</a>… The list could go on and on forever, but I think the links provided make valid points. Now It’s my turn:</p>
+<p>I stumbled across this particularly interesting error when I was moving KVM backups from a Proxmox host to another host. For some reason, I wasn’t able to find any information on the Internet regarding this issue.</p>
 
-<h1 id="its-formatting-is-not-consistent">Its formatting is not consistent</h1>
+<p>Let’s get to it!</p>
 
-<p>Microsoft’s own OOXML format isn’t designed to be consistent across all platforms and applications. While it definitely is an open format, some critics claim that its standard specification is too long to be implemented realistically. Moreover, even Microsoft doesn’t respect its own standard in a consistent manner across their Microsoft Office releases. This means that a document produced with Microsoft Word 2007 is likely to have inconsistencies when opened in a newer version such as Microsoft Word 2016. The truth is that, while Microsoft tries to insert features in newer Office releases that maintain a certain degree of retrocompatibility, this often introduces an inferior solution in the form of a workaround. What’s worse, this situation, when handled by a third party such as Apple (With Apple Pages, for example), or free software office suites such as LibreOffice, will increase the cost of maintenance, and it’s very likely the workaround will not be as effective as Microsoft’s implementation for practical reasons.</p>
+<h2 id="steps-to-reproduce-it">Steps to reproduce it:</h2>
 
-<h1 id="third-party-support-isnt-great">Third party support isn’t great</h1>
+<ol>
+  <li>Back up a KVM machine from a Proxmox host. If you back up to the default local storage, there will be a tarball file in <code class="highlighter-rouge">/var/lib/vz/dump/</code> (GZIP or LZO, depending on what you selected when backing up)</li>
+  <li>Copy that file to a different Proxmox host. You can use rsync, SFTP, FTP, it doesn’t really matter.</li>
+  <li>Place that file in <code class="highlighter-rouge">/var/lib/vz/dump</code> in the second host (or wherever you want that’s set up in Proxmox to use as VZDump backup file directory).</li>
+  <li>Try to restore the tarball through the Proxmox Web GUI by choosing the file in the appropriate storage and clicking “Restore”.</li>
+</ol>
 
-<p>Related to the above point, to correctly display OOXML files you’re going to need the latest version of Microsoft Office (which isn’t free as in beer or as in freedom), or one of the Office documents viewing tools Microsoft provides at no extra charge (this is only for Windows though, macOS users are left in the dark). If you have ever tried to view a Microsoft Word-produced document in Apple Pages or LibreOffice Writer, you probably know it will not be pixel-perfect (some images might be offset, text fonts might not display correctly unless you have the same font set, margins and some special formatting could be configured incorrectly, etc). This also happens vice versa: Apple Pages-produced OOXML documents opened in Microsoft Word, or even LibreOffice Writer. However, PDF (Portable Document Format) is a fully open specification, it’s universal, and can be viewed in any modern operating system without additional software (even modern browsers ship with PDF viewers built in).</p>
+<p>The machine is now copied to the second server, but if you try to start it, an error will appear. It will look like this:</p>
 
-<h1 id="its-openness-is-debatable">Its openness is debatable</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kvm: -vnc 192.168.33.5:85: Failed to start VNC server: Failed to bind socket: Cannot assign requested address
+TASK ERROR: start failed: command '/usr/bin/kvm -id 115 -name xyz -chardev 'socket,id=qmp,path=/var/run/qemu-server/115.qmp,server,nowait' -mon 'chardev=qmp,mode=control' -pidfile /var/run/qemu-server/115.pid -daemonize -smbios 'type=1,uuid=abcd' -smp '1,sockets=1,cores=1,maxcpus=1' -nodefaults -boot 'menu=on,strict=on,reboot-timeout=1000,splash=/usr/share/qemu-server/bootsplash.jpg' -vga std -vnc unix:/var/run/qemu-server/115.vnc,x509,password -no-hpet -cpu 'kvm64,+lahf_lm,+sep,+kvm_pv_unhalt,+kvm_pv_eoi,hv_spinlocks=0x1fff,hv_vapic,hv_time,hv_reset,hv_vpindex,hv_runtime,hv_relaxed,enforce' -m 5120 -vnc 192.168.33.5:85 -device 'pci-bridge,id=pci.1,chassis_nr=1,bus=pci.0,addr=0x1e' -device 'pci-bridge,id=pci.2,chassis_nr=2,bus=pci.0,addr=0x1f' -device 'piix3-usb-uhci,id=uhci,bus=pci.0,addr=0x1.0x2' -device 'usb-tablet,id=tablet,bus=uhci.0,port=1' -device 'virtio-balloon-pci,id=balloon0,bus=pci.0,addr=0x3' -drive 'file=/var/lib/vz/images/115/vm-115-disk-1.raw,if=none,id=drive-ide0,cache=writeback,format=raw,aio=threads,detect-zeroes=on' -device 'ide-hd,bus=ide.0,unit=0,drive=drive-ide0,id=ide0,bootindex=100' -drive 'if=none,id=drive-ide2,media=cdrom,aio=threads' -device 'ide-cd,bus=ide.1,unit=0,drive=drive-ide2,id=ide2,bootindex=200' -netdev 'type=tap,id=net0,ifname=tap115i0,script=/var/lib/qemu-server/pve-bridge,downscript=/var/lib/qemu-server/pve-bridgedown' -device 'e1000,mac=xx:xx:xx:xx:xx:xx,netdev=net0,bus=pci.0,addr=0x12,id=net0,bootindex=300' -rtc 'driftfix=slew,base=localtime' -global 'kvm-pit.lost_tick_policy=discard'' failed: exit code 1
+</code></pre></div></div>
 
-<p>While the format itself is an open specification, Microsoft has a long record of using the <a href="https://en.wikipedia.org/wiki/Embrace%2C_extend_and_extinguish">EEE</a> strategy to marginalise and neutralise competition. This means that, while they might release something that looks like an open standard anyone can adopt, the truth is that OOXML is <a href="http://www.sutor.com/newsite/blog-open/?p=2069">too hard to implement, even for Microsoft</a>. While other office suites can adopt OOXML formats, Microsoft Office can always add new features that break compatibility with these office suites that don’t implement them.</p>
+<p>(Note: everything was copied from the Proxmox Web GUI, but the name, MAC and BIOS UUID have been altered)</p>
 
-<h1 id="they-can-contain-malware-in-the-form-of-macros">They can contain malware in the form of macros</h1>
+<p>At first glance, it could look like a ports issue. But we’re not opening ports, are we? Why is this machine throwing a VNC error when I didn’t even try to open up VNC?</p>
 
-<p>This is a well known fact by malware designers, information security professionals, and most software engineers. This is such a commonly known fact that Microsoft Office, by default, opens unknown origin documents in read-only mode, disabling macros, and warns users in multiple ways of allowing edits on these documents. Warnings that are, by the way, typically dismissed by inexperienced users.</p>
+<h2 id="the-solution">The solution</h2>
 
-<h1 id="editing-shared-documents-is-often-unnecessary">Editing shared documents is often unnecessary</h1>
+<p>Well, Proxmox opens a VNC virtual screen when booting up a KVM machine, and the problem is that the backup carried the IP from the first Proxmox server, and now we’re asking the second Proxmox server to open a port in an IP that doesn’t belong to it.</p>
 
-<p>When sharing an OOXML document, the receiver will have a file they can easily edit or modify. Therefore, when attaching invoices, or finished works, if you use the PDF format, the document will be displayed exactly the way you want it to be. Microsoft Office supports exporting to PDF in its latest versions, as well as LibreOffice and essentially most office suites, including Apple’s and Google’s.</p>
+<p>Specifically, the first line is a dead giveaway: “kvm: -vnc <strong>192.168.33.5:85</strong>: Failed to start VNC server: Failed to bind socket: Cannot assign requested address”</p>
 
-<h1 id="its-a-poor-choice-for-forms">It’s a poor choice for forms</h1>
+<p>What we have to do is go into the virtual machine Proxmox config file, which should be located in <code class="highlighter-rouge">/etc/pve/qemu-server/&lt;VM ID&gt;.conf</code>, and in this case, because the machine ID is 115, the config file would be in <code class="highlighter-rouge">/etc/pve/qemu-server/115.conf</code>. The ID is manually selected when restoring the backup.</p>
 
-<p>People sometimes use Office documents to send blank forms to be filled in by the recipient. This document passing forth and back is unnecessary, slow, and inconvenient. Where you could simply present a webpage with a form, and have a web server receive all that data in a manner that can be automatically stored into databases for further processing, encrypted for security, or analysed, the choice of using a document format that cannot facilitate automation seems rather an uninformed and suboptimal decision.</p>
+<p>The original contents of the file are as follows.</p>
 
-<h1 id="microsoft-office-has-terrible-formula-support">Microsoft Office has terrible formula support</h1>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>args: -vnc 192.168.33.5:85
+balloon: 1024
+bootdisk: ide0
+cores: 1
+ide0: local:115/vm-115-disk-1.raw,cache=writeback,size=50G
+ide2: none,media=cdrom
+memory: 5120
+name: xyz
+net0: e1000=xx:xx:xx:xx:xx:xx,bridge=vmbr1
+numa: 0
+onboot: 1
+ostype: win8
+scsihw: virtio-scsi-pci
+smbios1: uuid=abcd
+sockets: 1
+</code></pre></div></div>
 
-<p>When producing documents with math and physics formulas, Microsoft Office has a tool for inserting equations, however, this tool, while easy to use for sporadic situations, becomes a nightmare in terms of UX, because it’s too difficult to insert reasonably complex formulas using Microsoft Office’s system. The most reasonable option, and what most math university teachers and doctors use is LaTeX. LaTeX typically produces PDF documents, and has a very solid syntax, built on top of TeX. Both are open source typesetting systems that produce beautiful, solid, and consistent output and it’s the desirable choice for productivity. Here’s some more information on Word vs LaTeX: <a href="http://web.mit.edu/klund/www/urk/texvword.html">MIT</a>, <a href="https://www.researchgate.net/post/Why_LaTex_is_better_choice_than_Microsoft_Word">ResearchGate</a>,  <a href="https://tex.stackexchange.com/questions/1756/why-should-i-use-latex">StackExchange</a>, <a href="https://www.reddit.com/r/LaTeX/comments/26z3ii/why_is_latex_better_than_the_current_version_of/">Reddit</a>, <a href="http://www.andy-roberts.net/writing/latex/benefits">Andrew Roberts</a>.</p>
+<p>Our second machine has the IP <code class="highlighter-rouge">192.168.33.10</code>, but this depends on your Proxmox and network configuration. The IP address of any Linux machine can be consulted by running <code class="highlighter-rouge">ip addr show</code>.</p>
 
+<p>We only need to change the first line, to have the correct IP. Once this is done, the machine will boot successfully, but if you haven’t already, it might be desirable to change the MAC address of the network adapter as well, depending on your network configuration, to avoid collisions, and maybe the network bridge in case the NAT in your second Proxmox server is set up differently.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>args: -vnc 192.168.33.10:85
+[...]
+net0: e1000=yy:yy:yy:yy:yy:yy,bridge=vmbr1
+[...]
+</code></pre></div></div>
+
+<p>That’s it!</p>
 
         
       </section>
@@ -414,11 +468,11 @@
     
       
       
-      <a href="/tags/#microsoft" class="page__taxonomy-item" rel="tag">Microsoft</a><span class="sep">, </span>
+      <a href="/tags/#proxmox" class="page__taxonomy-item" rel="tag">Proxmox</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#opinion" class="page__taxonomy-item" rel="tag">opinion</a>
+      <a href="/tags/#tip" class="page__taxonomy-item" rel="tag">tip</a>
     
     </span>
   </p>
@@ -427,7 +481,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-03-21T18:59:32+01:00">March 21, 2017</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-08-30T15:44:32+02:00">August 30, 2018</time></p>
         
       </footer>
 
@@ -436,12 +490,11 @@
       
   <nav class="pagination">
     
-      <a href="/2017/03/21/making-an-open-source-security-system-part-1" class="pagination--pager" title="Making an open source security system: part 1
+      <a href="/2018/06/14/defeat-spammers" class="pagination--pager" title="The DEFINITIVE guide to defeating spammers
 ">Previous</a>
     
     
-      <a href="/2017/03/21/password-managers" class="pagination--pager" title="Password managers
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -455,42 +508,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/2018-08-30-proxmox-vnc/header.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/2018/08/30/proxmox-vnc" rel="permalink">Proxmox tip: “Failed to start VNC server: Failed to bind socket: Cannot assign requested address”
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  3 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.
-
-</p>
-  </article>
-</div>
         
           
 
@@ -596,8 +613,43 @@
   </article>
 </div>
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/2018-06-08-windows-static/header.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2018/06/08/windows-static" rel="permalink">Static analysis tools for Windows
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">I’m currently studying malware analysis, so I wanted to write a post on the tools I’ve been using recently, to serve as a reference for me and hopefully for ...</p>
+  </article>
+</div>
+        
       </div>
     </div>
+  
   
 </div>
     </div>
