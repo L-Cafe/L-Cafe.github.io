@@ -113,9 +113,10 @@ author:
 
 # Reading Files
 include:
-  - .htaccess
   - _pages
+  - .well-known
 exclude:
+  - .htaccess
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
