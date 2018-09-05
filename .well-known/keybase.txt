@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/l1cafe
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://l1cafe.github.io
+  * I am l1cafe (https://keybase.io/l1cafe) on keybase.
+  * I have a public key ASA9rbr1OTTi9s4y9xAeMiTloeXK3X1lwX4wD27StMSa2go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01203dadbaf53934e2f6ce32f7101e3224e5a1e5cadd7d65c17e300f6ed2b4c49ada0a",
+      "host": "keybase.io",
+      "kid": "01203dadbaf53934e2f6ce32f7101e3224e5a1e5cadd7d65c17e300f6ed2b4c49ada0a",
+      "uid": "11f4e6f2353921a5ba8a1e9447a40d19",
+      "username": "l1cafe"
+    },
+    "merkle_root": {
+      "ctime": 1536140894,
+      "hash": "33478f424854a5e074dfa3487506bce7936542d51ac4f43a27127d477504f8fd695b0ddfebd58f008a0a67097ded74dbc50c21785355484a59fdce1e580c3e4c",
+      "hash_meta": "c05126cfb397107b9fe80e978edac22a016a543da4779d2a283b01336bb9b9ab",
+      "seqno": 3565351
+    },
+    "service": {
+      "entropy": "Pwcnz2H4AEDdqLZrZH3gN+u8",
+      "hostname": "l1cafe.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.5.1"
+  },
+  "ctime": 1536140929,
+  "expire_in": 504576000,
+  "prev": "f963b559c27000679b38317eef48397ffd5142acd9a7a7e1bcd7f205117e9690",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgPa269Tk04vbOMvcQHjIk5aHlyt19ZcF+MA9u0rTEmtoKp3BheWxvYWTESpcCDcQg+WO1WcJwAGebODF+70g5f/1RQqzZp6fhvNfyBRF+lpDEIGx7B3r85IlKiWVNkrXBKRCRCEblsSAwNVrSh4YMHvsVAgHCo3NpZ8RA/76pyamtmLW3dkxdFDqosP3G3lSGoERbiOdQ4Fom1qx9PqczqT1xsXmIDsl2RYJrZorCffy4YYNl5qoumHhrAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAJgAfeevcwDG1ZBpmgwpEJeP07h1fhIHceVbgn3JjcAo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/l1cafe
+
+==================================================================
