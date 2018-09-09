@@ -57,10 +57,13 @@ projects, check out the links in the top navigation bar.
 - [Metasploitable 3](https://github.com/rapid7/metasploitable3)
 - [VulnHub](https://www.vulnhub.com) - Free, downloadable VMs for practice.
 
-
-## Cybersecurity resources
+### Cybersecurity resources
 
 - [Hack with GitHub](https://github.com/Hack-with-Github)
 - [Hakluke’s Ultimate OSCP Guide](https://medium.com/@hakluke/haklukes-ultimate-oscp-guide-part-3-practical-hacking-tips-and-tricks-c38486f5fc97)
 - [Offensive Computer Security Videos](https://www.cs.fsu.edu/%7Eredwood/OffensiveComputerSecurity/lectures.html) by Florida State University
 - [OSCP](https://github.com/ferreirasc/oscp) by ferreirasc
+
+## Other
+
+- [My favourite noise generator](https://mynoise.net/superGenerator.php?g1=windSeaRainNoiseGenerator.php%3Fc%3D3%26l%3D9958000000400029000041%26a%3D4%26am%3D3%26d%3D0&g2=pebbleBeachNoiseGenerator.php%3Fc%3D3%26l%3D8053342110030000000000%26d%3D0&g3=romanBathWhiteNoiseGenerator.php%3Fc%3D3%26l%3D0000003040300000000041%26a%3D4%26am%3D5%26d%3D0&g4=dataCenterNoiseGenerator.php%3Fc%3D3%26l%3D1012141516182224252841%26a%3D4%26am%3D5%26d%3D0&g5=thunderNoiseGenerator.php%3Fc%3D3%26l%3D5759666372000000003041%26a%3D4%26am%3D4%26d%3D0&yt=2TQ4a31VSoI) - You must be a Patron on myNoise.net.
