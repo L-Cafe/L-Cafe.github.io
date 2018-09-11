@@ -13,7 +13,7 @@ My name is León Castillejos. I'm a Higher Technician in Multi-Platform Applicat
 Currently studying Computer Science & Engineering at
 [URJC](http://www.urjc.es/), a Spanish university located in Madrid.
 
-I consider myself a passionate and creative individual, I thrive in highly
+I consider myself a passionate and creative individual which thrives in highly
 competitive and intellectually demanding environments.
 
 My native country is Spain, so my primary language is Spanish. I can also speak
@@ -56,26 +56,19 @@ basis. I also use Linux very often, and maintain some Linux servers running
 Debian, Proxmox, CentOS, Fedora Server, and a Windows Server as an
 experimentation platform.
 
-For editing code, I enjoy using Vim and Visual Studio Code. You can find my
-`.vimrc` settings
-[here](https://github.com/L1Cafe/My-Preferences/tree/master/vim), for Visual
-Studio Code, I wrote a
+For editing code, I use Visual Studio Code with a Vim extension. I wrote a
 [post]({% post_url 2018-05-14-my-vscode-extensions %}) on the
 extensions I use the most.
 
 My shell of choice is zsh. My settings are published
 [here](https://github.com/L1Cafe/My-Preferences/tree/master/macOS).
 
-My favourite programming languages are: Rust, Ruby (on Rails) and Python.
+My favourite programming languages are: Python, Rust and Ruby (on Rails).
 
 For writing documents, I use a combination of LaTeX and Markdown, depending on
 whether what I write will be published on the web (for which I use Markdown,
 with LaTeX math formulas through MathJax), or needs to be printed, or released
 as a PDF file, (for which I use plain LaTeX).
-
-I enjoy producing audiovisual content. Specifically, I play the piano, and enjoy
- making chiptunes (8-bit music) with
- [Pico-8](http://www.lexaloffle.com/pico-8.php). As well as photo editing.
 
 For my photo editing and graphical design needs, I rely on
 [Affinity Photo](https://affinity.serif.com/en-gb/photo/), and 

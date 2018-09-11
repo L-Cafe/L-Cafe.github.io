@@ -68,4 +68,9 @@ var store = [{
         "excerpt":"Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems. I stumbled across this particularly interesting error when I was moving KVM backups from a Proxmox host to another host. For some reason, I wasn’t able to find any information on the...","categories": [],
         "tags": ["Proxmox","tip"],
         "url": "http://localhost:4000/2018/08/30/proxmox-vnc",
-        "teaser":"http://localhost:4000/assets/images/2018-08-30-proxmox-vnc/header.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/2018-08-30-proxmox-vnc/header.jpg"},{
+        "title": "MSFVenom and Meterpreter: The basics",
+        "excerpt":"I just recently successfully gained root (or rather, Administrator, because it’s a Windows box) on the Devel machine in Hack The Box. The machine itself is very easy, and there are lots of writeups on it, I’m sure, so this won’t be another one. However, one thing it made really...","categories": [],
+        "tags": ["HackTheBox"],
+        "url": "http://localhost:4000/2018/09/11/msfvenom",
+        "teaser":"http://localhost:4000/assets/images/2018-09-11-msfvenom/header.jpg"}]

