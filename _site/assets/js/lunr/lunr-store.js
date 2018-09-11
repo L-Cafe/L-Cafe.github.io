@@ -70,7 +70,7 @@ var store = [{
         "url": "http://localhost:4000/2018/08/30/proxmox-vnc",
         "teaser":"http://localhost:4000/assets/images/2018-08-30-proxmox-vnc/header.jpg"},{
         "title": "MSFVenom and Meterpreter: The basics",
-        "excerpt":"I just recently successfully gained root (or rather, Administrator, because it’s a Windows box) on the Devel machine in Hack The Box. The machine itself is very easy, and there are lots of writeups on it, I’m sure, so this won’t be another one. However, one thing it made really...","categories": [],
+        "excerpt":"I just recently successfully gained root (or rather, Administrator, because it’s a Windows box) on the Devel machine in Hack The Box. The machine itself is very easy, and there are lots of writeups on it, I’m sure, so this won’t be another one. However, one thing it made really...","categories": ["Cybersecurity"],
         "tags": ["HackTheBox"],
         "url": "http://localhost:4000/2018/09/11/msfvenom",
         "teaser":"http://localhost:4000/assets/images/2018-09-11-msfvenom/header.jpg"}]
