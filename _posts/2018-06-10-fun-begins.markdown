@@ -22,4 +22,4 @@ Most machines are set up like that: You need to gain user privileges, and then r
 
 I intend to dedicate at least one hour daily to learning security tools and breaking into HackTheBox machines (preferably, much, much more, especially during the summer).
 
-You can [follow me](https://www.hackthebox.eu/home/users/profile/1904), and message me. I love challenges!
+You can [follow me](https://www.hackthebox.eu/profile/1904), and message me. I love challenges!
