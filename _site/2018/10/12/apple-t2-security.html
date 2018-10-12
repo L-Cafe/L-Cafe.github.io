@@ -9,48 +9,48 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>x86 Function call conventions · L1Cafe</title>
-<meta name="description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
+<!-- begin _includes/seo.html --><title>What Apple’s T2 chip means for the security of Macs · L1Cafe</title>
+<meta name="description" content="An article by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="L1Cafe">
-<meta property="og:title" content="x86 Function call conventions">
-<meta property="og:url" content="http://localhost:4000/2018/06/09/function-calls">
+<meta property="og:title" content="What Apple’s T2 chip means for the security of Macs">
+<meta property="og:url" content="http://localhost:4000/2018/10/12/apple-t2-security">
 
 
-  <meta property="og:description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
+  <meta property="og:description" content="An article by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after.">
 
 
 
-  <meta property="og:image" content="http://localhost:4000/assets/images/2018-06-09-function-calls/header.jpg">
+  <meta property="og:image" content="http://localhost:4000/assets/images/2018-10-12-apple-t2-security/header.jpg">
 
 
 
   <meta name="twitter:site" content="@L1Cafe">
-  <meta name="twitter:title" content="x86 Function call conventions">
-  <meta name="twitter:description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
-  <meta name="twitter:url" content="http://localhost:4000/2018/06/09/function-calls">
+  <meta name="twitter:title" content="What Apple’s T2 chip means for the security of Macs">
+  <meta name="twitter:description" content="An article by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after.">
+  <meta name="twitter:url" content="http://localhost:4000/2018/10/12/apple-t2-security">
 
   
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="http://localhost:4000/assets/images/2018-06-09-function-calls/header.jpg">
+    <meta name="twitter:image" content="http://localhost:4000/assets/images/2018-10-12-apple-t2-security/header.jpg">
   
 
   
 
 
 
-  <meta property="article:published_time" content="2018-06-09T11:57:04+02:00">
+  <meta property="article:published_time" content="2018-10-12T00:00:00+02:00">
 
 
 
 
 
 
-<link rel="canonical" href="http://localhost:4000/2018/06/09/function-calls">
+<link rel="canonical" href="http://localhost:4000/2018/10/12/apple-t2-security">
 
 
 
@@ -203,7 +203,7 @@
   style=" "
 >
   
-    <img src="/assets/images/2018-06-09-function-calls/header.jpg" alt="x86 Function call conventions" class="page__hero-image">
+    <img src="/assets/images/2018-10-12-apple-t2-security/header.jpg" alt="What Apple’s T2 chip means for the security of Macs" class="page__hero-image">
   
   
     <span class="page__hero-caption">Photo credit: <a href="https://unsplash.com"><strong>Unsplash</strong></a>
@@ -361,15 +361,15 @@
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
-    <meta itemprop="headline" content="x86 Function call conventions">
-    <meta itemprop="description" content="Another cybersecurity post. Focused on binary (dis)assembly.">
-    <meta itemprop="datePublished" content="June 09, 2018">
+    <meta itemprop="headline" content="What Apple’s T2 chip means for the security of Macs">
+    <meta itemprop="description" content="An article by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after.">
+    <meta itemprop="datePublished" content="October 12, 2018">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">x86 Function call conventions
+          <h1 id="page-title" class="page__title" itemprop="headline">What Apple’s T2 chip means for the security of Macs
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -377,7 +377,7 @@
 
 
 
-  2 minute read
+  4 minute read
 </p>
           
         </header>
@@ -385,108 +385,41 @@
 
       <section class="page__content" itemprop="text">
         
-        <p>Another cybersecurity post. Focused on binary (dis)assembly.</p>
+        <p>An <a href="https://www.macrumors.com/2018/10/04/t2-macs-must-pass-diagnostics-for-certain-repairs/">article</a> by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after.</p>
 
-<p>This time it’s about how different compilers turn high-level programming language code into low-level assembly code, in regards to function calling.</p>
+<p>Naturally, e-waste activists and supporters of the “right to repair” movement (like me) are annoyed by this new chip that would, apparently, make it impossible to perform third-party repairs, which are much cheaper, or outright turning the computer into a very expensive paperweight when Apple decides to stop repairing those devices because they are considered too old to be accounted for.</p>
 
-<p>As a sample, I’ll use a pseudocode call like <code class="highlighter-rouge">test(a,b,c,d)</code> to demonstrate how it would look like in regards to different conventions.</p>
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
 
-<p>Keep in mind <code class="highlighter-rouge">push</code> is a pseudoinstruction that subtracts 4 from the stack pointer (ESP), and then writes the value onto the memory ESP points to. <code class="highlighter-rouge">pop</code> is the opposite: reads from the address ESP points to, and then adds 4.</p>
+  <iframe src="https://www.youtube.com/embed/4KuVvb9DTaU" frameborder="0" allowfullscreen=""></iframe>
 
-<h1 id="cdecl">cdecl</h1>
+</div>
 
-<p>It’s used by many C compilers.</p>
+<p>This, however, is nothing new. Apple has, at least since the inception of the iPhone, tried to keep people away from their software (closing loopholes used by jailbreakers) with increasing success as of lately, as well as hardware (using special screws and gluing parts). It is very clear why a company like Apple would want to do this: Their business model is selling hardware, and the more they sell, the better. Even better if they can make their devices last less so you have to buy new products more often. Louis Rossman, an electronics technician, has, repeatedly, shown how <a href="https://youtu.be/4KuVvb9DTaU">Apple designs their products so that only they can open and repair them</a> (video above). This is very widespread across the whole consumer electronics industry, and other companies have quickly adopted designs that leave removable batteries and expandable storage out, in favour of planned obsolescence. This goes back as far as 2007, at least, with the infamous <a href="https://en.wikipedia.org/wiki/Sony_timer">Sony Timer</a></p>
 
-<p>In Linux, the GNU Compiler Collection (GCC) sets the cdecl de facto standard.</p>
+<p>What I’ve seen so far, are heated up arguments on how Apple and others are intentionally building devices with an artificially short lifespan. However, I believe we’re not considering some key details, and I want to provide an additional point of view, which is entirely my opinion, on why this is might be a good idea even for the consumer.</p>
 
-<h2 id="conditions">Conditions</h2>
+<p>Supply chain security is important as evidenced by the <a href="https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies">recent news</a> by Bloomberg. Although security experts and the companies accused of having been infiltrated are not completely sure of the sources Bloomberg used and the veracity of the document, some experts argue that this is definitely possible, and we must be very careful with the hardware security. One thing is clear: the best way to be reasonably safe from security issues is to control the full supply chain, and Apple has a higher degree of control over the supply chain for MacBooks than, say, Lenovo or HP for their laptops.</p>
 
-<p>The registers ST0 through ST7 are empty when calling a function.</p>
+<p>Computer Security in general, has become a critical asset that any company nowadays must take seriously. And it’s not just evil hackers selling credit cards in the dark web from a basement, we also must be aware of State-sponsored attacks, terrorist organisations, and organised crime gangs.</p>
 
-<p>ST1 through ST7 are empty upon exiting a function, and if no floating point is returned, ST0 is empty too.</p>
+<!-- Courtesy of embedresponsively.com //-->
+<div class="responsive-video-container">
 
-<h2 id="arguments-and-return-values">Arguments and return values</h2>
+  <iframe src="https://www.youtube.com/embed/loBX_vEXxVA" frameborder="0" allowfullscreen=""></iframe>
 
-<p>Arguments are passed on the stack, right-to-left (C style).</p>
+</div>
 
-<p>For returns, integers and memory addresses are in EAX, whereas floating points will be in the ST0 x87 register.</p>
+<p>Remember the video of the <a href="https://www.youtube.com/watch?v=loBX_vEXxVA">hardware backdoor installation</a>? (video above). It’s very clear that once a computer is physically in the hands of a skilled criminal, the possibilities are endless. From attaching a hardware keylogger, a GPS tag, replacing the Ethernet controller firmware with a malicious one, cloning the hard disk… It’s exactly as easy for an attacker as it is for a third-party repair shop that is not associated with the laptop’s brand.</p>
 
-<h2 id="clean-up">Clean-up</h2>
+<p>This could be impossible to do in a MacBook Pro 2018 with the T2 chip: If Apple is performing the appropriate verifications at boot time to ensure the hardware hasn’t been tampered with, there is simply no way to break into a MacBook Pro, especially because almost all its parts are either glued-in or soldered into the mainboard. Of course, there’s also the issue of <a href="https://trmm.net/Thunderstrike_FAQ">Thunderstrike</a> in regards to malicious Thunderbolt devices. The good news is, as a proof of Apple being committed to security, <a href="https://appleinsider.com/articles/16/02/02/apple-hires-firmware-security-experts-who-worked-on-thunderstrike-2-exploit">they hired the team behind Thunderstrike 2</a>.</p>
 
-<p>Registers EAX, ECX and EDX are caller-saved, and the rest are callee-saved.</p>
+<p>Apple is, out of the big four technology companies (Microsoft, Google, Facebook, Apple), probably the one that treats their client’s security and privacy with the most respect. Microsoft injects ads in Windows 10, and bundles all sorts of tracking into the OS. Google runs literally the largest advertising agency (DoubleClick), and gives lots of free services in exchange for user information and placing ads and tracking features everywhere. I don’t think it’s even necessary to mention what Facebook does at this point. Apple, however, has a radically different business model: Their products are aimed at the higher end of the purchasing power spectrum, are beautifully designed, and, while Apple used to run an advertising service, they made so very little money off ads they shut down their iAd App Network service.</p>
 
-<p>The stack pointer (ESP) is cleaned by the caller.</p>
+<p>In general, I would argue that Apple products are expensive because they refuse to sell user data and/or bundle bloatware into their devices. The sad truth is that even high-end, expensive smartphones like the Galaxy S series still carry bloatware.</p>
 
-<h2 id="pseudocode-assembly">Pseudocode assembly</h2>
-
-<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">push</span>  <span class="n">d</span>
-<span class="k">push</span>  <span class="n">c</span>
-<span class="k">push</span>  <span class="n">b</span>
-<span class="k">push</span>  <span class="n">a</span>
-<span class="k">call</span>  <span class="k">test</span>
-<span class="k">add</span>   <span class="n">esp</span><span class="p">,</span> <span class="mi">16</span>
-</code></pre></div></div>
-
-<p>The result will be in EAX, and floating point values in ST*.</p>
-
-<h1 id="syscall">syscall</h1>
-
-<p>Similar to cdecl.</p>
-
-<p>It’s the convention for the 32 bit OS/2 API.</p>
-
-<h2 id="arguments-and-return-values-1">Arguments and return values</h2>
-
-<p>Arguments are passed on the stack, right-to-left (C style). The size of the parameter list in doublewords is passed in AL.</p>
-
-<p>Return values are in EAX.</p>
-
-<h2 id="clean-up-1">Clean-up</h2>
-
-<p>ECX, and EDX are cleared upon exiting the function call.</p>
-
-<p>The stack pointer (ESP) is cleaned by the caller.</p>
-
-<h2 id="pseudocode-assembly-1">Pseudocode assembly</h2>
-
-<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mov</span>   <span class="mi">4</span><span class="p">,</span> <span class="n">al</span>
-<span class="k">push</span>  <span class="n">d</span>
-<span class="k">push</span>  <span class="n">c</span>
-<span class="k">push</span>  <span class="n">b</span>
-<span class="k">push</span>  <span class="n">a</span>
-<span class="k">call</span>  <span class="k">test</span>
-<span class="k">add</span>   <span class="n">esp</span><span class="p">,</span> <span class="mi">16</span>
-<span class="k">mov</span>   <span class="mi">0</span><span class="p">,</span> <span class="n">al</span>
-</code></pre></div></div>
-
-<p>The result will be in EAX, and floating point values in ST*.</p>
-
-<h1 id="microsoft-fastcall">Microsoft fastcall</h1>
-
-<p>This convention is better than the previous two in terms of performance, hence its “fast” prefix.</p>
-
-<p>However, the fastcall convention is not standarised, and varies a lot from compiler to compiler, so I’ll focus in the Microsoft implementation. In this case, GCC’s <code class="highlighter-rouge">__msfastcall</code> is similar.</p>
-
-<h2 id="arguments-and-return-values-2">Arguments and return values</h2>
-
-<p>First two arguments are passed left-to-right into ECX and EDX. The remaining arguments are pushed onto the stack from right to left.</p>
-
-<p>Microsoft compilers behave differently for IA64 and AMD64 architectures, because of additional registers. They simply use their own x64 calling convention, regardless of what was specified to the compiler.</p>
-
-<h2 id="clean-up-2">Clean-up</h2>
-
-<p>The callee is responsible for cleaning the stack, as well as the ECX and EDX registers.</p>
-
-<h2 id="pseudocode-assembly-2">Pseudocode assembly</h2>
-
-<div class="language-nasm highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">mov</span>   <span class="n">a</span><span class="p">,</span> <span class="n">ecx</span>
-<span class="k">mov</span>   <span class="n">b</span><span class="p">,</span> <span class="n">edx</span>
-<span class="k">push</span>  <span class="n">d</span>
-<span class="k">push</span>  <span class="n">c</span>
-<span class="k">call</span>  <span class="k">test</span>
-</code></pre></div></div>
-
-<p>The result will be in EAX, and floating point values in ST*.</p>
+<p>In general, it’s probably safe to assume Apple is bundling the T2 chip to artificially limit the lifespan of their devices, so people buy more devices more often: after all, that’s how they really make money. But the truth is we don’t really know if that’s the case, and while it’s true shortening the lifespan of a device is a very good reason to bundle such chip, it also brings security features that no other brand can offer.</p>
 
         
       </section>
@@ -507,43 +440,20 @@
     
       
       
-      <a href="/tags/#assembly" class="page__taxonomy-item" rel="tag">assembly</a><span class="sep">, </span>
+      <a href="/tags/#apple" class="page__taxonomy-item" rel="tag">Apple</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#software-rev" class="page__taxonomy-item" rel="tag">software-rev</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#x86" class="page__taxonomy-item" rel="tag">x86</a>
+      <a href="/tags/#opinion" class="page__taxonomy-item" rel="tag">opinion</a>
     
     </span>
   </p>
 
 
-
-
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="/categories/#cybersecurity" class="page__taxonomy-item" rel="tag">Cybersecurity</a>
-    
-    </span>
-  </p>
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-06-09T11:57:04+02:00">June 09, 2018</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-10-12T00:00:00+02:00">October 12, 2018</time></p>
         
       </footer>
 
@@ -552,12 +462,11 @@
       
   <nav class="pagination">
     
-      <a href="/2018/06/08/windows-static" class="pagination--pager" title="Static analysis tools for Windows
+      <a href="/2018/09/11/msfvenom" class="pagination--pager" title="MSFVenom and Meterpreter: The basics
 ">Previous</a>
     
     
-      <a href="/2018/06/10/fun-begins" class="pagination--pager" title="The fun begins: HackTheBox.eu
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -571,40 +480,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You May Also Enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/2018-10-12-apple-t2-security/header.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/2018/10/12/apple-t2-security" rel="permalink">What Apple’s T2 chip means for the security of Macs
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  4 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">An article by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inopera...</p>
-  </article>
-</div>
         
           
 
@@ -669,7 +544,7 @@
 
 
 
-  3 minute read
+  2 minute read
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">Note: This issue appears on Proxmox 5.2-x, always check the date of the post when troubleshooting your systems.
@@ -712,8 +587,43 @@
   </article>
 </div>
         
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/2018-06-10-fun-begins/header.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/2018/06/10/fun-begins" rel="permalink">The fun begins: HackTheBox.eu
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">It’s been a while since I joined https://www.hackthebox.eu/. Probably more than a year. And I haven’t really had the time to spend trying to break into the m...</p>
+  </article>
+</div>
+        
       </div>
     </div>
+  
   
 </div>
     </div>

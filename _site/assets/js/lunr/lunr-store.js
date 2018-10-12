@@ -73,4 +73,9 @@ var store = [{
         "excerpt":"I just recently successfully gained root (or rather, Administrator, because it’s a Windows box) on the Devel machine in Hack The Box. The machine itself is very easy, and there are lots of writeups on it, I’m sure, so this won’t be another one. However, one thing it made really...","categories": ["Cybersecurity"],
         "tags": ["HackTheBox"],
         "url": "http://localhost:4000/2018/09/11/msfvenom",
-        "teaser":"http://localhost:4000/assets/images/2018-09-11-msfvenom/header.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/2018-09-11-msfvenom/header.jpg"},{
+        "title": "What Apple's T2 chip means for the security of Macs",
+        "excerpt":"An article by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after. Naturally, e-waste activists and supporters of the...","categories": [],
+        "tags": ["opinion","Apple"],
+        "url": "http://localhost:4000/2018/10/12/apple-t2-security",
+        "teaser":"http://localhost:4000/assets/images/2018-10-12-apple-t2-security/header.jpg"}]

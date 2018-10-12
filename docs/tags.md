@@ -12,6 +12,8 @@ Dynamic analysis focused reverse engineering of software.
 
 # HackTheBox
 
+# hacking
+
 # Microsoft
 
 # opinion

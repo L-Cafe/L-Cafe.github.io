@@ -15,7 +15,7 @@ minimal_mistakes_skin    : "l1cafe"
 # Site Settings
 locale                   : "en-US"
 title                    : "L1Cafe"
-subtitle                 : "<q>Try not to become a man of success, but rather try to become a man of value.</q> - Albert Einstein"
+subtitle                 : "<q>Everything is theoretically impossible, until it is done.</q> - Robert A. Heinlein"
 description              : "Software, infosec, system administration projects, opinions and tips."
 title_separator          : "·"
 name                     : "L1Cafe"
