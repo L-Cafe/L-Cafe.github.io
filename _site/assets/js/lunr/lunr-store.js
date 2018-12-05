@@ -78,4 +78,9 @@ var store = [{
         "excerpt":"An article by Mac Rumors was recently published, revealing Apple had designed a component, which, according to an Apple document, would “result in an inoperative system” in the event a hardware replacement or repair was performed without running a proprietary diagnostics solution after. Naturally, e-waste activists and supporters of the...","categories": [],
         "tags": ["opinion","Apple"],
         "url": "http://localhost:4000/2018/10/12/apple-t2-security",
-        "teaser":"http://localhost:4000/assets/images/2018-10-12-apple-t2-security/header.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/2018-10-12-apple-t2-security/header.jpg"},{
+        "title": "Post-Exploitation: spawning a shell",
+        "excerpt":"Once you have gained shell access on a machine, you will often find the promptextremely limited, especially if you have used manual exploitation. In thesecases, the shell often cannot perform basic tasks that you would expect from afully interactive shell prompt like Bash, or zsh. You will also be unable...","categories": ["Cybersecurity"],
+        "tags": ["HackTheBox","hacking","tip"],
+        "url": "http://localhost:4000/2018/12/05/post-exploitation-spawning-shell",
+        "teaser":"http://localhost:4000/assets/images/2018-12-05-post-exploitation-spawning-shell/header.jpg"}]
