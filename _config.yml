@@ -181,20 +181,11 @@ timezone: "Europe/Zurich" # https://en.wikipedia.org/wiki/List_of_tz_database_ti
 
 # Plugins (previously gems:)
 plugins:
+  - jemoji
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jemoji
-
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-
 
 # Archives
 #  Type

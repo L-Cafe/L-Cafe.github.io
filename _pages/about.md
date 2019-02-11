@@ -20,10 +20,11 @@ My native country is Spain, so my primary language is Spanish. I can also speak
 and write (British) English fluently, and I'm currently learning Chinese.
 
 I love travelling. I have visited the following countries:
-🇪🇸 🇷🇺 🇵🇹 🇫🇷 🇬🇧 🇱🇺 🇩🇪 🇺🇸 🇨🇦 🇯🇵 🇨🇳 🇭🇰
+:es: :ru: :portugal: :fr: :uk: :luxembourg: :de: :us: :canada: :jp: :cn: :hong_kong:
+
 
 I want to visit these countries:
-🇰🇷 🇹🇼 🇲🇴 🇹🇭 🇨🇺 🇦🇺 🇳🇿 🇮🇸 🇸🇪 🇩🇰 🇳🇴 🇳🇱 🇨🇭 🇧🇷 🇪🇬 🇪🇪 🇨🇾 🇦🇹 🇲🇳 🇸🇬 🇨🇷 🇮🇹 🇷🇺
+:kr: :taiwan: :thailand: :australia: :new_zealand: :austria: :norway: :sweden: :finland: :andorra: :switzerland: :ireland:
 
 I created this blog in order to have a centralised place to express my opinion
 and share what I know with the world.
