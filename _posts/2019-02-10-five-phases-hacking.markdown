@@ -21,7 +21,7 @@ apply.
 ## Reconnaissance
 
 This is the first phase of the process, and involves gathering information about
-the target in a passive manner. For example, using [Shodan](https://www.shodan.io),
+the target passively. For example, using [Shodan](https://www.shodan.io),
 visiting the company website to understand their network infrastructure and employee
 hierarchy, searching Twitter for official accounts and more. In this stage, the
 hacker does not interact directly with the company systems, but simply uses OSINT,
@@ -38,7 +38,7 @@ present in the systems.
 ## Gaining access
 
 Once the ethical hacker understands all the weaknesses and entry points in a network,
-they can launch an attack in order to obtain a privileged access into the system,
+they can launch an attack in order to obtain privileged access into the system,
 for whatever purpose they need. They might want to use the first attack to pivot
 to a different server, or they might want to get root access to an HTTP server running
 inside the company's LAN, or just dump databases from an unprotected PostgreSQL server.
