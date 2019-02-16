@@ -54,7 +54,7 @@ and system administrators.
 
 ## Covering tracks
 
-The last and final step is reverting changes to leave as little trace as possible,
+The final step is reverting changes to leave as little trace as possible,
 such as deleting logs, re-enabling security measures, and deleting temporary files
-that aided in the attack. This will help the att attacker stay in the network for
+that aided in the attack. This will help the attacker stay in the network for
 as long as they want, while ensuring nobody suspects they've been attacked.
