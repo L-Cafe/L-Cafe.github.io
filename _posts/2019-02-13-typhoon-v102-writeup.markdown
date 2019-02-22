@@ -522,6 +522,7 @@ So far, I've only been able to find 3 out of the 4 total flags.
 2. NFS flag
 3. Root flag
 
-The VM is available on [VulnHub](https://www.vulnhub.com/entry/typhoon-102,267/).
+The VM is available on [VulnHub](https://www.vulnhub.com/entry/typhoon-102,267/)
+as well as [Prisma's webpage](https://www.prismacsi.com/en/typhoon-vulnerable-virtual-machines/).
 I used VMware Fusion to run the VM. The process took me about 3-4 hours of trial
 and error.
