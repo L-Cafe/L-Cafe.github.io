@@ -13,9 +13,10 @@ links.
 I may or may not be related to these projects. To find out more about me and my
 projects, check out the links in the top navigation bar.
 
-## People
+## People and blogs
 
 - [Scott Helme](https://scotthelme.co.uk) - He presents himself as a Security Researcher, and runs a blog with very up-to-date and accurate information for hardening servers. He also runs two free, very popular tools that help you deploy better security.
+- [Root Network Security](https://www.rootnetsec.com/) - Reverse engineering, binary dissassembly and systems programming.
 
 ## General resources
 
