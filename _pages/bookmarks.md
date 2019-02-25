@@ -64,6 +64,7 @@ projects, check out the links in the top navigation bar.
 - [Hakluke’s Ultimate OSCP Guide](https://medium.com/@hakluke/haklukes-ultimate-oscp-guide-part-3-practical-hacking-tips-and-tricks-c38486f5fc97)
 - [Offensive Computer Security Videos](https://www.cs.fsu.edu/%7Eredwood/OffensiveComputerSecurity/lectures.html) by Florida State University
 - [OSCP](https://github.com/ferreirasc/oscp) by ferreirasc
+- [Basic Linux Privilege Escalation](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 
 ## Other
 
