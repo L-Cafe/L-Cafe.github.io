@@ -363,7 +363,7 @@ root/.nano/
 root/M3m3L0rd.txt
 root/.selected_editor
 root/.bash_history
-$ cat root/M3m3L0rd.txt I
+$ cat root/M3m3L0rd.txt
 You did it !!!!
 
 COngratulations :D 
