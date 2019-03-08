@@ -13,9 +13,10 @@ links.
 I may or may not be related to these projects. To find out more about me and my
 projects, check out the links in the top navigation bar.
 
-## People
+## People and blogs
 
 - [Scott Helme](https://scotthelme.co.uk) - He presents himself as a Security Researcher, and runs a blog with very up-to-date and accurate information for hardening servers. He also runs two free, very popular tools that help you deploy better security.
+- [Root Network Security](https://www.rootnetsec.com/) - Reverse engineering, binary dissassembly and systems programming.
 
 ## General resources
 
@@ -63,6 +64,7 @@ projects, check out the links in the top navigation bar.
 - [Hakluke’s Ultimate OSCP Guide](https://medium.com/@hakluke/haklukes-ultimate-oscp-guide-part-3-practical-hacking-tips-and-tricks-c38486f5fc97)
 - [Offensive Computer Security Videos](https://www.cs.fsu.edu/%7Eredwood/OffensiveComputerSecurity/lectures.html) by Florida State University
 - [OSCP](https://github.com/ferreirasc/oscp) by ferreirasc
+- [Basic Linux Privilege Escalation](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
 
 ## Other
 
