@@ -172,7 +172,7 @@ It looks like a file transfer. We can actually extract files from Wireshark by g
 
 ### Bruteforcing 7z password
 
-It's an encrypted 7z file to which we don't have the password. Let's crack it using https://github.com/koboi137/john/blob/master/7z2john.pl
+It's an encrypted 7z file to which we don't have the password. [Let's crack it](https://github.com/koboi137/john/blob/master/7z2john.pl).
 
 ```
 
@@ -208,7 +208,7 @@ Which apparently belongs to the `test` user.
 
 ### Bruteforcing SSH private keys
 
-Unfortunately, the private key is also encrypted. Let's use John The Ripper again with another tool that converts SSH keys to John The Ripper's hash format: https://github.com/koboi137/john/blob/master/ssh2john.py
+Unfortunately, the private key is also encrypted. Let's use John The Ripper again with [another tool that converts SSH keys to John The Ripper's hash format](https://github.com/koboi137/john/blob/master/ssh2john.py).
 
 ```
 $ ./ssh2john.py loot/id_rsa > ssh_john.txt
@@ -306,7 +306,7 @@ $ tar -xvf shadow.tar
 etc/shadow
 ```
 
-At this point, I moved the shadow file to my desktop, so I can use John The Ripper on it, with the rockyou.txt dictionary while I look for other clues.
+At this point, I moved the shadow file to my desktop, so I can use John The Ripper on it, with the `rockyou.txt` dictionary while I look for other clues.
 
 ## Step 3: Privilege escalation
 
@@ -383,5 +383,12 @@ Well I can't help so here is the last one <FLAG>
 
 #PeaceOut
 ```
+
+## Wrap up
+
+No, I was not able to crack the shadow file to get root. Also, I wasn't able
+to find the correct password for the `3.jpg` file. I tried with all flags and all
+passwords and potential passwords I harvested, but nothing worked. Maybe I missed
+something?
 
 This machine is available on [VulnHub](https://www.vulnhub.com/entry/kuya-1,283/).
