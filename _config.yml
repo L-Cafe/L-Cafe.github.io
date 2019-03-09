@@ -15,7 +15,8 @@ minimal_mistakes_skin    : "l1cafe"
 # Site Settings
 locale                   : "en-US"
 title                    : "L1Cafe"
-subtitle                 : "<q>A scientist can discover a new star but he cannot make one. He would have to ask an engineer to do it for him.</q> -Gordon Lindsay Glegg"
+subtitle                 : "<q>The way to succeed is to double your failure rate.</q>  
+—Thomas J. Watson"
 description              : "Software, infosec, system administration projects, opinions and tips."
 title_separator          : "·"
 name                     : "L1Cafe"
