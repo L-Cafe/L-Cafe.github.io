@@ -34,18 +34,6 @@ and share what I know with the world.
 - [myNoise Friends](https://mynoise.net/myNoiseFriends.php) - Listed as "white hat hacker", helped secure the website and perform penetration testing and responsible vulnerability disclosure.
 - [Tutorio.es](https://www.tutorio.es/) - Listed as "sysadmin", responsible for server maintenance, management, and hardening.
 
-### My (other) profiles
-
-#### Cybersecurity
-
-[![](https://www.hackthebox.eu/badge/image/1904)](https://www.hackthebox.eu/profile/1904)
-
-#### Programming
-
-[![](https://www.codewars.com/users/L1Cafe/badges/small)](https://www.codewars.com/users/L1Cafe)
-
-- [HackerRank](https://www.hackerrank.com/L1Cafe)
-
 ### My publications
 
 - [Ataques homógrafos - The Hacker Way](https://thehackerway.com/2017/04/21/ataques-homografos/)
