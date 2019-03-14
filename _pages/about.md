@@ -40,7 +40,7 @@ and share what I know with the world.
 
 ## How I do my computing
 
-I own a MacBook Pro 2016, 15 inch (with Touch Bar) and use macOS on a daily
+I own a MacBook Pro 2016, and use macOS on a daily
 basis. I also use Linux very often, and maintain some Linux servers running
 Debian, Proxmox, CentOS, Fedora Server, and a Windows Server as an
 experimentation platform.
