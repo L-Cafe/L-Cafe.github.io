@@ -15,7 +15,6 @@ minimal_mistakes_skin: "l1cafe"
 # Site Settings
 locale: "en-US"
 title: "León Castillejos' personal blog - L1Cafe"
-logo: "L1Cafe"
 subtitle: "<q>The way to succeed is to double your failure rate.</q>
   —Thomas J. Watson"
 description: "Infosec, cybersecurity and system administration."
