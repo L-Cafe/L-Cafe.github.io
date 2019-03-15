@@ -9,94 +9,92 @@
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "l1cafe"
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "l1cafe"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "L1Cafe"
-subtitle                 : "<q>The way to succeed is to double your failure rate.</q>  
-—Thomas J. Watson"
-description              : "Infosec, cybersecurity and system administration."
-title_separator          : "·"
-name                     : "L1Cafe"
-url                      : "https://L1Cafe.blog"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "L1Cafe/L1Cafe.github.io"
-teaser                   : "/assets/images/teaser.jpg"
+locale: "en-US"
+title: "León Castillejos' personal blog - L1Cafe"
+subtitle: "<q>The way to succeed is to double your failure rate.</q>
+  —Thomas J. Watson"
+description: "Infosec, cybersecurity and system administration."
+title_separator: "·"
+name: "L1Cafe"
+url: "https://L1Cafe.blog"
+baseurl: # the subpath of your site, e.g. "/blog"
+repository: "L1Cafe/L1Cafe.github.io"
+teaser: "/assets/images/teaser.jpg"
 # breadcrumbs            : false # true, false (default) # Beta apparently not working
-words_per_minute         : 200
+words_per_minute: 200
 comments:
-  provider               : "staticman_v2" # (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
+  provider: "staticman_v2" # (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "staticman_v2" "custom"
 staticman:
-  branch                 : "master"
+  branch: "master"
 atom_feed:
-  path                   : # blank (default) uses feed.xml
-search                   : true #, false (default)
-search_full_content      : false # true, false (default)
-search_provider          : "lunr" #(default), algolia
+  path: # blank (default) uses feed.xml
+search: true #, false (default)
+search_full_content: false # true, false (default)
+search_provider: "lunr" #(default), algolia
 # algolia:
-  # application_id         : # YOUR_APPLICATION_ID
-  # index_name             : # YOUR_INDEX_NAME
-  # search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  # powered_by             : # true (default), false
+# application_id         : # YOUR_APPLICATION_ID
+# index_name             : # YOUR_INDEX_NAME
+# search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
+# powered_by             : # true (default), false
 
 # SEO Related
-google_site_verification : #! Check these later
-bing_site_verification   : #! Bing
-yandex_site_verification : #! Yandex
-naver_site_verification  : #! Naver
+google_site_verification: #! Check these later
+bing_site_verification: #! Bing
+yandex_site_verification: #! Yandex
+naver_site_verification: #! Naver
 
 # Social Sharing
 twitter:
-  username               : "L1Cafe"
+  username: "L1Cafe"
 # facebook:
 #   username               :
 #   app_id                 :
 #   publisher              :
-og_image                 : "/assets/images/logo-bordered.png"
+og_image: "/assets/images/logo-bordered.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : "Person" # Person or Organization (defaults to Person)
-  name                   : "León Castillejos" # If the user or organization name differs from the site's name
+  type: "Person" # Person or Organization (defaults to Person)
+  name: "León Castillejos" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-  - https://twitter.com/L1Cafe
-  - https://www.linkedin.com/in/l1cafe
-  - https://github.com/L1Cafe
-  - https://gitlab.com/L1Cafe
-  - https://soundcloud.com/l1cafe
-  - https://keybase.io/l1cafe
+    - https://twitter.com/L1Cafe
+    - https://www.linkedin.com/in/l1cafe
+    - https://github.com/L1Cafe
+    - https://gitlab.com/L1Cafe
+    - https://soundcloud.com/l1cafe
+    - https://keybase.io/l1cafe
 # - https://stackoverflow.com/users/l1cafe #! When I create a SO account
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider: google-gtag # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
-
+    tracking_id: "UA-136298121-1"
+    anonymize_ip: true
 
 # Site Author
 author:
-  name             : "León Castillejos"
-  avatar           : "/assets/images/avatar.jpg"
-  location         : "European Union"
-  email            : "L1Cafe-github@tuta.io"
-  uri              : #"https://L1Cafe.blog"
-  home             : "https://L1Cafe.blog" # null (default), "absolute or relative url to link to author home"
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  github           : "L1Cafe"
-  gitlab           : "L1Cafe"
-  keybase          : "l1cafe"
-  linkedin         : "l1cafe" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
-  soundcloud       : "l1cafe"
-  stackoverflow    : # "l1cafe" # ! crear cuenta # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  twitter          : "L1Cafe"
-  youtube          :
-
+  name: "León Castillejos"
+  avatar: "/assets/images/avatar.jpg"
+  location: "European Union"
+  email: "L1Cafe-github@tuta.io"
+  uri: #"https://L1Cafe.blog"
+  home: "https://L1Cafe.blog" # null (default), "absolute or relative url to link to author home"
+  bitbucket:
+  codepen:
+  dribbble:
+  github: "L1Cafe"
+  gitlab: "L1Cafe"
+  keybase: "l1cafe"
+  linkedin: "l1cafe" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  soundcloud: "l1cafe"
+  stackoverflow: # "l1cafe" # ! crear cuenta # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
+  twitter: "L1Cafe"
+  youtube:
 
 # Reading Files
 include:
@@ -134,14 +132,12 @@ keep_files:
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-
 # Conversion
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
-
 
 # Markdown Processing
 kramdown:
@@ -154,19 +150,16 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
-
 # Sass/SCSS
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
 
 # Outputting
 permalink: /:year/:month/:day/:title
 paginate: 5 # amount of posts to show
 paginate_ath: /page:num/
 timezone: "Europe/Zurich" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
 
 # Plugins (previously gems:)
 plugins:
@@ -204,14 +197,12 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
-
 # HTML Compression
 # - http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
     envs: development
-
 
 # Defaults
 defaults:
