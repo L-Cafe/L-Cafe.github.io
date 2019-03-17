@@ -2,7 +2,7 @@
 title:    "Kuya 1 writeup"
 date:     2019-03-03
 tags:     VulnHub
-category:	Cybersecurity
+category:	Cybersecurity writeup
 comment:  header sizes are 2000x750
 header:
   image:    assets/images/2019-03-03-kuya-1-writeup/header.jpg
