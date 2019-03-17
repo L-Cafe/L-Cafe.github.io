@@ -187,7 +187,9 @@ secret in clear text.
 
 We can simply tell bWAPP to open the `/` directory.
 
-`http://10.99.50.177/bWAPP/directory_traversal_1.php?page=/`
+```
+http://10.99.50.177/bWAPP/directory_traversal_1.php?page=/
+```
 
 ## Directory Traversal - Files
 
@@ -196,7 +198,9 @@ We can simply tell bWAPP to open the `/` directory.
 We can also instruct bWAPP to open arbitrary files in the file system using
 absolute filesystem paths.
 
-`http://10.99.50.177/bWAPP/directory_traversal_1.php?page=/etc/passwd`
+```
+http://10.99.50.177/bWAPP/directory_traversal_1.php?page=/etc/passwd
+```
 
 ## Restrict Device Access
 
