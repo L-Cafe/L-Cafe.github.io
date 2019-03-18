@@ -17,7 +17,7 @@ I consider myself a passionate and creative individual which thrives in highly
 competitive and intellectually demanding environments.
 
 My native country is Spain, so my primary language is Spanish. I can also speak
-and write (British) English fluently, and I'm currently learning Chinese.
+and write (British) English fluently, and I'm currently learning Norwegian (Bokmål Norsk).
 
 I love travelling. I have visited the following countries:
 :es: :ru: :portugal: :fr: :uk: :luxembourg: :de: :us: :canada: :jp: :cn: :hong_kong:
