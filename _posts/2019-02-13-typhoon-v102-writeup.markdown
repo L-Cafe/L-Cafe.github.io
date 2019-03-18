@@ -1,8 +1,8 @@
 ---
 title:    "Typhoon v1.02 writeup"
 date:     2019-02-13
-tags:     VulnHub
-category:	Cybersecurity writeup
+tags:     VulnHub writeup
+category:	Cybersecurity
 comment:  header sizes are 2000x750
 header:
   image:    assets/images/2019-02-13-typhoon-v102-writeup/header.jpg
