@@ -8,13 +8,19 @@ author_profile: true
 
 If you want to join any of these projects, feel free to contact me, or submit pull requests.
 
-## [Awesome Video Channels](https://github.com/L1Cafe/Awesome-Video-Channels)
+## Air quality sensor
 
-A curated list of online video channels for learning just about anything!
+Arduino-based air quality sensor, with modularity in mind, so you can add and/or
+remove sensors and modules. Developed as a DIY alternative to expensive
+professional sensors that are very expensive and offer less functionality.
 
 ## [Andromeda](https://github.com/Kydara/Andromeda)
 
 A statically generated status web page. No server software required!
+
+## [Awesome Video Channels](https://github.com/L1Cafe/Awesome-Video-Channels)
+
+A curated list of online video channels for learning just about anything!
 
 ## [Coindesk Python API Client](https://github.com/L1Cafe/Coindesk-Python-API-client)
 
@@ -48,7 +54,7 @@ services such as SendGrid, or MailGun.
 ## SafeSpace
 
 An open source burglar alarm consisting of Arduino hardware, schematics, and
-wireless protocol, and firmware for the central panel, sensonrs, etc.
+wireless protocol, and firmware for the central panel, sensors, etc.
 
 # Finished projects
 
