@@ -12,6 +12,10 @@ If you want to join any of these projects, feel free to contact me, or submit pu
 
 A curated list of online video channels for learning just about anything!
 
+## [Andromeda](https://github.com/Kydara/Andromeda)
+
+A statically generated status web page. No server software required!
+
 ## [Coindesk Python API Client](https://github.com/L1Cafe/Coindesk-Python-API-client)
 
 This library fetches Coindesk's Bitcoin Price Index from their API.
