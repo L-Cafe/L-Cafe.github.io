@@ -10,8 +10,9 @@ header:
   caption:  "Photo credit: [**Unsplash**](https://unsplash.com)"
 ---
 
-This is a short and fun machine available on [VulnHub](https://www.vulnhub.com/entry/unknowndevice64-1,293/). The machine has no outdated, vulnerable software, but is set up as a fun CTF challenge with a few intentional configuration mistakes you're supposed to exploit to get a root
-shell.
+This is a short and fun machine available on [VulnHub](https://www.vulnhub.com/entry/unknowndevice64-1,293/). The machine has no outdated, vulnerable software, but is set up as a fun CTF challenge with a few intentional configuration mistakes you're supposed to exploit to get a root shell.
+
+This machine was made by [@UnknownDevice64](https://twitter.com/@unknowndevice64).
 
 ## Nmap
 
