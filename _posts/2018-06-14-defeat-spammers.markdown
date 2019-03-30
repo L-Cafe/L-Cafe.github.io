@@ -39,7 +39,7 @@ So there had to be a better way...
 
 The solution I came up with didn't require any more time than what's typical when signing up for an online service, and shouldn't necessarily cost more than 10 dollars a year (if you already have your own e-mail server), but it had a profound impact in how I approach sign-ups nowadays.
 
-Basically, I purchased a domain I would use exclusively for e-mail. It needed to be sort and legible, so .com domains were out of the question, but the introduction of new TLDs have greatly decreased the chances of having your favourite domain name taken by [domain squatters](https://en.wikipedia.org/wiki/Cybersquatting), as you only have to choose a different TLD if the domain name you want is taken.
+Basically, I purchased a domain I would use exclusively for e-mail. It needed to be short and legible, so .com domains were out of the question, but the introduction of new TLDs have greatly decreased the chances of having your favourite domain name taken by [domain squatters](https://en.wikipedia.org/wiki/Cybersquatting), as you only have to choose a different TLD if the domain name you want is taken.
 
 Then, I had to configure my e-mail server to accept mails from said domain, and have it redirect all e-mails to my actual inbox. Since replying from each address was not necessary, I didn't have to set up individual accounts on my mail server. If I ever need to reply to someone's e-mail, I reply with my personal e-mail address.
 
