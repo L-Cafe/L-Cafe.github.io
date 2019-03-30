@@ -1,9 +1,9 @@
 ---
-title:    "bWAPP writeup"
-date:     2019-03-17
-tags:     writeup
-category:	Cybersecurity
-comment:  header sizes are 2000x750
+title:      "bWAPP writeup"
+date:       2019-03-17
+tags:       writeup
+category:	  Cybersecurity
+comment:    header sizes are 2000x750
 header:
   image:    assets/images/2019-03-17-bwapp-writeup/header.jpg
   teaser:   assets/images/2019-03-17-bwapp-writeup/header.jpg

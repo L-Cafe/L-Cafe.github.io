@@ -219,3 +219,11 @@ defaults:
       share: false
       related: true
       sitemap: true
+
+# Rake tasks
+post:
+  template: _post.txt
+  extension: markdown
+editor: code
+git:
+  branch: master
