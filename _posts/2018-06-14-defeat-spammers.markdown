@@ -51,7 +51,7 @@ As a side benefit, like I said before, even if I shared passwords across service
 
 The results have been dramatically positive. In the last 2 years I have been using this experiment, I have received exactly 0 (**ZERO**) spam e-mails, although, in all honesty, I do apply all the technologies mentioned at the top of the article, so spammers already have a hard time spamming me, with the catch-all domain feature being just another layer I can quickly and effectively disable for specific addresses.
 
-Want to learn more and/or implement it yourself? Check out the links below. If you still have questions, you can leave a comment below, or try getting in touch with me, but replies are not guaranteed 😉.
+Want to learn more and/or implement it yourself? Check out the links below. If you still have questions, you can leave a comment below, or try getting in touch with me, but replies are not guaranteed :wink:.
 
 [https://serverfault.com/questions/560906/postfix-virtual-aliases-and-catchall-for-undefined-addresses](https://serverfault.com/questions/560906/postfix-virtual-aliases-and-catchall-for-undefined-addresses)
 

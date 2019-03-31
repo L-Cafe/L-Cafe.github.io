@@ -31,7 +31,7 @@ and share what I know with the world.
 
 ## Me across the web
 
-- [myNoise Friends](https://mynoise.net/myNoiseFriends.php) - Listed as "white hat hacker", helped secure the website and perform penetration testing and responsible vulnerability disclosure.
+- [myNoise Friends](https://mynoise.net/myNoiseFriends.php) - Listed as "white hat hacker", I help secure the website and perform penetration testing and responsible vulnerability disclosure.
 - [Tutorio.es](https://www.tutorio.es/) - Listed as "sysadmin", responsible for server maintenance, management, and hardening.
 
 ### My publications
@@ -60,5 +60,5 @@ with LaTeX math formulas through MathJax), or needs to be printed, or released
 as a PDF file, (for which I use plain LaTeX).
 
 For my photo editing and graphical design needs, I rely on
-[Affinity Photo](https://affinity.serif.com/en-gb/photo/), and 
+[Affinity Photo](https://affinity.serif.com/en-gb/photo/), and
 [Affinity Designer](https://affinity.serif.com/en-gb/designer/).
