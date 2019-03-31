@@ -1,7 +1,7 @@
 ---
 title:      "Unknowndevice64 writeup"
 date:       2019-03-30
-tags:       writeup
+tags:       writeup VulnHub
 category:   Cybersecurity
 comment:    header sizes are 2000x750
 header:
