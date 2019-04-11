@@ -34,6 +34,7 @@ projects, check out the links in the top navigation bar.
 - [Learn Anything](https://learn-anything.xyz/) - Directions for learning anything with easy to understand, interactive maps.
 - [MIT OpenCourseWare](https://ocw.mit.edu/index.htm) - Free, high quality college lesson recordings.
 - [myNoise.net](https://mynoise.net/) - White noise, rain, fireplaces... Noises to help you focus, relax, or sleep.
+- [Privacy Tools](https://www.privacytools.io) - Tools to secure your digital life against mass surveillance.
 
 ## Administration tools
 
@@ -46,13 +47,13 @@ projects, check out the links in the top navigation bar.
 - [SSL email check](https://ssl-tools.net/mailservers/kydara.com) - Checks mail servers for encryption their supported SSL/TLS protocols and certificates offered.
 - [Qualys SSL Labs](https://www.ssllabs.com/) - Free SSL/TLS server and browser tests.
 
-## Cybersecurity
+## Cybersecurity (CTF and hacking challenges)
 
 - [Google Gruyere](http://google-gruyere.appspot.com) - Hosted vulnerable application instance.
 - [HackTheBox](https://www.hackthebox.eu) - Practice exploiting and hacking machines legally.
 - [VulnHub](https://www.vulnhub.com) - Free, downloadable VMs for practice.
 
-### Cybersecurity resources
+### Cybersecurity resources (documentation and information)
 
 - [Awesome Hacking](https://github.com/Hack-with-Github/Awesome-Hacking)
 - [Awesome Hacking Resources](https://github.com/vitalysim/Awesome-Hacking-Resources)
