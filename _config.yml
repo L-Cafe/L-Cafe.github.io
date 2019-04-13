@@ -60,14 +60,6 @@ og_image: "/assets/images/logo-bordered.png"
 social:
   type: "Person" # Person or Organization (defaults to Person)
   name: "León Castillejos" # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-    - https://twitter.com/L1Cafe
-    - https://www.linkedin.com/in/l1cafe
-    - https://github.com/L1Cafe
-    - https://gitlab.com/L1Cafe
-    - https://soundcloud.com/l1cafe
-    - https://keybase.io/l1cafe
-# - https://stackoverflow.com/users/l1cafe #! When I create a SO account
 
 # Analytics
 analytics:
@@ -90,6 +82,7 @@ author:
   github: "L1Cafe"
   gitlab: "L1Cafe"
   keybase: "l1cafe"
+  mastodon: "social.privacytools.io/@L1Cafe"
   linkedin: "l1cafe" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   soundcloud: "l1cafe"
   stackoverflow: # "l1cafe" # ! crear cuenta # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
