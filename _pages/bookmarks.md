@@ -36,6 +36,10 @@ projects, check out the links in the top navigation bar.
 - [myNoise.net](https://mynoise.net/) - White noise, rain, fireplaces... Noises to help you focus, relax, or sleep.
 - [Privacy Tools](https://www.privacytools.io) - Tools to secure your digital life against mass surveillance.
 
+## Useful tools
+- [Bhadoo Mail](https://inbox.bhadoomail.com/) - Free disposable e-mail addresses.
+- [Cyber Chef](https://gchq.github.io/CyberChef/) - The Cyber Swiss Army Knife - a web app for encryption, encoding, compression and data analysis
+
 ## Administration tools
 
 - [HackerTarget.com Tools](https://hackertarget.com/ip-tools/) - Multiple network tools, like port scanning, HTTP headers, and nameserver zone transfer tests.
