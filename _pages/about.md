@@ -13,7 +13,7 @@ My name is León Castillejos. I'm a Higher Technician in Multi-Platform Applicat
 Currently studying Computer Science & Engineering at
 [URJC](http://www.urjc.es/), a Spanish university located in Madrid.
 
-I consider myself a passionate and creative individual which thrives in highly
+I consider myself a passionate and creative individual who thrives in highly
 competitive and intellectually demanding environments.
 
 My native country is Spain, so my primary language is Spanish. I can also speak
