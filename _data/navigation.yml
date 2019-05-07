@@ -10,6 +10,8 @@ main:
   #   url: /sitemap/
   - title: "About me"
     url:   /about/
+  - title: "Donate"
+    url:   /donate/
   - title: "My projects"
     url:   /projects/
   - title: "Bookmarks"
