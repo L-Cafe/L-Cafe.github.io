@@ -19,7 +19,7 @@ for everyone to enjoy free of charge.
 
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/btc.png) Bitcoin (BTC)  `3F9w1d2u8BZker6MXGDmUmEkEqyRdNXaqV`
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/bch.png) Bitcoin Cash (BCH) `bitcoincash:qp8gmvmz363l060vj4ptn5ujxynja786ssaa6d5e69`
--  [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/btg.png) Bitcoin Gold (BTG)`AdULRnMeHEL3SKkDseCREr1Vex9xfFJAYK`
+- [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/btg.png) Bitcoin Gold (BTG) `AdULRnMeHEL3SKkDseCREr1Vex9xfFJAYKdULRnMeHEL3SKkDseCREr1Vex9xfFJAYK`
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/dash.png) Dash (DASH) `XeGC6y9n3yS1Q64PDGgbnkS8VnG3B9Rzvt`
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/dgb.png) Digibyte (DGB) `SXkeRDWjNyoVsnBY7qRHq9m54cGBDr7LNh`
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/doge.png) Dogecoin (DOGE) `DGE5TYMNd2XoJ8bWYhNdNUU9i4Ms1yUGi3`
