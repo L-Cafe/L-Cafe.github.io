@@ -30,3 +30,4 @@ for everyone to enjoy free of charge.
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/zec.png) **Zcash** (ZEC) `t1SxkJB8g8nFP5ns24oTRJ4wXchJz28SA9y`
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/xem.png) **NEM** (XEM) `NASVBMIMAYSILVUOQ42BVFVEMKNREZ5TXG7YECGE`
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/doge.png) **Dogecoin** (DOGE) `DGE5TYMNd2XoJ8bWYhNdNUU9i4Ms1yUGi3`
+- [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/xlm.png) **Stellar Lumens** (XLM) `GAG245NL2R3AHQ7YIXMEJUU5U7K4PJCAL2XQXAHMLCFN7A66WIR3GFDH`
