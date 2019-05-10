@@ -23,9 +23,9 @@ for everyone to enjoy free of charge.
   - <input type="text" onclick="this.focus();this.select();document.execCommand('copy');alert('BCH address copied to clipboard');" readonly="" value="qp8gmvmz363l060vj4ptn5ujxynja786ssaa6d5e69">
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/btg.png) **Bitcoin Gold** (BTG)
   - <input type="text" onclick="this.focus();this.select();document.execCommand('copy');alert('BTG address copied to clipboard');" readonly="" value="AdULRnMeHEL3SKkDseCREr1Vex9xfFJAYK">
-- [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/eth.png) **Ethereum** (ETH) `0x15C8a30505B0418322B954210B0A41a14F27e73F`
+- [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/eth.png) **Ethereum** (ETH)
   - <input type="text" onclick="this.focus();this.select();document.execCommand('copy');alert('ETH address copied to clipboard');" readonly="" value="0x15C8a30505B0418322B954210B0A41a14F27e73F">
-- [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/etc.png) **Ethereum Classic** (ETC) `0x603a6cf592b072dc1695be94c591ef4b776b2c9c`
+- [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/etc.png) **Ethereum Classic** (ETC)
   - <input type="text" onclick="this.focus();this.select();document.execCommand('copy');alert('ETC address copied to clipboard');" readonly="" value="0x603a6cf592b072dc1695be94c591ef4b776b2c9c">
 - [<i class="fas fa-qrcode"></i>](/assets/images/cryptocurrency-qrs/ltc.png) **Litecoin** (LTC)
   - <input type="text" onclick="this.focus();this.select();document.execCommand('copy');alert('LTC address copied to clipboard');" readonly="" value="M9ctz1MEH2JV1yvGAw8iybucxKi8oYT8PL">
